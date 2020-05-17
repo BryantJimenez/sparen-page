@@ -10,42 +10,20 @@
                             </a>
                         </div>
                         <p>
-                            Firmament morning sixth subdue darkness
-                            creeping gathered divide.
+                            Buscamos que nuestros clientes manejen sus fondos con transparencia.
                         </p>
-                        <div class="socail_links">
-                            <ul>
-                                <li>
-                                    <a href="#">
-                                        <i class="ti-facebook"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="ti-twitter-alt"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="fa fa-instagram"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
 
                     </div>
                 </div>
                 <div class="col-xl-2 offset-xl-1 col-md-6 col-lg-3">
                     <div class="footer_widget">
                         <h3 class="footer_title">
-                            Services
+                            Servicios
                         </h3>
                         <ul>
-                            <li><a href="#">Design</a></li>
-                            <li><a href="#">Development</a></li>
-                            <li><a href="#">Marketing</a></li>
-                            <li><a href="#">Consulting</a></li>
-                            <li><a href="#">Finance</a></li>
+                            <li><a href="#">Servicios</a></li>
+                            <li><a href="#">Nosotros</a></li>
+                            <li><a href="#">Informes</a></li>
                         </ul>
 
                     </div>
@@ -53,25 +31,23 @@
                 <div class="col-xl-2 col-md-6 col-lg-2">
                     <div class="footer_widget">
                         <h3 class="footer_title">
-                            Useful Links
+                           Links
                         </h3>
                         <ul>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#"> Contact</a></li>
-                            <li><a href="#"> Free quote</a></li>
+                            <li><a href="#">Informes</a></li>
+                            <li><a href="#">Contacto</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-xl-3 col-md-6 col-lg-3">
                     <div class="footer_widget">
                         <h3 class="footer_title">
-                            Address
+                            Dirección
                         </h3>
                         <ul>
-                            <li>200, D-block, Green lane USA</li>
-                            <li>+10 367 467 8934</li>
-                            <li><a href="#"> docmed@contact.com</a></li>
+                            <li>Rondeau 69 5°Piso (CP 5000) Nueva-Cordoba - CORDOBA - ARGENTINA</li>
+                            <li>+54 367 467 8934</li>
+                            <li>info@sparen.com.ar</li>
                         </ul>
                     </div>
                 </div>
@@ -95,30 +71,3 @@
 </footer>
 <!--/ footer end  -->
 
-<!-- form itself end-->
-<form id="test-form" class="white-popup-block mfp-hide">
-    <div class="popup_box ">
-        <div class="popup_inner">
-            <div class="popup_header">
-                <h3>Get Free Quote</h3>
-            </div>
-            <div class="custom_form">
-                <div class="row">
-                    <div class="col-xl-12">
-                        <input type="text" placeholder="Your Name">
-                    </div>
-                    <div class="col-xl-12">
-                        <input type="email" placeholder="Email">
-                    </div>
-                    <div class="col-xl-12">
-                        <textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
-                    </div>
-                    <div class="col-xl-12">
-                        <button type="submit" class="boxed-btn3">Send</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</form>
-    <!-- form itself end -->

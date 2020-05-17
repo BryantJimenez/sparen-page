@@ -21,14 +21,18 @@ use Illuminate\Support\Facades\Route;
 // Inicio
 Route::get('/', 'WebController@index')->name('home');
 
+//Sobre Sparen
+Route::get('/sparen/sobre-sparen', 'AboutController@index')->name('sobre.index');
 
 
+//Servicios
+Route::get('/sparen/servicios', 'ServiceController@index')->name('servicio.index');
 
+//Informes
+Route::get('/sparen/informes', 'ReportController@index')->name('informe.index');
 
+//Contacto
+Route::get('/sparen/contacto', 'ContactController@index')->name('contacto.index');
 
-
-
-
-
-
-/////////////////////////////////////////////////Admin////////////////////////////////////////////////////////////
+//bitacora
+Route::get('/sparen/bitacora-usuarios', 'BinnacleController@index')->name('bitacora.index');

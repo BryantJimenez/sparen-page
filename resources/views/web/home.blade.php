@@ -13,15 +13,7 @@
                 <div class="row">
                     <div class="col-xl-12">
                         <div class="slider_text ">
-                            <h3> Grow Big with <br>
-                            Musicol Business </h3>
-                            <p>Nam libero tempore, cum soluta nobis est eligendi optio <br>
-                            cumque nihil impedit quo minus.</p>
-                            <div class="video_service_btn">
-                                <a href="#" class="boxed-btn3">Our Services</a>
-                                <a href="#" class="boxed-btn3-white"> <i class="fa fa-play"></i>
-                                See How it Work</a>
-                            </div>
+                            <h3>Economía Finanzas <br> e Inversión </h3>
                         </div>
                     </div>
                 </div>
@@ -32,35 +24,20 @@
                 <div class="row">
                     <div class="col-xl-12">
                         <div class="slider_text ">
-                            <h3> Grow Big with <br>
-                            Musicol Business </h3>
-                            <p>Nam libero tempore, cum soluta nobis est eligendi optio <br>
-                            cumque nihil impedit quo minus.</p>
-                            <div class="video_service_btn">
-                                <a href="#" class="boxed-btn3">Our Services</a>
-                                <a href="#" class="boxed-btn3-white"> <i class="fa fa-play"></i>
-                                See How it Work</a>
-                            </div>
+                            <h3> consultorías para empresas, <br>
+                            inversores e instituciones </h3>
 
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="single_slider  d-flex align-items-center slider_bg_2 overlay2">
+        <div class="single_slider  d-flex align-items-center slider_bg_3 overlay2">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-12">
                         <div class="slider_text ">
-                            <h3> Grow Big with <br>
-                            Musicol Business </h3>
-                            <p>Nam libero tempore, cum soluta nobis est eligendi optio <br>
-                            cumque nihil impedit quo minus.</p>
-                            <div class="video_service_btn">
-                                <a href="#" class="boxed-btn3">Our Services</a>
-                                <a href="#" class="boxed-btn3-white"> <i class="fa fa-play"></i>
-                                See How it Work</a>
-                            </div>
+                            <h3> Compromiso, profesionalismo, responsabilidad y <br> creatividad son valores que nos guían  </h3>>
                         </div>
                     </div>
                 </div>
@@ -76,7 +53,7 @@
         <div class="row">
             <div class="col-xl-12">
                 <div class="section_title text-center mb-50">
-                    <h3>Explore Our Solutions</h3>
+                    <h3>Nuestros Servicios</h3>
                 </div>
             </div>
         </div>
@@ -85,11 +62,17 @@
                 <div class="single_service service_bg_1">
                     <div class="service_hover">
                         <img src="{{ asset('/web/images/svg_icon/legal-paper.svg') }}" alt="">
-                        <h3>Invoicing</h3>
+                        <h3>Consultorías de Economía</h3>
                         <div class="hover_content">
                             <div class="hover_content_inner">
-                                <h4>Invoicing</h4>
-                                <p>These cases are perfectly simple and easy to distinguish. In a free hour power.</p>
+                                <h4>Consultorías de Economía</h4>
+                                <p>Estudios de Mercado,  
+                                    Informes Sectoriales, 
+                                    Análisis de Impacto de Políticas, 
+                                    Proyecciones de Demanda, 
+                                    Estudios de Sensibilidad,  
+                                    Beneficios y Costos
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -99,11 +82,18 @@
                 <div class="single_service service_bg_2">
                     <div class="service_hover">
                         <img src="{{ asset('/web/images/svg_icon/case.svg') }}" alt="">
-                        <h3>Business Growth</h3>
+                        <h3>Consultorías de Finanzas</h3>
                         <div class="hover_content">
                             <div class="hover_content_inner">
-                                <h4>Business Growth</h4>
-                                <p>These cases are perfectly simple and easy to distinguish. In a free hour power.</p>
+                                <h4>Consultorías de Finanzas</h4>
+                                <p>
+                                    Planeamiento Financiero Estratégico,  
+                                    Optimización de Tesorería, 
+                                    Presupuestos y Flujos de caja,   
+                                    Inversión y Riesgo,  
+                                    Diversificación, 
+                                    Control y Corrección de Desvíos
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -113,11 +103,19 @@
                 <div class="single_service service_bg_3">
                     <div class="service_hover">
                         <img src="{{ asset('/web/images/svg_icon/survey.svg') }}" alt="">
-                        <h3>Problem Solving</h3>
+                        <h3>Consultorías de Inversión</h3>
                         <div class="hover_content">
                             <div class="hover_content_inner">
-                                <h4>Problem Solving</h4>
-                                <p>These cases are perfectly simple and easy to distinguish. In a free hour power.</p>
+                                <h4>Consultorías de Inversión</h4>
+                                <p>Planes y Modelos de Negocio,  
+                                    Fusiones y Adquisiciones / M&A, 
+                                    Valuaciones de Empresas, 
+                                    Evaluación de Proyectos de Inversión, 
+                                    Estudios de Factibilidad,  
+                                    Análisis y Gestión del Riesgo, 
+                                    Fuentes de Financiamiento, 
+                                    Inversiones Patrocinadas
+                                .</p>
                             </div>
                         </div>
                     </div>
@@ -134,22 +132,21 @@
         <div class="row no-gutters align-items-center">
             <div class="col-xl-6 col-lg-6">
                 <div class="about_image">
-                    <img src="{{ asset('/web/images/about/about.png') }}" alt="">
+                    <img src="{{ asset('/web/images/logo.jpg') }}" alt="">
                 </div>
             </div>
             <div class="col-xl-6 col-lg-6">
                 <div class="about_info">
-                    <h3>The Largest Business Expert</h3>
-                    <p>These cases are perfectly simple and easy to distinguish. In a free hour, <br> when our power of choice is untrammelled and when nothing prevents <br> our being able to do what we like best.</p>
+                    <h3>Nosotros/Sobre Sparen</h3>
+                    <p>Compañía especializada en brindar consultorías en Economía, Finanzas e Inversión a Empresas, Inversores e Instituciones. <br><br>
+                        A través de un estudio personalizado y objetivo proponemos soluciones concretas a las necesidades de nuestros clientes, con el objetivo de agregar valor y simplificar la complejidad de la realidad económica.
+                    </p>
                     <ul>
-                        <li> Apartments frequently or motionless. </li>
-                        <li> Duis aute irure dolor in reprehenderit in voluptate. </li>
-                        <li> Voluptatem quia voluptas sit aspernatur.</li>
+                        <li> Compromiso. </li>
+                        <li> Profesionalismo. </li>
+                        <li> Responsabilidad y creatividad .</li>
                     </ul>
 
-                    <div class="about_btn">
-                        <a class="boxed-btn3" href="#">About Us</a>
-                    </div>
                 </div>
             </div>
         </div>
@@ -161,22 +158,16 @@
 <div class="counter_area">
     <div class="container">
         <div class="row">
-            <div class="col-xl-4 col-md-4">
+            <div class="col-xl-6 col-md-6">
                 <div class="single_counter text-center">
                     <h3> <span class="counter" >520</span> <span>+</span> </h3>
-                    <span>Total Projects</span>
+                    <span>Visitas</span>
                 </div>
             </div>
-            <div class="col-xl-4 col-md-4">
+            <div class="col-xl-6 col-md-6">
                 <div class="single_counter text-center">
                     <h3> <span class="counter" >244</span>  </h3>
-                    <span>On Going Projects</span>
-                </div>
-            </div>
-            <div class="col-xl-4 col-md-4">
-                <div class="single_counter text-center">
-                    <h3> <span class="counter" >95</span> <span>%</span> </h3>
-                    <span>Job Success</span>
+                    <span>Informes Almacenados</span>
                 </div>
             </div>
         </div>
@@ -185,7 +176,7 @@
 <!--/ counter  -->
 
 
-<!-- gallery -->
+{{-- <!-- gallery -->
 <div class="gallery_area">
     <div class="container">
         <div class="row">
@@ -273,7 +264,7 @@
         </div>
     </div>
 </div>
-<!--/ gallery -->
+<!--/ gallery --> --}}
 
 <!-- about wrap  -->
 <div class="about_wrap_area about_bg_1">
@@ -282,22 +273,22 @@
             <div class="col-xl-4 col-md-6 col-lg-4">
                 <div class="single_service_wrap text-center">
                     <img src="{{ asset('/web/images/svg_icon/controls.svg') }}" alt="">
-                    <h3>Unlimited Control</h3>
-                    <p>These cases are perfectly simple and easy to </p>
+                    <h3>Economía</h3>
+                    <p>estudio personalizado y objetivo proponemos soluciones concretas a las necesidades de nuestros clientes </p>
                 </div>
             </div>
             <div class="col-xl-4 col-md-6 col-lg-4">
                 <div class="single_service_wrap text-center">
                     <img src="{{ asset('/web/images/svg_icon/bar-chart.svg"') }}" alt="">
-                    <h3>Rapidly Growth</h3>
-                    <p>These cases are perfectly simple and easy to </p>
+                    <h3>Finanzas</h3>
+                    <p>Nuestro objetivo es agregar valor y simplificar la complejidad de la realidad económica </p>
                 </div>
             </div>
             <div class="col-xl-4 col-md-6 col-lg-4">
                 <div class="single_service_wrap text-center">
                     <img src="{{ asset('/web/images/svg_icon/puzzle.svg') }}" alt="">
-                    <h3>Problem Solving</h3>
-                    <p>These cases are perfectly simple and easy to </p>
+                    <h3>Inversión</h3>
+                    <p>Compromiso, profesionalismo, responsabilidad y creatividad son valores que nos guían para satisfacer los requerimientos de nuestros clientes con eficacia y eficiencia</p>
                 </div>
             </div>
         </div>
@@ -313,19 +304,17 @@
             <div class="col-xl-6 col-lg-6">
                 <div class="financial_active owl-carousel">
                     <div class="single_finalcial_wrap">
-                        <h3>Gives you the best Financial <br>
-                        solution for business</h3>
-                        <p>These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best.</p>
+                        <h3>Consultorías de Economía</h3>
+
+                        <p>Con el objetivo de dotar a los clientes de información clara y confiable para la toma de decisiones, realizamos estudios micro y macroeconómicos orientados a simplificar el entorno y determinar las variables relevantes</p>
                     </div>
                     <div class="single_finalcial_wrap">
-                        <h3>Gives you the best Financial <br>
-                        solution for business</h3>
-                        <p>These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best.</p>
+                        <h3>Consultorías de Finanzas</h3>
+                        <p>Acompañamos y capacitamos a nuestros clientes en las mejores prácticas del manejo de fondos. Con herramientas financieras personalizadas y acordes a cada situación, buscamos que nuestros clientes manejen sus fondos con transparencia, eficiencia, eficacia y que cuenten con información relevante sobre su gestión para reaccionar a tiempo a cambios en sus disponibilidades o riesgos</p>
                     </div>
                     <div class="single_finalcial_wrap">
-                        <h3>Gives you the best Financial <br>
-                        solution for business</h3>
-                        <p>These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best.</p>
+                        <h3>Consultorías de Inversión</h3>
+                        <p>Según la necesidad de nuestros clientes, desarrollamos actividades integrales para todas las etapas de una inversión. Suministramos técnicas adecuadas para cada momento, desde la gestación hasta la puesta en marcha, y ofrecemos herramientas de evaluación de rendimientos, de minimización de riesgos y de fuentes de financiamiento, entre otras</p>
                     </div>
                 </div>
             </div>
@@ -339,49 +328,15 @@
 </div>
 <!--/ financial_solution -->
 
-<div class="testmonial_area">
-    <div class="container">
-        <div class="row">
-            <div class="col-xl-10 offset-xl-1">
-                <div class="testmonial_active2 owl-carousel">
-                    <div  class="single_slider text-center" data-dot='<img src="{{ asset('/web/images/testmonial/1.png"') }}" alt="#" ' >
-                        <p>These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able.</p>
-                        <div class="author_name text-center">
-                            <h4>Robert Jonson</h4>
-                            <span> Business Owner</span>
-                        </div>
-                    </div>
-                    <div  class="single_slider text-center" data-dot='<img src="{{ asset('/web/images/testmonial/1.png') }}" alt="#" ' >
-                        <p>These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able.</p>
-                        <div class="author_name text-center">
-                            <h4>Robert Jonson</h4>
-                            <span> Business Owner</span>
-                        </div>
-                    </div>
-                    <div  class="single_slider text-center" data-dot='<img src="{{ asset('/web/images/testmonial/1.png') }}" alt="#" ' >
-                        <p>These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able.</p>
-                        <div class="author_name text-center">
-                            <h4>Robert Jonson</h4>
-                            <span> Business Owner</span>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-</div>
-
 <!-- project  -->
 <div class="project_area">
     <div class="container">
         <div class="row">
             <div class="col-xl-12">
                 <div class="project_info text-center">
-                    <h3>Do you Have any Project?</h3>
-                    <p>Nam libero tempore, cum soluta nobis est eligendi optio <br>
-                    cumque nihil impedit quo minus.</p>
-                    <a href="#" class="boxed-btn3-white">Contact Us</a>
+                    <h3>¿Tienes algún proyecto?</h3>
+                    <p>Estaremos encantados en ayudarte en todo lo que necesites</p>
+                    <a href="#" class="boxed-btn3-white">Contáctanos</a>
                 </div>
             </div>
         </div>
