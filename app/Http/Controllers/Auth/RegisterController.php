@@ -1,8 +1,9 @@
 <?php
-
+ 
 namespace App\Http\Controllers\Auth;
 
 use App\User;
+use Illuminate\Support\Str;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -28,7 +29,10 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected function redirectTo()
+    {
+        return url()->previous();
+    }
 
     /**
      * Create a new controller instance.
@@ -50,6 +54,10 @@ class RegisterController extends Controller
     {
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
+            'lastname' => ['required', 'string', 'max:255'],
+            'phone' => ['required', 'string', 'max:255'],
+            'dni' => ['required', 'string', 'max:255'],
+            'address' =>['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
@@ -63,10 +71,43 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+       $count=User::where('name', $data['name'])->where('lastname', $data['lastname'])->count();
+        $slug=Str::slug($data['name']." ".$data['lastname'], '-');
+        if ($count>0) {
+            $slug=$slug."-".$count;
+        }
+
+        // Validación para que no se repita el slug
+        $num=0;
+        while (true) {
+            $count2=User::where('slug', $slug)->count();
+            if ($count2>0) {
+                $slug=$slug."-".$num;
+                $num++;
+            } else {
+                break;
+            }
+        }
+
+         // Mover imagen a carpeta users y extraer nombre
+        if ($request->hasFile('photo')) {
+            $file = $request->file('photo');
+            $photo = time()."_".$file->getClientOriginalName();
+            $file->move(public_path().'/web/images/users/', $photo);
+            $data['photo'] = $photo;
+        }
+
         return User::create([
             'name' => $data['name'],
+            'lastname' => $data['lastname'],
+            'slug' => $slug,
+            'phone' => $data['phone'],
             'email' => $data['email'],
+            'dni' => $data['dni'],
+            'address' => $data['address'],
+            'photo' => $data['photo'],
             'password' => Hash::make($data['password']),
+
         ]);
     }
 }

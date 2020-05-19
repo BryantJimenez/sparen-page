@@ -15,12 +15,12 @@ class CreateAboutsTable extends Migration
     {
         Schema::create('abouts', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('banner1_spanish');
-            $table->string('banner1_english');
-            $table->string('banner2_spanish');
-            $table->string('banner2_english');
-            $table->string('banner3_spanish');
-            $table->string('banner3_english');
+            $table->string('banner1_spanish')->nullable();
+            $table->string('banner1_english')->nullable();
+            $table->string('banner2_spanish')->nullable();
+            $table->string('banner2_english')->nullable();
+            $table->string('banner3_spanish')->nullable();
+            $table->string('banner3_english')->nullable();
             $table->timestamps();
         });
     }

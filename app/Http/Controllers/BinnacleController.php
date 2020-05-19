@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Binnacle;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class BinnacleController extends Controller
 {

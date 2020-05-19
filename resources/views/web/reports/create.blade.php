@@ -29,22 +29,22 @@
 				<div class="card">
 					<div class="card-body">
 						<h6 class="card-subtitle">Campos obligatorios (<b class="text-danger">*</b>)</h6>
-						<form  method="POST" class="form" enctype="multipart/form-data">
+						<form  method="POST" action="{{ route('informe.store') }}" class="form" enctype="multipart/form-data">
 							@csrf
 							<div class="row">
 								<div class="form-group col-lg-6 col-md-6 col-12">
 									<label class="col-form-label">Título<b class="text-danger">*</b></label>
-									<input class="form-control" type="text" name="title" required placeholder="Introduzca un nombre" value="{{ old('title') }}" id="name" minlength="2" maxlength="191">
+									<input class="form-control" type="text" name="title_spanish" required placeholder="Introduzca un nombre" value="{{ old('title') }}" id="name" minlength="2" maxlength="191">
 								</div>
 
 								<div class="form-group col-lg-6 col-md-6 col-12">
 									<label class="col-form-label">Descripción<b class="text-danger">*</b></label>
-									<input class="form-control" type="text"  name="description" required placeholder="Introduzca su dirección exacta" value="{{ old('description') }}" minlength="5" maxlength="191">
+									<input class="form-control" type="text"  name="description_spanish" required placeholder="Introduzca su dirección exacta" value="{{ old('description') }}" minlength="5" maxlength="191">
 								</div>
 
 								<div class="form-group col-12">
 									<label class="col-form-label">Archivo<b class="text-danger">*</b></label>
-									<input type="file" name="pdf" required accept="image/*" id="input-file-now" class="dropify" data-height="125" data-max-file-size="20M" data-allowed-file-extensions="pdf" />
+									<input type="file" name="pdf_spanish" required accept="pdf/*" id="input-file-now" class="dropify" data-allowed-file-extensions="pdf" />
 								</div> 
 
 								<div class="form-group col-12">

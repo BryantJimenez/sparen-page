@@ -31,6 +31,7 @@ Route::get('/sparen/servicios', 'ServiceController@index')->name('servicio.index
 //Informes
 Route::get('/sparen/informes', 'ReportController@index')->name('informe.index');
 Route::get('/sparen/informes/registrar', 'ReportController@create')->name('informe.create');
+Route::post('/sparen/informes', 'ReportController@store')->name('informe.store');
 
 //Contacto
 Route::get('/sparen/contacto', 'ContactController@index')->name('contacto.index');
@@ -41,4 +42,7 @@ Route::get('/sparen/bitacora-usuarios', 'BinnacleController@index')->name('bitac
 //Usuario
 Route::get('/sparen/usuario', 'UserController@index')->name('usuario.index');
 Route::get('/sparen/usuario/registrar', 'UserController@create')->name('usuario.create');
-Route::post('/sparen//usuarios', 'UserController@store')->name('usuario.store');
+Route::post('/sparen/usuarios', 'UserController@store')->name('usuario.store');
+Auth::routes();
+
+

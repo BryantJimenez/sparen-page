@@ -15,16 +15,16 @@ class CreateBannersTable extends Migration
     {
         Schema::create('banners', function (Blueprint $table) {
            $table->bigIncrements('id');
-           $table->string('paragraph1_spanish');
-           $table->string('paragraph1_english');
-           $table->string('paragraph2_spanish');
-           $table->string('paragraph2_english');
-           $table->string('list1_spanish');
-           $table->string('list1_english');
-           $table->string('list2_spanish');
-           $table->string('list2_english');
-           $table->string('list3_spanish');
-           $table->string('list3_english');
+           $table->string('paragraph1_spanish')->nullable();
+           $table->string('paragraph1_english')->nullable();
+           $table->string('paragraph2_spanish')->nullable();
+           $table->string('paragraph2_english')->nullable();
+           $table->string('list1_spanish')->nullable();
+           $table->string('list1_english')->nullable();
+           $table->string('list2_spanish')->nullable();
+           $table->string('list2_english')->nullable();
+           $table->string('list3_spanish')->nullable();
+           $table->string('list3_english')->nullable();
            $table->timestamps();
        });
     }

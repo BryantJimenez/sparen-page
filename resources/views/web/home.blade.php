@@ -269,7 +269,7 @@
                 <div class="project_info text-center">
                     <h3>¿Tienes algún proyecto?</h3>
                     <p>Estaremos encantados en ayudarte en todo lo que necesites</p>
-                    <a href="#" class="boxed-btn3-white">Contáctanos</a>
+                    <a href="{{ route('contacto.index') }}" class="boxed-btn3-white">Contáctanos</a>
                 </div>
             </div>
         </div>

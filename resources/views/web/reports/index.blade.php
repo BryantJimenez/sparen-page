@@ -2,9 +2,7 @@
 
 @section('title', 'Informes')
 
-@section('links')
-<link rel="stylesheet" href="{{ asset('/web/vendors/lobibox/Lobibox.min.css') }}">
-@endsection
+
 
 @section('content')
 
@@ -155,11 +153,5 @@
     </div>
 </section>
 <!--================Blog Area =================-->
-
-@endsection
-
-@section('script')
-
-<script src="{{ asset('/web/vendors/lobibox/Lobibox.js') }}"></script>
 
 @endsection
