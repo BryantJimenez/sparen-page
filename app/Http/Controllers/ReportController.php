@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Report;
+use App\User;
 use Illuminate\Http\Request;
 
 class ReportController extends Controller
@@ -24,7 +25,7 @@ class ReportController extends Controller
      */
     public function create()
     {
-        //
+       return view('web.report');
     }
 
     /**
@@ -35,7 +36,7 @@ class ReportController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // 
     }
 
     /**

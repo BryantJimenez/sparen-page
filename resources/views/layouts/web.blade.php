@@ -22,6 +22,7 @@
 	<link rel="stylesheet" href="{{ asset('/web/css/slick.css') }}">
 	<link rel="stylesheet" href="{{ asset('/web/css/slicknav.css') }}">
 	<link rel="stylesheet" href="{{ asset('/web/css/style.css') }}">
+	<link rel="stylesheet" href="{{ asset('/web/vendors/datatables/jquery.dataTables.min.css') }}">
 
 
 	@yield('links')
@@ -60,6 +61,7 @@
 	<script src="{{ asset('/web/js/jquery.form.js') }}"></script>
 	<script src="{{ asset('/web/js/jquery.validate.min.js') }}"></script>
 	<script src="{{ asset('/web/js/mail-script.js') }}"></script>
+	<script src="{{ asset('/web/vendors/datatables/jquery.dataTables.min.js') }}"></script>
 
 
 	@yield('script')

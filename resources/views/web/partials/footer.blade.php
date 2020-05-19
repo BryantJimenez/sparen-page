@@ -6,7 +6,7 @@
                     <div class="footer_widget">
                         <div class="footer_logo">
                             <a href="#">
-                                <img src="i{{ asset('/web/images/footer_logo.png') }}" alt="">
+                                <img src="{{ asset('/web/images/logo.png') }}" alt="">
                             </a>
                         </div>
                         <p>
@@ -48,6 +48,7 @@
                             <li>Rondeau 69 5°Piso (CP 5000) Nueva-Cordoba - CORDOBA - ARGENTINA</li>
                             <li>+54 367 467 8934</li>
                             <li>info@sparen.com.ar</li>
+                            <li><a class="popup-with-form" href="#test-form">INICIAR SESIÓN</a></li>
                         </ul>
                     </div>
                 </div>

@@ -2930,6 +2930,14 @@ h3 {
   background-image: url(../images/banner/about_bg.png);
 }
 
+.breadcam_bg_5 {
+  background-image: url(../images/banner/banner1.png);
+}
+
+.breadcam_bg_6 {
+  background-image: url(../images/banner/bradcam_1.png);
+}
+
 /* line 13, ../../Arafath/CL/CL October/213. Business/HTML/scss/_bradcam.scss */
 .bradcam_area {
   background-size: cover;

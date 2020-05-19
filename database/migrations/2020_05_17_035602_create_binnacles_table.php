@@ -14,8 +14,13 @@ class CreateBinnaclesTable extends Migration
     public function up()
     {
         Schema::create('binnacles', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
+            $table->bigInteger('user_id')->unsigned();
+            $table->string('activity');
             $table->timestamps();
+
+            #Relations
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
         });
     }
 

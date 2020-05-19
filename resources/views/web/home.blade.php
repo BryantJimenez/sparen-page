@@ -5,6 +5,8 @@
 
 @section('content')
 
+
+
 <!-- slider_area_start -->
 <div class="slider_area">
     <div class="slider_active owl-carousel">
@@ -14,6 +16,9 @@
                     <div class="col-xl-12">
                         <div class="slider_text ">
                             <h3>Economía Finanzas <br> e Inversión </h3>
+                        </div>
+                        <div class="video_service_btn">
+                            <a href="#" class="boxed-btn3">Editar</a>
                         </div>
                     </div>
                 </div>
@@ -26,7 +31,9 @@
                         <div class="slider_text ">
                             <h3> consultorías para empresas, <br>
                             inversores e instituciones </h3>
-
+                        </div>
+                        <div class="video_service_btn">
+                            <a href="#" class="boxed-btn3">Editar</a>
                         </div>
                     </div>
                 </div>
@@ -37,7 +44,10 @@
                 <div class="row">
                     <div class="col-xl-12">
                         <div class="slider_text ">
-                            <h3> Compromiso, profesionalismo, responsabilidad y <br> creatividad son valores que nos guían  </h3>>
+                            <h3> Compromiso, profesionalismo, responsabilidad y <br> creatividad son valores que nos guían  </h3>
+                        </div>
+                        <div class="video_service_btn">
+                            <a href="#" class="boxed-btn3">Editar</a>
                         </div>
                     </div>
                 </div>
@@ -73,6 +83,7 @@
                                     Estudios de Sensibilidad,  
                                     Beneficios y Costos
                                 </p>
+                                <i title="editar" class="ti-pencil"></i>
                             </div>
                         </div>
                     </div>
@@ -94,6 +105,7 @@
                                     Diversificación, 
                                     Control y Corrección de Desvíos
                                 </p>
+                                <i title="editar" class="ti-pencil"></i>
                             </div>
                         </div>
                     </div>
@@ -116,6 +128,7 @@
                                     Fuentes de Financiamiento, 
                                     Inversiones Patrocinadas
                                 .</p>
+                                <i title="editar" class="ti-pencil"></i>
                             </div>
                         </div>
                     </div>
@@ -146,6 +159,10 @@
                         <li> Profesionalismo. </li>
                         <li> Responsabilidad y creatividad .</li>
                     </ul>
+                    <div class="video_service_btn">
+                        <a href="#" class="boxed-btn3">Editar</a>
+                    </div>
+                    <br>
 
                 </div>
             </div>
@@ -176,96 +193,6 @@
 <!--/ counter  -->
 
 
-{{-- <!-- gallery -->
-<div class="gallery_area">
-    <div class="container">
-        <div class="row">
-            <div class="col-xl-12">
-                <div class="section_title text-center mb-50">
-                    <h3>Our Recent Works</h3>
-                    <p>These cases are perfectly simple and easy to distinguish. In a free <br> hour, when our power of choice is untrammelled.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="row grid">
-            <div class="col-xl-4 col-lg-6 grid-item cat1 col-md-6">
-                <div class="single-gallery mb-20">
-                    <div class="portfolio-img">
-                        <img src="{{ asset('/web/images/gallery/1.png') }}" alt="">
-                    </div>
-                    <div class="gallery_hover">
-                        <a  href="portfolio_details.html" class="hover_inner">
-                            <h3>Product Branding</h3>
-                            <span>Branding</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-4 col-lg-6 grid-item cat3 cat4 col-md-6">
-                <div class="single-gallery mb-20">
-                    <div class="portfolio-img">
-                        <img src="{{ asset('/web/images/gallery/2.png') }}" alt="">
-                    </div>
-                    <div class="gallery_hover">
-                        <a  href="portfolio_details.html" class="hover_inner">
-                            <h3>Product Branding</h3>
-                            <span>Branding</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-4 col-lg-6 grid-item cat4 col-md-6">
-                <div class="single-gallery mb-20">
-                    <div class="portfolio-img">
-                        <img src="{{ asset('/web/images/gallery/3.png') }}" alt="">
-                    </div>
-                    <div class="gallery_hover">
-                        <a  href="portfolio_details.html" class="hover_inner">
-                            <h3>Product Branding</h3>
-                            <span>Branding</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-8 col-lg-6 grid-item cat2 col-md-6">
-                <div class="single-gallery mb-20">
-                    <div class="portfolio-img">
-                        <img src="{{ asset('/web/images/gallery/4.png') }}" alt="">
-                    </div>
-                    <div class="gallery_hover">
-                        <a  href="portfolio_details.html" class="hover_inner">
-                            <h3>Product Branding</h3>
-                            <span>Branding</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-4 col-lg-6 grid-item cat2 col-md-6">
-                <div class="single-gallery mb-20">
-                    <div class="portfolio-img">
-                        <img src="{{ asset('/web/images/gallery/5.png') }}" alt="">
-                    </div>
-                    <div class="gallery_hover">
-                        <a  href="portfolio_details.html" class="hover_inner">
-                            <h3>Product Branding</h3>
-                            <span>Branding</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xl-12">
-                <div class="More_Works_btn text-center">
-                    <a class="boxed-btn3-green-2" href="#">More Works</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!--/ gallery --> --}}
-
 <!-- about wrap  -->
 <div class="about_wrap_area about_bg_1">
     <div class="container">
@@ -275,6 +202,7 @@
                     <img src="{{ asset('/web/images/svg_icon/controls.svg') }}" alt="">
                     <h3>Economía</h3>
                     <p>estudio personalizado y objetivo proponemos soluciones concretas a las necesidades de nuestros clientes </p>
+                    <i title="editar" class="ti-pencil"></i>
                 </div>
             </div>
             <div class="col-xl-4 col-md-6 col-lg-4">
@@ -282,6 +210,7 @@
                     <img src="{{ asset('/web/images/svg_icon/bar-chart.svg"') }}" alt="">
                     <h3>Finanzas</h3>
                     <p>Nuestro objetivo es agregar valor y simplificar la complejidad de la realidad económica </p>
+                    <i title="editar" class="ti-pencil"></i>
                 </div>
             </div>
             <div class="col-xl-4 col-md-6 col-lg-4">
@@ -289,6 +218,7 @@
                     <img src="{{ asset('/web/images/svg_icon/puzzle.svg') }}" alt="">
                     <h3>Inversión</h3>
                     <p>Compromiso, profesionalismo, responsabilidad y creatividad son valores que nos guían para satisfacer los requerimientos de nuestros clientes con eficacia y eficiencia</p>
+                    <i title="editar" class="ti-pencil"></i>
                 </div>
             </div>
         </div>
@@ -323,6 +253,9 @@
                     <img src="{{ asset('/web/images/about/finance.png') }}" alt="">
                 </div>
             </div>
+            <div class="video_service_btn">
+                <a href="#" class="boxed-btn3">Editar</a>
+            </div>
         </div>
     </div>
 </div>
@@ -343,6 +276,29 @@
     </div>
 </div>
 <!--/ project  -->
+
+{{-- Inicio del Modal --}}
+{{-- <div class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+      </button>
+  </div>
+  <div class="modal-body">
+    <p>Modal body text goes here.</p>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-primary">Save changes</button>
+    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+</div>
+</div>
+</div>
+</div> --}}
+
+{{-- Fin del Modal --}}
 
 @endsection
 
