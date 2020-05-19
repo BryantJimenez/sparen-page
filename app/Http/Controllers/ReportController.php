@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Report;
 use App\User;
+use App\Binnacle;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;

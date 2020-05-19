@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Banner;
+use App\User;
+use App\Binnacle;
 use Illuminate\Http\Request;
 
 class BannerController extends Controller

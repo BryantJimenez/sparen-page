@@ -37,7 +37,7 @@ Route::post('/sparen/informes', 'ReportController@store')->name('informe.store')
 Route::get('/sparen/contacto', 'ContactController@index')->name('contacto.index');
 
 //bitacora
-Route::get('/sparen/bitacora-usuarios', 'BinnacleController@index')->name('bitacora.index');
+Route::get('/sparen/bitacora-usuarios', 'WebController@binnacle')->name('bitacora.index');
 
 //Usuario
 Route::get('/sparen/usuario', 'UserController@index')->name('usuario.index');

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\About;
+use App\User;
+use App\Binnacle;
 use Illuminate\Http\Request;
 
 class AboutController extends Controller

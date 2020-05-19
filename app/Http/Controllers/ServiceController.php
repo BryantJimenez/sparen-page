@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Services;
+use App\User;
+use App\Binnacle;
 use Illuminate\Http\Request;
 
 class ServiceController extends Controller

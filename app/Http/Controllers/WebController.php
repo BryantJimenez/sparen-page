@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-
+use App\User;
+use App\Binnacle;
 use Illuminate\Http\Request;
 
 class WebController extends Controller
@@ -15,6 +16,13 @@ class WebController extends Controller
     public function index()
     {
         return view('web.home');
+    }
+
+    public function binnacle()
+    {
+        $binnacle = Binnacle::all();
+        $num = 1;
+        return view('web.binnacle', compact('binnacle', 'num'));
     }
 
     /**

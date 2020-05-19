@@ -32,24 +32,15 @@
 						</tr>
 					</thead>
 					<tbody>
+						@foreach($binnacle as $b)
 						<tr>
-							<th scope="row">1</th>
-							<td>Mark</td>
-							<td>Otto</td>
-							<td>@mdo</td>
+							<th scope="row">{{ $num++ }}</th>
+							<td>{{ $b->user->name." ".$b->user->lastname }}</td>
+							<td>{{ $b->activity }}</td>
+							<td>{{ $b->created_at }}</td>
 						</tr>
-						<tr>
-							<th scope="row">2</th>
-							<td>Jacob</td>
-							<td>Thornton</td>
-							<td>@fat</td>
-						</tr>
-						<tr>
-							<th scope="row">3</th>
-							<td>Larry</td>
-							<td>the Bird</td>
-							<td>@twitter</td>
-						</tr>
+						@endforeach
+
 					</tbody>
 				</table>
 			</div>
