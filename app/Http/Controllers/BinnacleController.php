@@ -15,7 +15,10 @@ class BinnacleController extends Controller
      */
     public function index()
     {
-        return view('web.binnacle');
+        $binnacle = Binnacle::all();
+        $num = 1;
+
+        return view('web.binnacle', compact('binnacle', 'num'));
     }
 
     /**

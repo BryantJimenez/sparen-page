@@ -44,7 +44,7 @@ Route::post('/sparen/contacto', 'ContactController@store')->name('contacto.store
 
 
 //bitacora
-Route::get('/sparen/bitacora-usuarios', 'WebController@binnacle')->name('bitacora.index');
+Route::get('/sparen/bitacora-usuarios', 'BinnacleController@index')->name('bitacora.index');
 
 //Usuario
 Route::get('/sparen/usuario', 'UserController@index')->name('usuario.index');

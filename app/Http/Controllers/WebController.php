@@ -20,20 +20,7 @@ class WebController extends Controller
         return view('web.home');
     }
 
-    public function binnacle()
-    {
-        $binnacle = Binnacle::all();
-        $num = 1;
-
-        $about=About::where('id', $num)->firstOrFail();
-        $visit = $about->visits;
-        $visits = $visit++;
-        $data = array('visits' => $visits);
-        $about->fill($data)->save();
-        $v = $about->visits;
-
-        return view('web.binnacle', compact('binnacle', 'num'));
-    }
+  
 
     /**
      * Show the form for creating a new resource.
