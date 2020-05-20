@@ -128,7 +128,6 @@
                                     Fuentes de Financiamiento, 
                                     Inversiones Patrocinadas
                                 .</p>
-                                <i t</i>
                             </div>
                         </div>
                     </div>
@@ -210,7 +209,7 @@
             </div>
             <div class="col-xl-4 col-md-6 col-lg-4">
                 <div class="single_service_wrap text-center">
-                    <img src="{{ asset('/web/images/svg_icon/bar-chart.svg"') }}" alt="">
+                    <img src="{{ asset('/web/images/svg_icon/bar-chart.svg') }}" alt="">
                     <h3>Finanzas</h3>
                     <p>Nuestro objetivo es agregar valor y simplificar la complejidad de la realidad económica </p>
                     
