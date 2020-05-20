@@ -11,6 +11,7 @@ class Report extends Model
 	protected $fillable = [
 		'title_spanish',
 		'title_english',
+		'slug',
 		'pdf_spanish',
 		'pdf_english',
 		'description_spanish',

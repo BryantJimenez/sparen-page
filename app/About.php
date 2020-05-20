@@ -18,6 +18,9 @@ class About extends Model
 		'list2_spanish',
 		'list2_english',
 		'list3_spanish',
-		'list3_english'
+		'list3_english',
+		'content3_spanish',
+		'content3_english',
+		'visits'
 	];
 }

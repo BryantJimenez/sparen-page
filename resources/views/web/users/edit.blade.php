@@ -1,6 +1,6 @@
 @extends('layouts.web')
 
-@section('title', 'Editar Consultarías')
+@section('title', 'Editar Usuarios')
 
 @section('links')
 <link rel="stylesheet" href="{{ asset('/web/vendors/dropify/css/dropify.min.css') }}">
@@ -14,7 +14,7 @@
 		<div class="row">
 			<div class="col-xl-12">
 				<div class="bradcam_text text-center">
-					<h3>Editar "Consultarías"</h3>
+					<h3>Editar "Usuarios"</h3>
 				</div>
 			</div>
 		</div>

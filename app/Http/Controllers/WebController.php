@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\User;
+use App\About;
 use App\Binnacle;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 class WebController extends Controller
@@ -22,6 +24,14 @@ class WebController extends Controller
     {
         $binnacle = Binnacle::all();
         $num = 1;
+
+        $about=About::where('id', $num)->firstOrFail();
+        $visit = $about->visits;
+        $visits = $visit++;
+        $data = array('visits' => $visits);
+        $about->fill($data)->save();
+        $v = $about->visits;
+
         return view('web.binnacle', compact('binnacle', 'num'));
     }
 
@@ -90,4 +100,5 @@ class WebController extends Controller
     {
         //
     }
+
 }

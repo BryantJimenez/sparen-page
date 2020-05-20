@@ -6,6 +6,7 @@ use App\User;
 use App\Binnacle;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
@@ -40,6 +41,9 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
+
+        //Registro de Usuarios
+
         $count=User::where('name', request('name'))->where('lastname', request('lastname'))->count();
         $slug=Str::slug(request('name')." ".request('lastname'), '-');
         if ($count>0) {
@@ -68,7 +72,20 @@ class UserController extends Controller
         }
         $user=User::create($data);
 
-        if ($user) {
+        //Fin Registro de Usuarios
+
+
+        //Bitácora
+
+        $activity = 'Ha registrado a un usuario';
+        $us = Auth::user()->id;
+        $data = array('user_id' => $us, 'activity' => $activity );
+        $binnacle = Binnacle::create($data);
+
+        //Fin Bitácora
+
+
+        if ($user && $binnacle) {
             return redirect()->route('usuario.index')->with(['type' => 'success', 'title' => 'Registro exitoso', 'msg' => 'El usuario ha sido registrado exitosamente.']);
         } else {
             return redirect()->route('usuario.index')->with(['type' => 'error', 'title' => 'Registro fallido', 'msg' => 'Ha ocurrido un error durante el proceso, intentelo nuevamente.']);
@@ -94,7 +111,7 @@ class UserController extends Controller
      */
     public function edit(user $web)
     {
-        //
+        return view('web.users.edit');
     }
 
     /**
@@ -115,8 +132,21 @@ class UserController extends Controller
      * @param  \App\Web  $web
      * @return \Illuminate\Http\Response
      */
-    public function destroy(user $web)
+    public function destroy($slug)
     {
         //
     }
+
+    public function activate($slug){
+
+    }
+
+     public function deactivate($slug){
+
+    }
+
+     public function profile($slug){
+
+    }
+
 }

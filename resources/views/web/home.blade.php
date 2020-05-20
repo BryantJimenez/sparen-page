@@ -18,7 +18,7 @@
                             <h3>Economía Finanzas <br> e Inversión </h3>
                         </div>
                         <div class="video_service_btn">
-                            <a href="#" class="boxed-btn3">Editar</a>
+                            <a href="{{ route('banner.edit') }}" class="boxed-btn3">Editar</a>
                         </div>
                     </div>
                 </div>
@@ -33,7 +33,7 @@
                             inversores e instituciones </h3>
                         </div>
                         <div class="video_service_btn">
-                            <a href="#" class="boxed-btn3">Editar</a>
+                            <a href="{{ route('banner.edit') }}" class="boxed-btn3">Editar</a>
                         </div>
                     </div>
                 </div>
@@ -47,7 +47,7 @@
                             <h3> Compromiso, profesionalismo, responsabilidad y <br> creatividad son valores que nos guían  </h3>
                         </div>
                         <div class="video_service_btn">
-                            <a href="#" class="boxed-btn3">Editar</a>
+                            <a href="{{ route('banner.edit') }}" class="boxed-btn3">Editar</a>
                         </div>
                     </div>
                 </div>
@@ -63,7 +63,7 @@
         <div class="row">
             <div class="col-xl-12">
                 <div class="section_title text-center mb-50">
-                    <h3>Nuestros Servicios</h3>
+                    <h3> <a  name="servicios" id="servicios" >Nuestros Servicios</a></h3>
                 </div>
             </div>
         </div>
@@ -83,7 +83,7 @@
                                     Estudios de Sensibilidad,  
                                     Beneficios y Costos
                                 </p>
-                                <i title="editar" class="ti-pencil"></i>
+                                
                             </div>
                         </div>
                     </div>
@@ -105,7 +105,7 @@
                                     Diversificación, 
                                     Control y Corrección de Desvíos
                                 </p>
-                                <i title="editar" class="ti-pencil"></i>
+                                
                             </div>
                         </div>
                     </div>
@@ -128,12 +128,15 @@
                                     Fuentes de Financiamiento, 
                                     Inversiones Patrocinadas
                                 .</p>
-                                <i title="editar" class="ti-pencil"></i>
+                                <i t</i>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="video_service_btn">
+            <a href="{{ route('servicio.edit') }}" class="boxed-btn3">Editar</a>
         </div>
     </div>
 </div>
@@ -145,29 +148,29 @@
         <div class="row no-gutters align-items-center">
             <div class="col-xl-6 col-lg-6">
                 <div class="about_image">
-                    <img src="{{ asset('/web/images/logo.jpg') }}" alt="">
+                   <a  name="sobre" id="sobre"> <img src="{{ asset('/web/images/logo.jpg') }}" alt=""></a>
+               </div>
+           </div>
+           <div class="col-xl-6 col-lg-6">
+            <div class="about_info">
+                <h3>Nosotros/Sobre Sparen</h3>
+                <p>Compañía especializada en brindar consultorías en Economía, Finanzas e Inversión a Empresas, Inversores e Instituciones. <br><br>
+                    A través de un estudio personalizado y objetivo proponemos soluciones concretas a las necesidades de nuestros clientes, con el objetivo de agregar valor y simplificar la complejidad de la realidad económica.
+                </p>
+                <ul>
+                    <li> Compromiso. </li>
+                    <li> Profesionalismo. </li>
+                    <li> Responsabilidad y creatividad .</li>
+                </ul>
+                <div class="video_service_btn">
+                    <a href="{{ route('sobre.edit') }}" class="boxed-btn3">Editar</a>
                 </div>
-            </div>
-            <div class="col-xl-6 col-lg-6">
-                <div class="about_info">
-                    <h3>Nosotros/Sobre Sparen</h3>
-                    <p>Compañía especializada en brindar consultorías en Economía, Finanzas e Inversión a Empresas, Inversores e Instituciones. <br><br>
-                        A través de un estudio personalizado y objetivo proponemos soluciones concretas a las necesidades de nuestros clientes, con el objetivo de agregar valor y simplificar la complejidad de la realidad económica.
-                    </p>
-                    <ul>
-                        <li> Compromiso. </li>
-                        <li> Profesionalismo. </li>
-                        <li> Responsabilidad y creatividad .</li>
-                    </ul>
-                    <div class="video_service_btn">
-                        <a href="#" class="boxed-btn3">Editar</a>
-                    </div>
-                    <br>
+                <br>
 
-                </div>
             </div>
         </div>
     </div>
+</div>
 </div>
 <!--/ about  -->
 
@@ -202,7 +205,7 @@
                     <img src="{{ asset('/web/images/svg_icon/controls.svg') }}" alt="">
                     <h3>Economía</h3>
                     <p>estudio personalizado y objetivo proponemos soluciones concretas a las necesidades de nuestros clientes </p>
-                    <i title="editar" class="ti-pencil"></i>
+                    
                 </div>
             </div>
             <div class="col-xl-4 col-md-6 col-lg-4">
@@ -210,7 +213,7 @@
                     <img src="{{ asset('/web/images/svg_icon/bar-chart.svg"') }}" alt="">
                     <h3>Finanzas</h3>
                     <p>Nuestro objetivo es agregar valor y simplificar la complejidad de la realidad económica </p>
-                    <i title="editar" class="ti-pencil"></i>
+                    
                 </div>
             </div>
             <div class="col-xl-4 col-md-6 col-lg-4">
@@ -218,9 +221,12 @@
                     <img src="{{ asset('/web/images/svg_icon/puzzle.svg') }}" alt="">
                     <h3>Inversión</h3>
                     <p>Compromiso, profesionalismo, responsabilidad y creatividad son valores que nos guían para satisfacer los requerimientos de nuestros clientes con eficacia y eficiencia</p>
-                    <i title="editar" class="ti-pencil"></i>
+                    
                 </div>
             </div>
+        </div>
+        <div class="video_service_btn">
+            <a href="{{ route('objetivo.edit') }}" class="boxed-btn3">Editar</a>
         </div>
     </div>
 </div>
@@ -254,7 +260,7 @@
                 </div>
             </div>
             <div class="video_service_btn">
-                <a href="#" class="boxed-btn3">Editar</a>
+                <a href="{{ route('consultoria.edit') }}" class="boxed-btn3">Editar</a>
             </div>
         </div>
     </div>

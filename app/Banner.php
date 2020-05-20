@@ -14,6 +14,9 @@ class Banner extends Model
 		'banner2_spanish',
 		'banner2_english',
 		'banner3_spanish',
-		'banner3_english'
+		'banner3_english',
+		'picture1',
+		'picture2',
+		'picture3'
 	];
 }
