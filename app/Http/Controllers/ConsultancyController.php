@@ -2,13 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\About;
-use App\User;
-use App\Binnacle;
-use Illuminate\Support\Facades\Auth;
+use App\Consultancy;
 use Illuminate\Http\Request;
 
-class AboutController extends Controller
+class ConsultancyController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -44,10 +41,10 @@ class AboutController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\About  $about
+     * @param  \App\Consultancy  $consultancy
      * @return \Illuminate\Http\Response
      */
-    public function show(About $about)
+    public function show(Consultancy $consultancy)
     {
         //
     }
@@ -55,22 +52,22 @@ class AboutController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\About  $about
+     * @param  \App\Consultancy  $consultancy
      * @return \Illuminate\Http\Response
      */
-    public function edit(About $about)
+    public function edit(Consultancy $consultancy)
     {
-        return view('web.about.edit');
+       return view('web.consultancy.edit');
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\About  $about
+     * @param  \App\Consultancy  $consultancy
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, About $about)
+    public function update(Request $request, Consultancy $consultancy)
     {
         //
     }
@@ -78,10 +75,10 @@ class AboutController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\About  $about
+     * @param  \App\Consultancy  $consultancy
      * @return \Illuminate\Http\Response
      */
-    public function destroy(About $about)
+    public function destroy(Consultancy $consultancy)
     {
         //
     }

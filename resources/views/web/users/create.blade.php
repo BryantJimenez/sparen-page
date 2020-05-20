@@ -28,6 +28,7 @@
 			<div class="col-12">
 				<div class="card">
 					<div class="card-body">
+						<h3 class="text-heading">Registro de Usuarios</h3>
 
 						<h6 class="card-subtitle">Campos obligatorios (<b class="text-danger">*</b>)</h6>
 						<form  method="POST" class="form" action="{{ route('usuario.store') }}" enctype="multipart/form-data">
@@ -90,10 +91,10 @@
 						</form>
 					</div>
 				</div>
-				</div
 			</div>
 		</div>
-	</section>
+	</div>
+</section>
 
 
 
@@ -102,16 +103,11 @@
 
 
 
-	@endsection
+@endsection
 
 
-	@section('script')
+@section('script')
 
-	<script src="{{ asset('/web/vendors/dropify/js/dropify.min.js') }}"></script>
-	<script type="text/javascript">
+<script src="{{ asset('/web/vendors/dropify/js/dropify.min.js') }}"></script>
 
-
-
-	</script>
-
-	@endsection
+@endsection

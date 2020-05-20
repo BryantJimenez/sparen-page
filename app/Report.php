@@ -9,9 +9,9 @@ class Report extends Model
 	protected $table = "reports";
 
 	protected $fillable = [
-		'slug',
 		'title_spanish',
 		'title_english',
+		'slug',
 		'pdf_spanish',
 		'pdf_english',
 		'description_spanish',

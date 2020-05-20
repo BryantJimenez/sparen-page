@@ -1,10 +1,10 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
 
-class CreateServicesTable extends Migration
+class CreateObjectivesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateServicesTable extends Migration
      */
     public function up()
     {
-        Schema::create('services', function (Blueprint $table) {
+        Schema::create('objectives', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('title1_spanish')->nullable();
             $table->string('title1_english')->nullable();
@@ -27,9 +27,7 @@ class CreateServicesTable extends Migration
             $table->string('title3_english')->nullable();
             $table->string('content3_spanish')->nullable();
             $table->string('content3_english')->nullable();
-            $table->string('picture1');
-            $table->string('picture2');
-            $table->string('picture3');
+            $table->string('picture');
             $table->timestamps();
         });
     }
@@ -41,6 +39,6 @@ class CreateServicesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('services');
+        Schema::dropIfExists('objectives');
     }
 }

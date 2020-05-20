@@ -12,6 +12,30 @@
                                 </a>
                             </div>
                         </div>
+                        @guest
+
+                        <div class="col-xl-6 col-lg-7">
+                            <div class="main-menu  d-none d-lg-block">
+                                <nav> 
+                                    <ul id="navigation">
+                                        <li><a class="active" href="{{ route('home') }}">Inicio</a></li>
+                                        <li><a href="#sobre">Sobre Sparen</a></li>
+                                        <li><a href="#servicios">Servicos</a></li>
+                                        <li><a href="{{ route('informe.index') }}">Informes</a></li>
+                                        <li><a href="{{ route('contacto.index') }}">Contacto</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        
+                        <div class="col-xl-3 col-lg-3 d-none d-lg-block">
+                            <div class="Appointment">
+                                <div class="book_btn d-none d-lg-block">
+                                    <a class="popup-with-form">Bienvenido</a>
+                                </div>
+                            </div>
+                        </div>
+                        @else
                         <div class="col-xl-6 col-lg-7">
                             <div class="main-menu  d-none d-lg-block">
                                 <nav> 
@@ -30,15 +54,6 @@
                                 </nav>
                             </div>
                         </div>
-                        @guest
-                        <div class="col-xl-3 col-lg-3 d-none d-lg-block">
-                            <div class="Appointment">
-                                <div class="book_btn d-none d-lg-block">
-                                    <a class="popup-with-form">Bienvenido</a>
-                                </div>
-                            </div>
-                        </div>
-                        @else
                         <div class="col-xl-3 col-lg-3 d-none d-lg-block">
                             <div class="Appointment">
                                 <div class="book_btn d-none d-lg-block">
@@ -47,6 +62,8 @@
                             </div>
                         </div>
                         @endguest
+                        
+
                         <div class="col-12">
                             <div class="mobile_menu d-block d-lg-none"></div>
                         </div>
@@ -90,8 +107,8 @@
                             <button type="submit" class="boxed-btn3">Entrar</button>
                         </div>
                         <div class="col-xl-12">
-                           @if (Route::has('password.request'))
-                           <a class="btn btn-link" href="{{ route('password.request') }}">
+                         @if (Route::has('password.request'))
+                         <a class="btn btn-link" href="{{ route('password.request') }}">
                             {{ __('Forgot Your Password?') }}
                         </a>
                         @endif

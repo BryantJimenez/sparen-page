@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Services;
 use App\User;
 use App\Binnacle;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 class ServiceController extends Controller
@@ -59,7 +60,7 @@ class ServiceController extends Controller
      */
     public function edit(Services $services)
     {
-        //
+        return view('web.service.edit');
     }
 
     /**

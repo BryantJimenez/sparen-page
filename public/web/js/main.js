@@ -36,6 +36,10 @@ $(document).ready(function(){
   });
 }
 
+ if ($('.dropifys').length) {
+  $('.dropifys').dropify({});
+}
+
 // mobile_menu
 var menu = $('ul#navigation');
 if(menu.length){

@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Contact;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use App\Http\Requests;
+use App\Contact;
+use Mail;
 
 class ContactController extends Controller
 {
@@ -14,7 +17,7 @@ class ContactController extends Controller
      */
     public function index()
     {
-        return view('web.contact');
+        
     }
 
     /**
@@ -24,7 +27,7 @@ class ContactController extends Controller
      */
     public function create()
     {
-        //
+       return view('web.contact.create');
     }
 
     /**
@@ -35,8 +38,11 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
-        //
-    }
+
+
+
+   }
+
 
     /**
      * Display the specified resource.

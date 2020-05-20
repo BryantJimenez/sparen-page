@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Banner;
 use App\User;
 use App\Binnacle;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 class BannerController extends Controller
@@ -48,7 +49,7 @@ class BannerController extends Controller
      */
     public function show(Banner $banner)
     {
-        //
+        
     }
 
     /**
@@ -59,7 +60,7 @@ class BannerController extends Controller
      */
     public function edit(Banner $banner)
     {
-        //
+        return view('web.banner.edit');
     }
 
     /**
