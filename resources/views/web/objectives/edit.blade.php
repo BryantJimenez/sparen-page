@@ -33,37 +33,38 @@
 
 						<h6 class="card-subtitle">Campos obligatorios (<b class="text-danger">*</b>)</h6>
 						<form  method="POST" class="form" action="{{ route('objetivo.update', ['id' => 1]) }}" enctype="multipart/form-data">
+							@method('PUT')
 							@csrf
 							<div class="row">
 
 								<div class="form-group  col-6">
 									<label class="col-form-label">Título 1<b class="text-danger">*</b></label>
-									<input class="form-control" type="text" name="title1_spanish" required value="" minlength="5" maxlength="191">
+									<input class="form-control" type="text" name="title1_spanish" required value="{{ $objective->title1_spanish }}" minlength="5" maxlength="191">
 								</div>
 
 								<div class="form-group col-6">
 									<label class="col-form-label">Contenido 1<b class="text-danger">*</b></label>
-									<textarea class="form-control"name="content1_spanish" required  value="" id="paragraph1_spanish" minlength="2" maxlength="191"></textarea> 
+									<textarea class="form-control"name="content1_spanish" required  value="" id="paragraph1_spanish" minlength="2" maxlength="191">{{ $objective->content1_spanish }}</textarea> 
 								</div>
 
 								<div class="form-group  col-6">
 									<label class="col-form-label">Título 2<b class="text-danger">*</b></label>
-									<input class="form-control" type="text" name="title2_spanish" required value="" minlength="5" maxlength="191">
+									<input class="form-control" type="text" name="title2_spanish" required value="{{ $objective->title2_spanish }}" minlength="5" maxlength="191">
 								</div>
 
 								<div class="form-group col-6">
 									<label class="col-form-label">Contenido 2<b class="text-danger">*</b></label>
-									<textarea class="form-control"name="content2_spanish" required  value="" id="paragraph1_spanish" minlength="2" maxlength="191"></textarea> 
+									<textarea class="form-control"name="content2_spanish" required  value="" id="paragraph1_spanish" minlength="2" maxlength="191">{{ $objective->content2_spanish }}</textarea> 
 								</div>
 
 								<div class="form-group  col-6">
 									<label class="col-form-label">Título 3<b class="text-danger">*</b></label>
-									<input class="form-control" type="text" name="title3_spanish" required value="" minlength="5" maxlength="191">
+									<input class="form-control" type="text" name="title3_spanish" required value="{{ $objective->title3_spanish }}" minlength="5" maxlength="191">
 								</div>
 
 								<div class="form-group col-6">
 									<label class="col-form-label">Contenido 3<b class="text-danger">*</b></label>
-									<textarea class="form-control"name="content3_spanish" required  value="" id="paragraph1_spanish" minlength="2" maxlength="191"></textarea> 
+									<textarea class="form-control"name="content3_spanish" required  value="" id="paragraph1_spanish" minlength="2" maxlength="191">{{ $objective->content3_spanish }}</textarea> 
 								</div>
 
 								<div class="form-group col-12">
@@ -97,39 +98,40 @@
 					<div class="card-body">
 						<h3 class="text-heading">Edit "Objectives in English"</h3>
 
-						<h6 class="card-subtitle">Fields Obligatories (<b class="text-danger">*</b>)</h6>
+						<h6 class="card-subtitle">Required fields (<b class="text-danger">*</b>)</h6>
 						<form  method="POST" class="form" action="{{ route('objetivo.update', ['id' => 1]) }}" enctype="multipart/form-data">
+							@method('PUT')
 							@csrf
 							<div class="row">
 
 								<div class="form-group  col-6">
 									<label class="col-form-label">Title 1<b class="text-danger">*</b></label>
-									<input class="form-control" type="text" name="title1_english" required value="" minlength="5" maxlength="191">
+									<input class="form-control" type="text" name="title1_english" required value="{{ $objective->title1_english }}" minlength="5" maxlength="191">
 								</div>
 
 								<div class="form-group col-6">
 									<label class="col-form-label">Content 1<b class="text-danger">*</b></label>
-									<textarea class="form-control"name="content1_english" required  value="" id="paragraph1_spanish" minlength="2" maxlength="191"></textarea> 
+									<textarea class="form-control"name="content1_english" required  value="" id="paragraph1_spanish" minlength="2" maxlength="191">{{ $objective->content1_english }}</textarea> 
 								</div>
 
 								<div class="form-group  col-6">
 									<label class="col-form-label">Title 2<b class="text-danger">*</b></label>
-									<input class="form-control" type="text" name="title2_english" required value="" minlength="5" maxlength="191">
+									<input class="form-control" type="text" name="title2_english" required value="{{ $objective->title2_english }}" minlength="5" maxlength="191">
 								</div>
 
 								<div class="form-group col-6">
 									<label class="col-form-label">Content 2<b class="text-danger">*</b></label>
-									<textarea class="form-control"name="content2_english" required  value="" id="paragraph1_spanish" minlength="2" maxlength="191"></textarea> 
+									<textarea class="form-control"name="content2_english" required  value="" id="paragraph1_spanish" minlength="2" maxlength="191">{{ $objective->content2_english }}</textarea> 
 								</div>
 
 								<div class="form-group  col-6">
 									<label class="col-form-label">Title 3<b class="text-danger">*</b></label>
-									<input class="form-control" type="text" name="title3_english" required value="" minlength="5" maxlength="191">
+									<input class="form-control" type="text" name="title3_english" required value="{{ $objective->title3_english }}" minlength="5" maxlength="191">
 								</div>
 
 								<div class="form-group col-6">
 									<label class="col-form-label">Content 3<b class="text-danger">*</b></label>
-									<textarea class="form-control"name="content3_english" required  value="" id="paragraph1_spanish" minlength="2" maxlength="191"></textarea> 
+									<textarea class="form-control"name="content3_english" required  value="" id="paragraph1_spanish" minlength="2" maxlength="191">{{ $objective->content3_english }}</textarea> 
 								</div>
 
 

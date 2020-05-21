@@ -109,9 +109,11 @@ class UserController extends Controller
      * @param  \App\Web  $web
      * @return \Illuminate\Http\Response
      */
-    public function edit(user $web)
-    {
-        return view('web.users.edit');
+    public function edit($slug) {
+
+        $user=User::where('slug', $slug)->firstOrFail();
+        return view('web.users.edit', compact("user"));
+
     }
 
     /**
@@ -121,9 +123,25 @@ class UserController extends Controller
      * @param  \App\Web  $web
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, user $web)
-    {
-        //
+    public function update(Request $request,$slug) {
+
+        $user = User::where('slug', $slug)->firstOrFail();
+        $user->fill($request->all())->save();
+
+                //Bitácora
+
+        $activity = 'Ha editado a un usuario';
+        $us = Auth::user()->id;
+        $data = array('user_id' => $us, 'activity' => $activity );
+        $binnacle = Binnacle::create($data);
+
+        //Fin Bitácora
+
+        if ($user && $binnacle) {
+            return redirect()->route('usuario.index', ['slug' => $slug])->with(['type' => 'success', 'title' => 'Edición exitosa', 'msg' => 'El usuario ha sido editado exitosamente.']);
+        } else {
+            return redirect()->route('usuario.index', ['slug' => $slug])->with(['type' => 'error', 'title' => 'Edición fallida', 'msg' => 'Ha ocurrido un error durante el proceso, intentelo nuevamente.']);
+        }
     }
 
     /**
@@ -137,16 +155,5 @@ class UserController extends Controller
         //
     }
 
-    public function activate($slug){
-
-    }
-
-     public function deactivate($slug){
-
-    }
-
-     public function profile($slug){
-
-    }
 
 }

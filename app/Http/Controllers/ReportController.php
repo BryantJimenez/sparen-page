@@ -16,9 +16,14 @@ class ReportController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view('web.reports.index');
+
+        $report = $request->get('report');
+        $reports = Report::where('title_spanish','like',"%$report%")
+        ->orderBy('id', 'DESC')
+        ->paginate(3);
+        return view('web.reports.index', compact('reports'));
     }
 
     /** 

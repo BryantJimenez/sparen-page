@@ -26,101 +26,31 @@
         <div class="row">
             <div class="col-lg-8 mb-5 mb-lg-0">
                 <div class="blog_left_sidebar">
-                    <article class="blog_item">
 
-                        <div class="blog_details">
-                            <a class="d-inline-block" href="single-blog.html">
-                                <h2>Título</h2>
-                            </a>
-                            <p>That dominion stars lights dominion divide years for fourth have don't stars is that
-                            he earth it first without heaven in place seed it second morning saying.</p>
-                            <ul class="blog-info-link">
-                                <li><a href="#"><i class="fa fa-user"></i>Usuario responsable</a></li>
-                                <li><a href="#"><i class="fa fa-download"></i> DESCARGAR</a></li>
-                            </ul>
-                        </div>
-                    </article>
+                    @foreach($reports as $r)
 
                     <article class="blog_item">
 
                         <div class="blog_details">
-                            <a class="d-inline-block" href="single-blog.html">
-                                <h2>Título</h2>
+                            <a class="d-inline-block">
+                                <h2>{{ $r->title_spanish }}</h2>
                             </a>
-                            <p>That dominion stars lights dominion divide years for fourth have don't stars is that
-                            he earth it first without heaven in place seed it second morning saying.</p>
+                            <p>{{ $r->description_spanish }}</p>
                             <ul class="blog-info-link">
-                                <li><a href="#"><i class="fa fa-user"></i>Usuario responsable</a></li>
-                                <li><a href="#"><i class="fa fa-download"></i> DESCARGAR</a></li>
+                                <li><a href="#"><i class="fa fa-user"></i>{{ $r->user->name." ".$r->user->lastname }}</a></li>
+                                <li><a href='{{ asset('/web/images/reports/'.$r->pdf_spanish) }}'><i class="fa fa-download"></i> DESCARGAR</a></li>
                             </ul>
                         </div>
                     </article>
 
-                    <article class="blog_item">
+                    @endforeach
 
-                        <div class="blog_details">
-                            <a class="d-inline-block" href="single-blog.html">
-                                <h2>Título</h2>
-                            </a>
-                            <p>That dominion stars lights dominion divide years for fourth have don't stars is that
-                            he earth it first without heaven in place seed it second morning saying.</p>
-                            <ul class="blog-info-link">
-                                <li><a href="#"><i class="fa fa-user"></i>Usuario responsable</a></li>
-                                <li><a href="#"><i class="fa fa-download"></i> DESCARGAR</a></li>
-                            </ul>
-                        </div>
-                    </article>
 
-                    <article class="blog_item">
-
-                        <div class="blog_details">
-                            <a class="d-inline-block" href="single-blog.html">
-                                <h2>Título</h2>
-                            </a>
-                            <p>That dominion stars lights dominion divide years for fourth have don't stars is that
-                            he earth it first without heaven in place seed it second morning saying.</p>
-                            <ul class="blog-info-link">
-                                <li><a href="#"><i class="fa fa-user"></i>Usuario responsable</a></li>
-                                <li><a href="#"><i class="fa fa-download"></i> DESCARGAR</a></li>
-                            </ul>
-                        </div>
-                    </article>
-
-                    <article class="blog_item">
-
-                        <div class="blog_details">
-                            <a class="d-inline-block" href="single-blog.html">
-                                <h2>Título</h2>
-                            </a>
-                            <p>That dominion stars lights dominion divide years for fourth have don't stars is that
-                            he earth it first without heaven in place seed it second morning saying.</p>
-                            <ul class="blog-info-link">
-                                <li><a href="#"><i class="fa fa-user"></i>Usuario responsable</a></li>
-                                <li><a href="#"><i class="fa fa-download"></i> DESCARGAR</a></li>
-                            </ul>
-                        </div>
-                    </article>
 
                     <nav class="blog-pagination justify-content-center d-flex">
-                        <ul class="pagination">
-                            <li class="page-item">
-                                <a href="#" class="page-link" aria-label="Previous">
-                                    <i class="ti-angle-left"></i>
-                                </a>
-                            </li>
-                            <li class="page-item">
-                                <a href="#" class="page-link">1</a>
-                            </li>
-                            <li class="page-item active">
-                                <a href="#" class="page-link">2</a>
-                            </li>
-                            <li class="page-item">
-                                <a href="#" class="page-link" aria-label="Next">
-                                    <i class="ti-angle-right"></i>
-                                </a>
-                            </li>
-                        </ul>
+                        {!! $reports->render() !!}
                     </nav>
+
                 </div>
             </div>
             <div class="col-lg-4">
@@ -129,9 +59,7 @@
                         <form action="#">
                             <div class="form-group">
                                 <div class="input-group mb-3">
-                                    <input type="text" class="form-control" placeholder='Introduzca el título de un informe'
-                                    onfocus="this.placeholder = ''"
-                                    onblur="this.placeholder = 'Introduzca el título de un informe'">
+                                    <input type="search" name="report" class="form-control" aria-label="Search" placeholder='Introduzca el título de un informe'>
                                     <div class="input-group-append">
                                         <button class="btn" type="button"><i class="ti-search"></i></button>
                                     </div>
@@ -142,11 +70,14 @@
                         </form>
                     </aside>
                     
+                    @guest
+                    @else
                     <aside class="single_sidebar_widget newsletter_widget">
                         <h4 class="widget_title">Registrar un Nuevo Informe</h4>
                         <a href=" {{ route('informe.create') }} "><button class="button rounded-0 genric-btn success-border w-100 btn_1 boxed-btn"
                         >Registrar</button></a>
                     </aside>
+                    @endguest
                 </div>
             </div>
         </div>

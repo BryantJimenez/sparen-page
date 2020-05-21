@@ -60,7 +60,8 @@ class AboutController extends Controller
      */
     public function edit(About $about)
     {
-        return view('web.about.edit');
+        $about = About::where('id', 1)->firstOrFail();
+        return view('web.about.edit', compact('about'));
     }
 
     /**
@@ -70,9 +71,34 @@ class AboutController extends Controller
      * @param  \App\About  $about
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, About $about)
-    {
-        //
+    public function update(Request $request, $id) {
+
+        $about = About::where('id', $id)->firstOrFail();
+
+        if ($request->hasFile('picture')) {
+            $file = $request->file('picture');
+            $picture = time()."_".$file->getClientOriginalName();
+            $file->move(public_path().'/web/images/about/', $picture);
+            $data['picture'] = $picture;
+        }
+
+        $about->fill($request->all())->save();
+
+         //Bitácora
+
+        $activity = 'Ha editado la sección "Nosotros"';
+        $us = Auth::user()->id;
+        $data = array('user_id' => $us, 'activity' => $activity );
+        $binnacle = Binnacle::create($data);
+
+        //Fin Bitácora
+
+
+        if ($about && $binnacle) {
+            return redirect()->route('home.sobre')->with(['type' => 'success', 'title' => 'Edición exitosa', 'msg' => 'La sección "Nosotros" ha sido editada exitosamente.']);
+        } else {
+            return redirect()->route('home.sobre')->with(['type' => 'error', 'title' => 'Edición fallida', 'msg' => 'Ha ocurrido un error durante el proceso, intentelo nuevamente.']);
+        }
     }
 
     /**

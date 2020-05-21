@@ -1263,21 +1263,6 @@ h3 {
   }
 }
 
-/* line 1, ../../Arafath/CL/CL October/213. Business/HTML/scss/_slider.scss */
-.slider_bg_1 {
-  background-image: url(../images/banner/banner1.png);
-}
-
-/* line 4, ../../Arafath/CL/CL October/213. Business/HTML/scss/_slider.scss */
-.slider_bg_2 {
-  background-image: url(../images/banner/banner2.png);
-}
-
-.slider_bg_3 {
-  background-image: url(../images/banner/about_banner.png);
-}
-
-
 /* line 8, ../../Arafath/CL/CL October/213. Business/HTML/scss/_slider.scss */
 .slider_area .single_slider {
   height: 900px;
@@ -1502,11 +1487,6 @@ h3 {
 /* line 83, ../../Arafath/CL/CL October/213. Business/HTML/scss/_about.scss */
 .about_area .about_info .boxed-btn3 {
   padding: 13px 46px 14px 46px;
-}
-
-/* line 90, ../../Arafath/CL/CL October/213. Business/HTML/scss/_about.scss */
-.about_bg_1 {
-  background-image: url(../images/banner/about_bg.png);
 }
 
 /* line 93, ../../Arafath/CL/CL October/213. Business/HTML/scss/_about.scss */
@@ -2917,7 +2897,7 @@ h3 {
 
 /* line 4, ../../Arafath/CL/CL October/213. Business/HTML/scss/_bradcam.scss */
 .breadcam_bg_2 {
-  background-image: url(../images/banner/bradcam_2.png);
+  background-image: url(../images/banner/banner.png);
 }
 
 /* line 7, ../../Arafath/CL/CL October/213. Business/HTML/scss/_bradcam.scss */
@@ -2927,7 +2907,7 @@ h3 {
 
 /* line 10, ../../Arafath/CL/CL October/213. Business/HTML/scss/_bradcam.scss */
 .breadcam_bg_4 {
-  background-image: url(../images/banner/about_bg.png);
+  background-image: url(../images/banner/banner2.png);
 }
 
 .breadcam_bg_5 {
@@ -3436,20 +3416,6 @@ h3 {
   }
 }
 
-/* line 1, ../../Arafath/CL/CL October/213. Business/HTML/scss/_service.scss */
-.service_bg_1 {
-  background-image: url(../images/about/3.png);
-}
-
-/* line 3, ../../Arafath/CL/CL October/213. Business/HTML/scss/_service.scss */
-.service_bg_2 {
-  background-image: url(../images/about/1.png);
-}
-
-/* line 5, ../../Arafath/CL/CL October/213. Business/HTML/scss/_service.scss */
-.service_bg_3 {
-  background-image: url(../images/about/2.png);
-}
 
 /* line 8, ../../Arafath/CL/CL October/213. Business/HTML/scss/_service.scss */
 .service_area {

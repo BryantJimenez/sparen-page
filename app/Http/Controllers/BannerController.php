@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 
 class BannerController extends Controller
 {
-    /**
+    /** 
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -60,7 +60,8 @@ class BannerController extends Controller
      */
     public function edit(Banner $banner)
     {
-        return view('web.banner.edit');
+        $banner = Banner::where('id', '1')->firstOrFail();
+        return view('web.banner.edit', compact('banner'));
     }
 
     /**
@@ -70,9 +71,48 @@ class BannerController extends Controller
      * @param  \App\Banner  $banner
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Banner $banner)
-    {
-        //
+    public function update(Request $request,  $id) {
+
+        $banner = Banner::where('id', $id)->firstOrFail();
+
+        if ($request->hasFile('picture1')) {
+            $file = $request->file('picture1');
+            $picture1 = time()."_".$file->getClientOriginalName();
+            $file->move(public_path().'/web/images/banner/', $picture1);
+            $data['picture1'] = $picture1;
+        }
+
+         if ($request->hasFile('picture2')) {
+            $file = $request->file('picture2');
+            $picture2 = time()."_".$file->getClientOriginalName();
+            $file->move(public_path().'/web/images/banner/', $picture2);
+            $data['picture2'] = $picture2;
+        }
+
+         if ($request->hasFile('picture3')) {
+            $file = $request->file('picture3');
+            $picture3 = time()."_".$file->getClientOriginalName();
+            $file->move(public_path().'/web/images/banner/', $picture3);
+            $data['picture3'] = $picture3;
+        }
+
+        $banner->fill($request->all())->save();
+
+         //Bitácora
+
+        $activity = 'Ha editado la sección "Banner"';
+        $us = Auth::user()->id;
+        $data = array('user_id' => $us, 'activity' => $activity );
+        $binnacle = Binnacle::create($data);
+
+        //Fin Bitácora
+
+
+        if ($banner && $binnacle) {
+            return redirect()->route('home')->with(['type' => 'success', 'title' => 'Edición exitosa', 'msg' => 'La sección "Banner" ha sido editada exitosamente.']);
+        } else {
+            return redirect()->route('home')->with(['type' => 'error', 'title' => 'Edición fallida', 'msg' => 'Ha ocurrido un error durante el proceso, intentelo nuevamente.']);
+        }
     }
 
     /**

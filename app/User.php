@@ -50,5 +50,9 @@ class User extends Authenticatable
     public function binnacles() {
         return $this->hasMany(Binnacle::class);
     }
+
+    public function reports() {
+        return $this->hasMany(Binnacle::class);
+    }
     
 }

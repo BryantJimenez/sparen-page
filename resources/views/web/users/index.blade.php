@@ -32,7 +32,7 @@
 							<th scope="col">#</th>
 							<th scope="col">Nombre Completo</th>
 							<th scope="col">Correo Electrónico</th>
-							<th scope="col">Estado</th>
+							<th scope="col">DNI</th>
 							<th scope="col">Acciones</th>
 						</tr>
 					</thead>
@@ -42,15 +42,10 @@
 							<th scope="row">{{ $num++ }}</th>
 							<td>{{ $user->name." ".$user->lastname }}</td>
 							<td>{{ $user->email }}</td>
-							<td>@if($user->state==1)
-									<span class="badge badge-success">Activo</span>
-									@else
-									<span class="badge badge-danger">Inactivo</span>
-									@endif</td>
+							<td>{{ $user->dni }}</td>
 							<td class="d-flex">
-									<a class="btn btn-primary btn-circle btn-sm" data-toggle="tooltip" data-placement="bottom" title="Ver Más" ><i class="fa fa-eye"></i></a>&nbsp;&nbsp;
-									<a class="btn btn-info btn-circle btn-sm" data-toggle="tooltip" data-placement="bottom" title="Editar"><i class="fa fa-edit"></i></a>&nbsp;&nbsp;
-									</td>
+								<a class="btn btn-info btn-circle btn-sm" data-toggle="tooltip" data-placement="bottom" title="Editar" href="{{ route('usuario.edit', ['slug' => $user->slug]) }}"><i class="fa fa-edit"></i></a>&nbsp;&nbsp;
+							</td>
 						</tr>
 						@endforeach
 					</tbody>
@@ -60,10 +55,12 @@
 	</div>
 </section>
 
+
 @endsection
 
 @section('script')
 
 <script src="{{ asset('/web/vendors/lobibox/Lobibox.js') }}"></script>
+
 
 @endsection

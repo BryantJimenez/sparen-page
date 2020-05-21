@@ -32,7 +32,8 @@
 						<h3 class="text-heading">Editar "Banner en Español"</h3>
 
 						<h6 class="card-subtitle">Campos obligatorios (<b class="text-danger">*</b>)</h6>
-						<form  method="POST" class="form" action="{{ route('banner.update', ['id' => 1]) }}" enctype="multipart/form-data">
+						<form  method="POST" class="form" action="{{ route('servicio.update', ['id' => 1]) }}" enctype="multipart/form-data">
+							@method('PUT')
 							@csrf
 							<div class="row">
 
@@ -49,12 +50,12 @@
 
 									<div class="form-group col-12">
 										<label class="col-form-label">Título 1<b class="text-danger">*</b></label>
-										<input type="text" class="form-control"name="title1_spanish" required value="" minlength="2" maxlength="191"> 
+										<input type="text" class="form-control"name="title1_spanish" required value="{{ $service->title1_spanish }}" minlength="2" maxlength="191"> 
 									</div>
 
 									<div class="form-group col-12 ">
 										<label class="col-form-label">Contenido 1<b class="text-danger">*</b></label>
-										<textarea class="form-control"name="content1_spanish" required  value="" minlength="2" maxlength="191"></textarea>  
+										<textarea class="form-control"name="content1_spanish" required  value="" minlength="2" maxlength="191">{{ $service->content1_spanish }}</textarea>  
 									</div>
 
 								</div>
@@ -71,12 +72,12 @@
 
 									<div class="form-group col-12">
 										<label class="col-form-label">Título 2<b class="text-danger">*</b></label>
-										<input type="text" class="form-control"name="title2_spanish" required value="" minlength="2" maxlength="191"> 
+										<input type="text" class="form-control"name="title2_spanish" required value="{{ $service->title2_spanish }}" minlength="2" maxlength="191"> 
 									</div>
 
 									<div class="form-group col-12 ">
 										<label class="col-form-label">Contenido 2<b class="text-danger">*</b></label>
-										<textarea class="form-control"name="content2_spanish" required  value="" minlength="2" maxlength="191"></textarea>  
+										<textarea class="form-control"name="content2_spanish" required  value="" minlength="2" maxlength="191">{{ $service->content2_spanish }}</textarea>  
 									</div>
 
 								</div>
@@ -93,12 +94,12 @@
 
 									<div class="form-group col-12">
 										<label class="col-form-label">Título 3<b class="text-danger">*</b></label>
-										<input type="text" class="form-control"name="title3_spanish" required value="" minlength="2" maxlength="191"> 
+										<input type="text" class="form-control"name="title3_spanish" required value="{{ $service->title3_spanish }}" minlength="2" maxlength="191"> 
 									</div>
 
 									<div class="form-group col-12 ">
 										<label class="col-form-label">Contenido 3<b class="text-danger">*</b></label>
-										<textarea class="form-control"name="content3_spanish" required  value="" minlength="2" maxlength="191"></textarea>  
+										<textarea class="form-control"name="content3_spanish" required  value="" minlength="2" maxlength="191">{{ $service->content3_spanish }}</textarea>  
 									</div>
 
 								</div>
@@ -128,8 +129,9 @@
 					<div class="card-body">
 						<h3 class="text-heading">Edit "Banner in English"</h3>
 
-						<h6 class="card-subtitle">Fields Obligatories (<b class="text-danger">*</b>)</h6>
-						<form  method="POST" class="form" action="{{ route('sobre.update', ['id' => 1]) }}" enctype="multipart/form-data">
+						<h6 class="card-subtitle">Required fields (<b class="text-danger">*</b>)</h6>
+						<form  method="POST" class="form" action="{{ route('servicio.update', ['id' => 1]) }}" enctype="multipart/form-data">
+							@method('PUT')
 							@csrf
 							<div class="row">
 
@@ -145,12 +147,12 @@
 
 									<div class="form-group col-12">
 										<label class="col-form-label">Title 1<b class="text-danger">*</b></label>
-										<input type="text" class="form-control"name="title1_english" required value="" minlength="2" maxlength="191"> 
+										<input type="text" class="form-control"name="title1_english" required value="{{ $service->title1_english }}" minlength="2" maxlength="191"> 
 									</div>
 
 									<div class="form-group col-12 ">
 										<label class="col-form-label">Content 1<b class="text-danger">*</b></label>
-										<textarea class="form-control"name="content1_english" required  value="" minlength="2" maxlength="191"></textarea>  
+										<textarea class="form-control"name="content1_english" required  value="" minlength="2" maxlength="191">{{ $service->content1_english }}</textarea>  
 									</div>
 
 								</div>
@@ -167,12 +169,12 @@
 
 									<div class="form-group col-12">
 										<label class="col-form-label">Title 2<b class="text-danger">*</b></label>
-										<input type="text" class="form-control"name="title2_english" required value="" minlength="2" maxlength="191"> 
+										<input type="text" class="form-control"name="title2_english" required value="{{ $service->title2_english }}" minlength="2" maxlength="191"> 
 									</div>
 
 									<div class="form-group col-12 ">
 										<label class="col-form-label">Content 2<b class="text-danger">*</b></label>
-										<textarea class="form-control"name="content2_english" required  value="" minlength="2" maxlength="191"></textarea>  
+										<textarea class="form-control"name="content2_english" required  value="" minlength="2" maxlength="191">{{ $service->content2_english }}</textarea>  
 									</div>
 
 								</div>
@@ -189,19 +191,19 @@
 
 									<div class="form-group col-12">
 										<label class="col-form-label">Title 3<b class="text-danger">*</b></label>
-										<input type="text" class="form-control"name="title3_english" required value="" minlength="2" maxlength="191"> 
+										<input type="text" class="form-control"name="title3_english" required value="{{ $service->title3_english }}" minlength="2" maxlength="191"> 
 									</div>
 
 									<div class="form-group col-12 ">
 										<label class="col-form-label">Content 3<b class="text-danger">*</b></label>
-										<textarea class="form-control"name="content3_english" required  value="" minlength="2" maxlength="191"></textarea>  
+										<textarea class="form-control"name="content3_english" required  value="" minlength="2" maxlength="191">{{ $service->content3_english }}</textarea>  
 									</div>
 
 								</div>
 
 								<div class="form-group col-12">
 									<div class="btn-group" role="group">
-										<button type="submit" class="btn btn-primary" action="user">Saver</button>
+										<button type="submit" class="btn btn-primary" action="user">Save</button>
 
 									</div>
 								</div>

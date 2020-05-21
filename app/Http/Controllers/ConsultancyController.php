@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Consultancy;
+use App\User;
+use App\Binnacle;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 class ConsultancyController extends Controller
@@ -57,7 +60,8 @@ class ConsultancyController extends Controller
      */
     public function edit(Consultancy $consultancy)
     {
-       return view('web.consultancy.edit');
+        $consultancy = Consultancy::where('id', 1)->firstOrFail();
+        return view('web.consultancy.edit', compact('consultancy'));
     }
 
     /**
@@ -67,9 +71,34 @@ class ConsultancyController extends Controller
      * @param  \App\Consultancy  $consultancy
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Consultancy $consultancy)
-    {
-        //
+    public function update(Request $request, $id) {
+
+        $consultancy = Consultancy::where('id', $id)->firstOrFail();
+
+        if ($request->hasFile('picture')) {
+            $file = $request->file('picture');
+            $picture = time()."_".$file->getClientOriginalName();
+            $file->move(public_path().'/web/images/consultancy/', $picture);
+            $data['picture'] = $picture;
+        }
+
+        $consultancy->fill($request->all())->save();
+
+         //Bitácora
+
+        $activity = 'Ha editado la sección "Consultorías"';
+        $us = Auth::user()->id;
+        $data = array('user_id' => $us, 'activity' => $activity );
+        $binnacle = Binnacle::create($data);
+
+        //Fin Bitácora
+
+
+        if ($consultancy && $binnacle) {
+            return redirect()->route('home.sobre')->with(['type' => 'success', 'title' => 'Edición exitosa', 'msg' => 'La sección "Consultorías" ha sido editada exitosamente.']);
+        } else {
+            return redirect()->route('home.sobre')->with(['type' => 'error', 'title' => 'Edición fallida', 'msg' => 'Ha ocurrido un error durante el proceso, intentelo nuevamente.']);
+        }
     }
 
     /**

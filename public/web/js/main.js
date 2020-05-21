@@ -432,6 +432,17 @@ $(document).ready(function() {
 	});
 });
 
+//funciones para desactivar y activar usuarios
+function deactiveUser(slug) {
+    $("#deactiveUser").modal();
+    $('#formDeactiveUser').attr('action', '/maesma/usuarios/desactivar/' + slug);
+}
+
+function activeUser(slug) {
+    $("#activeUser").modal();
+    $('#formActiveUser').attr('action', '/maesma/usuarios/activar/' + slug);
+}
+
 
 
 
