@@ -14,8 +14,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-
-
 ////////////////////////////////////////////////Web////////////////////////////////////////////////////////////////
 
 // Inicio
@@ -38,7 +36,7 @@ Route::put('/sparen/services/{id}', 'ServiceController@updateEnglish')->name('se
 Route::get('/sparen/informes', 'ReportController@index')->name('informe.index');
 Route::get('/sparen/informes/registrar', 'ReportController@create')->name('informe.create');
 Route::post('/sparen/informes', 'ReportController@store')->name('informe.store');
-Route::post('/sparen/reports/{id}', 'ReportController@storeEnglish')->name('report.store');
+Route::post('/sparen/reports', 'ReportController@storeEnglish')->name('report.store');
 Route::get('/sparen/informes/editar', 'ReportController@edit')->name('informe.edit');
 Route::put('/sparen/informes/editar/{slug}', 'ReportController@update')->name('informe.update');
 

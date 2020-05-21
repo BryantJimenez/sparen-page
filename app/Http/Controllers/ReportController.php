@@ -35,8 +35,8 @@ class ReportController extends Controller
      */
     public function create()
     {
-       return view('web.reports.create');
-   }
+     return view('web.reports.create');
+ }
 
     /**
      * Store a newly created resource in storage.
@@ -47,15 +47,14 @@ class ReportController extends Controller
     public function store(ReportStoreSpanishRequest $request)
     {
 
-        $count=Report::where('title_spanish', $request->title_spanish)->count();
-        $slug=Str::slug($request->title_spanish, '-');
-        if ($count>0) {
-            $slug=$slug."-".$count;
+        $count=Report::where('slug', "report-spanish")->count();
+        $slug=Str::slug("report-spanish", '-');
+
             $num=0;
             while (true) {
                 $count2 = Report::where('slug', $slug)->count();
                 if ($count2>0) {
-                    $slug=$slug."-".$num;
+                    $slug="report-spanish-".$num;
                     $num++;
                 } else {
                     $data=array('title_spanish' => request('title_spanish'), 'slug' => $slug, 'pdf_spanish' => $request->pdf_spanish, 'description_spanish' => request('description_spanish'), 
@@ -63,9 +62,6 @@ class ReportController extends Controller
                     break;
                 }
             }
-
-        }
-
 
         $file = $request->file('pdf_spanish');
         $pdf = time()."_".$file->getClientOriginalName();
@@ -85,15 +81,14 @@ class ReportController extends Controller
     public function storeEnglish(ReportStoreEnglishRequest $request)
     {
 
-        $count=Report::where('title_english', $request->title_english)->count();
-        $slug=Str::slug($request->title_english, '-');
-        if ($count>0) {
-            $slug=$slug."-".$count;
+         $count=Report::where('slug', "report-english")->count();
+        $slug=Str::slug("report-english", '-');
+
             $num=0;
             while (true) {
                 $count2 = Report::where('slug', $slug)->count();
                 if ($count2>0) {
-                    $slug=$slug."-".$num;
+                    $slug="report-english-".$num;
                     $num++;
                 } else {
                     $data=array('title_english' => request('title_english'), 'slug' => $slug, 'pdf_english' => $request->pdf_english, 'description_english' => request('description_english'), 
@@ -101,8 +96,6 @@ class ReportController extends Controller
                     break;
                 }
             }
-
-        }
 
 
         $file = $request->file('pdf_english');
@@ -119,11 +112,6 @@ class ReportController extends Controller
         } 
 
     }
-
-
-
-
-
 
     /**
      * Display the specified resource.
