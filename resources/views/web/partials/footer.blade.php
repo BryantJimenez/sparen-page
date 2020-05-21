@@ -67,7 +67,7 @@
         <div class="row">
             <div class="col-xl-12">
                 <p class="copy_right text-center">
-                 Sparen &copy;<script>document.write(new Date().getFullYear());</script> Todos los derechos reservados | Realizado por <a href="https://www.otterscompany.com" target="_blank">OttersCompany <i class="fa fa-heart-o" aria-hidden="true"></i></a>
+                 Sparen &copy;<script>document.write(new Date().getFullYear());</script> Todos los derechos reservados | Realizado por <a href="https://www.otterscompany.com" target="_blank">Otters Company <i class="fa fa-heart-o" aria-hidden="true"></i></a>
              </p>
          </div>
      </div>

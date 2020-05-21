@@ -20,7 +20,7 @@ class WebController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($lang)
     {
         $about = About::where('id', 1)->firstOrFail();
         $service = Service::where('id', 1)->firstOrFail();
@@ -29,7 +29,7 @@ class WebController extends Controller
         $banner = Banner::where('id', 1)->firstOrFail();
         $reports = Report::all()->count();
         
-        return view('web.home', compact('about', 'service', 'consultancy', 'objective', 'banner', 'reports'));
+        return view('web.home', compact('about', 'service', 'consultancy', 'objective', 'banner', 'reports', 'lang'));
     }
 
   

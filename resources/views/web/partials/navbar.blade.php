@@ -18,7 +18,7 @@
                             <div class="main-menu  d-none d-lg-block">
                                 <nav> 
                                     <ul id="navigation">
-                                        <li><a class="active" href="{{ route('home') }}">Inicio</a></li>
+                                        <li><a class="active" href="{{ route('home', ['lang' => $lang]) }}">Inicio</a></li>
                                         <li><a href="#sobre">Sobre Sparen</a></li>
                                         <li><a href="#servicios">Servicos</a></li>
                                         <li><a href="{{ route('informe.index') }}">Informes</a></li>

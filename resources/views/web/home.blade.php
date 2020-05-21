@@ -163,7 +163,7 @@
                 </div>
 
                 @endguest             
-                 <br>
+                <br>
 
             </div>
         </div>
@@ -209,7 +209,7 @@
             <div class="col-xl-4 col-md-6 col-lg-4">
                 <div class="single_service_wrap text-center">
 
-                    <img src="{{ asset('/web/images/svg_icon/bar-chart.svg"') }}" alt="">
+                    <img src="{{ asset('/web/images/svg_icon/bar-chart.svg') }}" alt="">
                     <h3>{{ $objective->title2_spanish }}</h3>
                     <p>{{ $objective->content2_spanish }} </p>
                     
@@ -289,33 +289,30 @@
 <!--/ project  -->
 
 {{-- Inicio del Modal --}}
-{{-- <div class="modal" tabindex="-1" role="dialog">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-      </button>
-  </div>
-  <div class="modal-body">
-    <p>Modal body text goes here.</p>
+<div class="modal" id="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Modal body text goes here.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
 </div>
-<div class="modal-footer">
-    <button type="button" class="btn btn-primary">Save changes</button>
-    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-</div>
-</div>
-</div>
-</div> --}}
-
 {{-- Fin del Modal --}}
 
 @endsection
 
 @section('script')
-
 <script src="{{ asset('/web/vendors/dropify/js/dropify.min.js') }}"></script>
-
 @endsection
 
