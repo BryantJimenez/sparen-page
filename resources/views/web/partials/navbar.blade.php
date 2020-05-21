@@ -5,7 +5,7 @@
             <div class="container">
                 <div class="header_bottom_border">
                     <div class="row align-items-center">
-                        <div class="col-xl-3 col-lg-2">
+                        <div class="col-xl-2 col-lg-2">
                             <div class="logo">
                                 <a href="{{ route('home') }}">
                                     <img src="{{ asset('/web/images/logo.png') }}" alt="">
@@ -14,21 +14,21 @@
                         </div>
                         @guest 
 
-                        <div class="col-xl-6 col-lg-7">
+                        <div class="col-xl-8 col-lg-8">
                             <div class="main-menu  d-none d-lg-block">
                                 <nav> 
                                     <ul id="navigation">
                                         <li><a class="active" href="{{ route('home', ['lang' => $lang]) }}">Inicio</a></li>
-                                        <li><a href="#sobre">Sobre Sparen</a></li>
-                                        <li><a href="#servicios">Servicos</a></li>
-                                        <li><a href="{{ route('informe.index') }}">Informes</a></li>
-                                        <li><a href="{{ route('contacto.index') }}">Contacto</a></li>
+                                        <li><a href="{{ route('home.sobre', ['lang' => $lang]) }}">Nosotros</a></li>
+                                        <li><a href="{{ route('home.servicios', ['lang' => $lang]) }}">Servicos</a></li>
+                                        <li><a href="{{ route('informe.index', ['lang' => $lang]) }}">Informes</a></li>
+                                        <li><a href="{{ route('contacto.index', ['lang' => $lang]) }}">Contacto</a></li>
                                     </ul>
                                 </nav>
                             </div>
                         </div>
                         
-                        <div class="col-xl-3 col-lg-3 d-none d-lg-block">
+                        <div class="col-xl-2 col-lg-2 d-none d-lg-block">
                             <div class="Appointment">
                                 <div class="book_btn d-none d-lg-block">
                                     <a class="popup-with-form">Bienvenido</a>
@@ -36,25 +36,27 @@
                             </div>
                         </div>
                         @else
-                        <div class="col-xl-6 col-lg-7">
+                        <div class="col-xl-8 col-lg-8">
                             <div class="main-menu  d-none d-lg-block">
                                 <nav> 
                                     <ul id="navigation">
-                                        <li><a class="active" href="{{ route('home') }}">Inicio</a></li>
-                                        <li><a href="{{ route('informe.index') }}">Informes</a></li>
-                                        <li><a href="{{ route('contacto.index') }}">Contacto</a></li>
-                                        <li><a href="{{ route('bitacora.index') }}">Bitácora</a></li>
+                                        <li><a class="active" href="{{ route('home', ['lang' => $lang]) }}">Inicio</a></li>
+                                        <li><a href="{{ route('home.sobre', ['lang' => $lang]) }}">Nosotros</a></li>
+                                        <li><a href="{{ route('home.servicios', ['lang' => $lang]) }}">Servicos</a></li>
+                                        <li><a href="{{ route('informe.index', ['lang' => $lang]) }}">Informes</a></li>
+                                        <li><a href="{{ route('contacto.index', ['lang' => $lang]) }}">Contacto</a></li>
+                                        <li><a href="{{ route('bitacora.index', ['lang' => $lang]) }}">Bitácora</a></li>
                                         <li><a href="#">Usuarios<i class="ti-angle-down"></i></a>
                                             <ul class="submenu">
-                                                <li><a href="{{ route('usuario.create') }}">Registrar</a></li>
-                                                <li><a href="{{ route('usuario.index') }}">Listado</a></li>
+                                                <li><a href="{{ route('usuario.create', ['lang' => $lang]) }}">Registrar</a></li>
+                                                <li><a href="{{ route('usuario.index', ['lang' => $lang]) }}">Listado</a></li>
                                             </ul>
                                         </li>
                                     </ul>
                                 </nav>
                             </div>
                         </div>
-                        <div class="col-xl-3 col-lg-3 d-none d-lg-block">
+                        <div class="col-xl-2 col-lg-2 d-none d-lg-block">
                             <div class="Appointment">
                                 <div class="book_btn d-none d-lg-block">
                                     <a class="popup-with-form">{{ Auth::user()->name." ".Auth::user()->lastname  }}</a>

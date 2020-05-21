@@ -6,7 +6,6 @@
 <link rel="stylesheet" href="{{ asset('/web/vendors/dropify/css/dropify.min.css') }}">
 @endsection
 
-
 @section('content')
 
 <!-- slider_area_start -->
@@ -17,12 +16,12 @@
                 <div class="row">
                     <div class="col-xl-12">
                         <div class="slider_text ">
-                            <h3 style="margin-right: 30%">{{ $banner->banner1_spanish }} </h3>
+                            <h3 style="margin-right: 30%">@if($lang=="es") {{ $banner->banner1_spanish }} @else {{ $banner->banner1_english }} @endif</h3>
                         </div>
                         @guest
                         @else
                         <div class="video_service_btn">
-                            <a href="{{ route('banner.edit') }}" class="boxed-btn3">Editar</a>
+                            <a href="{{ route('banner.edit') }}" class="boxed-btn3">@lang('messages.edit')</a>
                         </div>
                         @endguest
                     </div>
@@ -34,12 +33,12 @@
                 <div class="row">
                     <div class="col-xl-12">
                         <div class="slider_text ">
-                            <h3 style="margin-right: 30%">{{ $banner->banner2_spanish }} </h3>
+                            <h3 style="margin-right: 30%">@if($lang=="es") {{ $banner->banner2_spanish }} @else {{ $banner->banner2_english }} @endif</h3>
                         </div>
                         @guest
                         @else
                         <div class="video_service_btn">
-                            <a href="{{ route('banner.edit') }}" class="boxed-btn3">Editar</a>
+                            <a href="{{ route('banner.edit') }}" class="boxed-btn3">@lang('messages.edit')</a>
                         </div>
                         @endguest
                     </div>
@@ -51,12 +50,12 @@
                 <div class="row">
                     <div class="col-xl-12">
                         <div class="slider_text ">
-                            <h3 style="margin-right: 30%">{{ $banner->banner3_spanish }} </h3>
+                            <h3 style="margin-right: 30%">@if($lang=="es") {{ $banner->banner3_spanish }} @else {{ $banner->banner3_english }} @endif</h3>
                         </div>
                         @guest
                         @else
                         <div class="video_service_btn">
-                            <a href="{{ route('banner.edit') }}" class="boxed-btn3">Editar</a>
+                            <a href="{{ route('banner.edit') }}" class="boxed-btn3">@lang('messages.edit')</a>
                         </div>
                         @endguest
                     </div>

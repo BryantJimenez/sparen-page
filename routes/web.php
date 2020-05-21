@@ -19,12 +19,13 @@ Auth::routes();
 Route::group(['middleware' => ['lang']], function () {
 	// Inicio
 	Route::get('/{lang?}', 'WebController@index')->name('home');
+	Route::get('/{lang?}/#sobre', 'WebController@index')->name('home.sobre');
+	Route::get('/{lang?}/#servicios', 'WebController@index')->name('home.servicios');
 
 	//Sobre Sparen
 	Route::get('/{lang?}/sobre-sparen/editar', 'AboutController@edit')->name('sobre.edit');
 	Route::put('/{lang?}/sobre-sparen/{id}', 'AboutController@update')->name('sobre.update');
 	Route::put('/{lang?}/about-sparen/{id}', 'AboutController@updateEnglish')->name('about.update');
-	Route::get('/{lang?}/#sobre', 'WebController@index')->name('home.sobre');
 
 	//Servicios
 	Route::get('/{lang?}/servicios/editar', 'ServiceController@edit')->name('servicio.edit');

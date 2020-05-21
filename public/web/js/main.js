@@ -11,9 +11,9 @@
       $('#back-top').fadeIn(500);
     }
   });
+});
 
-  $("#modal").modal();
-
+$(document).ready(function($) {
   if ($('.dropify').length) {
     $('.dropify').dropify({
       messages: {

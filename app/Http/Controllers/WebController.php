@@ -12,6 +12,7 @@ use App\Binnacle;
 use App\Report;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
 
 class WebController extends Controller
 {
@@ -22,6 +23,8 @@ class WebController extends Controller
      */
     public function index($lang)
     {
+        App::setlocale($lang);
+
         $about = About::where('id', 1)->firstOrFail();
         $service = Service::where('id', 1)->firstOrFail();
         $consultancy = Consultancy::where('id', 1)->firstOrFail();
