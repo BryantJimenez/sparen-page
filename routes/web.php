@@ -13,7 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-////////////////////////////////////////////////Web///////////////////////////////////////////////////////
+////////////////////////////////////////////////Web////////////////////////////////////////////////////////////////
+
 Auth::routes();
 
 Route::group(['middleware' => ['lang']], function () {
@@ -36,7 +37,7 @@ Route::group(['middleware' => ['lang']], function () {
 	Route::get('/{lang?}/informes', 'ReportController@index')->name('informe.index');
 	Route::get('/{lang?}/informes/registrar', 'ReportController@create')->name('informe.create');
 	Route::post('/{lang?}/informes', 'ReportController@store')->name('informe.store');
-	Route::post('/{lang?}/reports/{id}', 'ReportController@storeEnglish')->name('report.store');
+	Route::post('/{lang?}/reports', 'ReportController@storeEnglish')->name('report.store');
 	Route::get('/{lang?}/informes/editar', 'ReportController@edit')->name('informe.edit');
 	Route::put('/{lang?}/informes/editar/{slug}', 'ReportController@update')->name('informe.update');
 
