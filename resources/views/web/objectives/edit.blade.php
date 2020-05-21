@@ -99,7 +99,7 @@
 						<h3 class="text-heading">Edit "Objectives in English"</h3>
 
 						<h6 class="card-subtitle">Required fields (<b class="text-danger">*</b>)</h6>
-						<form  method="POST" class="form" action="{{ route('objetivo.update', ['id' => 1]) }}" enctype="multipart/form-data">
+						<form  method="POST" class="form" action="{{ route('objetive.update', ['id' => 1]) }}" enctype="multipart/form-data">
 							@method('PUT')
 							@csrf
 							<div class="row">

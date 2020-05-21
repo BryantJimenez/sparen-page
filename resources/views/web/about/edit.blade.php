@@ -39,7 +39,7 @@
 
 								<div class="form-group col-12">
 									<label class="col-form-label">Párrafo 1<b class="text-danger">*</b></label>
-									<textarea class="form-control"name="paragraph1_spanish" required placeholder="Introduzca el contenido del párrafo 1" id="paragraph1_spanish" minlength="2" maxlength="191">{{ $about->paragraph1_spanish }}</textarea> 
+									<textarea class="form-control"name="paragraph1_spanish" placeholder="Introduzca el contenido del párrafo 1" id="paragraph1_spanish" minlength="2" maxlength="191">{{ $about->paragraph1_spanish }}</textarea> 
 								</div>
 
 								<div class="form-group col-12">
@@ -96,7 +96,7 @@
 						<h3 class="text-heading">Edit "About in English"</h3>
 
 						<h6 class="card-subtitle">Required fields (<b class="text-danger">*</b>)</h6>
-						<form  method="POST" class="form" action="{{ route('sobre.update', ['id' => 1]) }}" enctype="multipart/form-data">
+						<form  method="POST" class="form" action="{{ route('about.update', ['id' => 1]) }}" enctype="multipart/form-data">
 							@method('PUT')
 							@csrf
 							<div class="row">

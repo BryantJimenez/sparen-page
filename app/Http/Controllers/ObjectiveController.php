@@ -7,6 +7,8 @@ use App\User;
 use App\Binnacle;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use App\Http\Requests\ObjectiveUpdateSpanishRequest;
+use App\Http\Requests\ObjectiveUpdateEnglishRequest;
 
 class ObjectiveController extends Controller
 {
@@ -71,7 +73,7 @@ class ObjectiveController extends Controller
      * @param  \App\Objective  $objective
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id) {
+    public function update(ObjectiveUpdateSpanishRequest $request, $id) {
 
         $objective = Objective::where('id', $id)->firstOrFail();
 
@@ -86,7 +88,37 @@ class ObjectiveController extends Controller
 
          //Bitácora
 
-        $activity = 'Ha editado la sección "Objetivos"';
+        $activity = 'Ha editado la sección "Objetivos" en Español';
+        $us = Auth::user()->id;
+        $data = array('user_id' => $us, 'activity' => $activity );
+        $binnacle = Binnacle::create($data);
+
+        //Fin Bitácora
+
+
+        if ($objective && $binnacle) {
+            return redirect()->route('home')->with(['type' => 'success', 'title' => 'Edición exitosa', 'msg' => 'La sección "Consultorías" ha sido editada exitosamente.']);
+        } else {
+            return redirect()->route('home')->with(['type' => 'error', 'title' => 'Edición fallida', 'msg' => 'Ha ocurrido un error durante el proceso, intentelo nuevamente.']);
+        }
+    }
+
+    public function updateEnglish(ObjectiveUpdateEnglishRequest $request, $id) {
+
+        $objective = Objective::where('id', $id)->firstOrFail();
+
+        if ($request->hasFile('picture')) {
+            $file = $request->file('picture');
+            $picture = time()."_".$file->getClientOriginalName();
+            $file->move(public_path().'/web/images/objective', $picture);
+            $request['picture'] = $picture;
+        }
+
+        $objective->fill($request->all())->save();
+
+         //Bitácora
+
+        $activity = 'Ha editado la sección "Objetivos" en Inglés';
         $us = Auth::user()->id;
         $data = array('user_id' => $us, 'activity' => $activity );
         $binnacle = Binnacle::create($data);

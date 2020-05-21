@@ -39,33 +39,33 @@
 							<div class="row">
 								<div class="form-group col-6">
 									<label class="col-form-label">Titulo 1<b class="text-danger">*</b></label>
-									<input type="text" class="form-control"name="title1_spanish" required value="{{ $cinsultancy->title1_spanish }}" minlength="2" maxlength="191"> 
+									<input type="text" class="form-control"name="title1_spanish" required value="{{ $consultancy->title1_spanish }}" minlength="2" maxlength="191"> 
 								</div>
 
 								<div class="form-group col-6 ">
 									<label class="col-form-label">Contenido 1<b class="text-danger">*</b></label>
-									<textarea class="form-control"name="content1_spanish" required  value="" minlength="2" maxlength="191"></textarea>  
+									<textarea class="form-control"name="content1_spanish" required minlength="2" maxlength="191">{{ $consultancy->content1_spanish }}</textarea>  
 								</div>
 
 
 								<div class="form-group col-6">
 									<label class="col-form-label">Titulo 2<b class="text-danger">*</b></label>
-									<input type="text" class="form-control"name="title2_spanish" required value="" minlength="2" maxlength="191"> 
+									<input type="text" class="form-control"name="title2_spanish" required value="{{ $consultancy->title2_spanish }}" minlength="2" maxlength="191"> 
 								</div>
 
 								<div class="form-group col-6 ">
 									<label class="col-form-label">Contenido 2<b class="text-danger">*</b></label>
-									<textarea class="form-control"name="content2_spanish" required  value="" minlength="2" maxlength="191"></textarea>  
+									<textarea class="form-control"name="content2_spanish" required minlength="2" maxlength="191">{{ $consultancy->content2_spanish }}</textarea>  
 								</div>
 
 								<div class="form-group col-6">
 									<label class="col-form-label">Titulo 3<b class="text-danger">*</b></label>
-									<input type="text" class="form-control"name="title3_spanish" required value="" minlength="2" maxlength="191"> 
+									<input type="text" class="form-control"name="title3_spanish" required value="{{ $consultancy->title3_spanish }}" minlength="2" maxlength="191"> 
 								</div>
 
 								<div class="form-group col-6 ">
 									<label class="col-form-label">Contenido 3<b class="text-danger">*</b></label>
-									<textarea class="form-control"name="content3_spanish" required  value="" minlength="2" maxlength="191"></textarea>  
+									<textarea class="form-control"name="content3_spanish" required minlength="2" maxlength="191">{{ $consultancy->content3_spanish }}</textarea>  
 								</div>
 
 
@@ -100,40 +100,40 @@
 						<h3 class="text-heading">Edit "Banner in English"</h3>
 
 						<h6 class="card-subtitle">Required fields (<b class="text-danger">*</b>)</h6>
-						<form  method="POST" class="form" action="{{ route('consultoria.update', ['id' => 1]) }}" enctype="multipart/form-data">
+						<form  method="POST" class="form" action="{{ route('consultancy.update', ['id' => 1]) }}" enctype="multipart/form-data">
 							@method('PUT')
 							@csrf
 							<div class="row">
 
 								<div class="form-group col-6">
 									<label class="col-form-label">Title 1<b class="text-danger">*</b></label>
-									<input type="text" class="form-control"name="title1_english" required value="" minlength="2" maxlength="191"> 
+									<input type="text" class="form-control"name="title1_english" required value="{{ $consultancy->title1_english }}" minlength="2" maxlength="191"> 
 								</div> 
 
 								<div class="form-group col-6 ">
 									<label class="col-form-label">Content 1<b class="text-danger">*</b></label>
-									<textarea class="form-control"name="content1_english" required  value="" minlength="2" maxlength="191"></textarea>  
+									<textarea class="form-control"name="content1_english" required minlength="2" maxlength="191">{{ $consultancy->content1_english }}</textarea>  
 								</div>
 
 
 								<div class="form-group col-6">
 									<label class="col-form-label">Title 2<b class="text-danger">*</b></label>
-									<input type="text" class="form-control"name="title2_english" required value="" minlength="2" maxlength="191"> 
+									<input type="text" class="form-control"name="title2_english" required value="{{ $consultancy->title2_english }}" minlength="2" maxlength="191"> 
 								</div>
 
 								<div class="form-group col-6 ">
 									<label class="col-form-label">Content 2<b class="text-danger">*</b></label>
-									<textarea class="form-control"name="content2_english" required  value="" minlength="2" maxlength="191"></textarea>  
+									<textarea class="form-control"name="content2_english" required  minlength="2" maxlength="191">{{ $consultancy->content2_english }}</textarea>  
 								</div>
 
 								<div class="form-group col-6">
 									<label class="col-form-label">Title 3<b class="text-danger">*</b></label>
-									<input type="text" class="form-control"name="title3_english" required value="" minlength="2" maxlength="191"> 
+									<input type="text" class="form-control"name="title3_english" required value="{{ $consultancy->title3_english }}" minlength="2" maxlength="191"> 
 								</div>
 
 								<div class="form-group col-6 ">
 									<label class="col-form-label">Content 3<b class="text-danger">*</b></label>
-									<textarea class="form-control"name="content3_english" required  value="" minlength="2" maxlength="191"></textarea>  
+									<textarea class="form-control"name="content3_english" required  value="" minlength="2" maxlength="191">{{ $consultancy->content3_english }}</textarea>  
 								</div>
 
 

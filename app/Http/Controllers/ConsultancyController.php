@@ -7,6 +7,8 @@ use App\User;
 use App\Binnacle;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use App\Http\Requests\ConsultancyUpdateSpanishRequest;
+use App\Http\Requests\ConsultancyUpdateEnglishRequest;
 
 class ConsultancyController extends Controller
 {
@@ -71,7 +73,7 @@ class ConsultancyController extends Controller
      * @param  \App\Consultancy  $consultancy
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id) {
+    public function update(ConsultancyUpdateSpanishRequest $request, $id) {
 
         $consultancy = Consultancy::where('id', $id)->firstOrFail();
 
@@ -86,7 +88,37 @@ class ConsultancyController extends Controller
 
          //Bitácora
 
-        $activity = 'Ha editado la sección "Consultorías"';
+        $activity = 'Ha editado la sección "Consultorías" en Español';
+        $us = Auth::user()->id;
+        $data = array('user_id' => $us, 'activity' => $activity );
+        $binnacle = Binnacle::create($data);
+
+        //Fin Bitácora
+
+
+        if ($consultancy && $binnacle) {
+            return redirect()->route('home.sobre')->with(['type' => 'success', 'title' => 'Edición exitosa', 'msg' => 'La sección "Consultorías" ha sido editada exitosamente.']);
+        } else {
+            return redirect()->route('home.sobre')->with(['type' => 'error', 'title' => 'Edición fallida', 'msg' => 'Ha ocurrido un error durante el proceso, intentelo nuevamente.']);
+        }
+    }
+
+    public function updateEnglish(ConsultancyUpdateSEnglishRequest $request, $id) {
+
+        $consultancy = Consultancy::where('id', $id)->firstOrFail();
+
+        if ($request->hasFile('picture')) {
+            $file = $request->file('picture');
+            $picture = time()."_".$file->getClientOriginalName();
+            $file->move(public_path().'/web/images/consultancy/', $picture);
+            $data['picture'] = $picture;
+        }
+
+        $consultancy->fill($request->all())->save();
+
+         //Bitácora
+
+        $activity = 'Ha editado la sección "Consultorías" en Inglés';
         $us = Auth::user()->id;
         $data = array('user_id' => $us, 'activity' => $activity );
         $binnacle = Binnacle::create($data);
