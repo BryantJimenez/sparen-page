@@ -119,7 +119,6 @@
                             <div class="hover_content_inner">
                                 <h4>{{ $service->title3_spanish }}</h4>
                                 <p>{{ $service->content3_spanish }}</p>
-                                
                             </div>
                         </div>
                     </div>
@@ -209,6 +208,7 @@
             </div>
             <div class="col-xl-4 col-md-6 col-lg-4">
                 <div class="single_service_wrap text-center">
+
                     <img src="{{ asset('/web/images/svg_icon/bar-chart.svg"') }}" alt="">
                     <h3>{{ $objective->title2_spanish }}</h3>
                     <p>{{ $objective->content2_spanish }} </p>
