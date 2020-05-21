@@ -123,7 +123,7 @@ class ReportController extends Controller
         // } 
     }
 
-    public function store(ReportStoreEnglishRequest $request) {
+    public function storeEnlgish(ReportStoreEnglishRequest $request) {
 
     }
 
