@@ -93,7 +93,7 @@
 						<h3 class="text-heading">Edit "Banner in English"</h3>
 
 						<h6 class="card-subtitle">Required fields (<b class="text-danger">*</b>)</h6>
-						<form  method="POST" class="form" action="{{ route('sobre.update', ['id' => 1]) }}" enctype="multipart/form-data">
+						<form  method="POST" class="form" action="{{ route('banners.update', ['id' => 1]) }}" enctype="multipart/form-data">
 							@method('PUT')
 							@csrf
 							<div class="row">

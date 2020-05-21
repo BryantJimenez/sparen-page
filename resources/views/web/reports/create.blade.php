@@ -68,7 +68,7 @@
 				<div class="card">
 					<div class="card-body">
 						<h6 class="card-subtitle">Required fields (<b class="text-danger">*</b>)</h6>
-						<form  method="POST" action="{{ route('informe.store') }}" class="form" enctype="multipart/form-data">
+						<form  method="POST" action="{{ route('report.store') }}" class="form" enctype="multipart/form-data">
 							@csrf
 							<div class="row">
 								<div class="form-group col-lg-6 col-md-6 col-12">

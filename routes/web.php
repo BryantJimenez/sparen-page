@@ -21,47 +21,53 @@ Route::group(['middleware' => ['lang']], function () {
 	Route::get('/{lang?}', 'WebController@index')->name('home');
 
 	//Sobre Sparen
-	Route::get('/{lang?}/sparen/sobre-sparen/editar', 'AboutController@edit')->name('sobre.edit');
-	Route::put('/{lang?}/sparen/sobre-sparen/{id}', 'AboutController@update')->name('sobre.update');
+	Route::get('/{lang?}/sobre-sparen/editar', 'AboutController@edit')->name('sobre.edit');
+	Route::put('/{lang?}/sobre-sparen/{id}', 'AboutController@update')->name('sobre.update');
+	Route::put('/{lang?}/about-sparen/{id}', 'AboutController@updateEnglish')->name('about.update');
 	Route::get('/{lang?}/#sobre', 'WebController@index')->name('home.sobre');
 
 	//Servicios
-	Route::get('/{lang?}/sparen/servicios/editar', 'ServiceController@edit')->name('servicio.edit');
-	Route::put('/{lang?}/sparen/servicios/edit/{id}', 'ServiceController@update')->name('servicio.update');
+	Route::get('/{lang?}/servicios/editar', 'ServiceController@edit')->name('servicio.edit');
+	Route::put('/{lang?}/servicios/editar/{id}', 'ServiceController@update')->name('servicio.update');
+	Route::put('/{lang?}/services/editar/{id}', 'ServiceController@updateEnglish')->name('service.update');
 
 	//Informes
-	Route::get('/{lang?}/sparen/informes', 'ReportController@index')->name('informe.index');
-	Route::get('/{lang?}/sparen/informes/registrar', 'ReportController@create')->name('informe.create');
-	Route::post('/{lang?}/sparen/informes', 'ReportController@store')->name('informe.store');
-	Route::get('/{lang?}/sparen/informes/editar', 'ReportController@edit')->name('informe.edit');
-	Route::put('/{lang?}/sparen/informes/editar/{slug}', 'ReportController@update')->name('informe.update');
+	Route::get('/{lang?}/informes', 'ReportController@index')->name('informe.index');
+	Route::get('/{lang?}/informes/registrar', 'ReportController@create')->name('informe.create');
+	Route::post('/{lang?}/informes', 'ReportController@store')->name('informe.store');
+	Route::post('/{lang?}/reports/{id}', 'ReportController@storeEnglish')->name('report.store');
+	Route::get('/{lang?}/informes/editar', 'ReportController@edit')->name('informe.edit');
+	Route::put('/{lang?}/informes/editar/{slug}', 'ReportController@update')->name('informe.update');
 
 	//Contacto
-	Route::get('/{lang?}/sparen/contacto', 'ContactController@create')->name('contacto.index');
-	Route::post('/{lang?}/sparen/contacto', 'ContactController@store')->name('contacto.store');
+	Route::get('/{lang?}/contacto', 'ContactController@create')->name('contacto.index');
+	Route::post('/{lang?}/contacto', 'ContactController@store')->name('contacto.store');
 
 	//bitacora
-	Route::get('/{lang?}/sparen/bitacora-usuarios', 'BinnacleController@index')->name('bitacora.index');
+	Route::get('/{lang?}/bitacora-usuarios', 'BinnacleController@index')->name('bitacora.index');
 
 	//Usuario
-	Route::get('/{lang?}/sparen/usuario', 'UserController@index')->name('usuario.index');
-	Route::get('/{lang?}/sparen/usuario/registrar', 'UserController@create')->name('usuario.create');
-	Route::post('/{lang?}/sparen/usuarios', 'UserController@store')->name('usuario.store');
-	Route::get('/{lang?}/sparen/usuario/{slug}/editar', 'UserController@edit')->name('usuario.edit');
-	Route::put('/{lang?}/sparen/usuario/{slug}', 'UserController@update')->name('usuario.update');
-	Route::put('/{lang?}/sparen/usuario/activar/{slug}', 'UserController@activate')->name('usuario.activate');
-	Route::put('/{lang?}/sparen/usuario/desactivar/{slug}', 'UserController@deactivate')->name('usuario.deactivate');
-	Route::get('/{lang?}/sparen/perfil', 'UserController@profile')->name('usuario.profile');
+	Route::get('/{lang?}/usuario', 'UserController@index')->name('usuario.index');
+	Route::get('/{lang?}/usuario/registrar', 'UserController@create')->name('usuario.create');
+	Route::post('/{lang?}/usuarios', 'UserController@store')->name('usuario.store');
+	Route::get('/{lang?}/usuario/{slug}/editar', 'UserController@edit')->name('usuario.edit');
+	Route::put('/{lang?}/usuario/{slug}', 'UserController@update')->name('usuario.update');
+	Route::put('/{lang?}/usuario/activar/{slug}', 'UserController@activate')->name('usuario.activate');
+	Route::put('/{lang?}/usuario/desactivar/{slug}', 'UserController@deactivate')->name('usuario.deactivate');
+	Route::get('/{lang?}/perfil', 'UserController@profile')->name('usuario.profile');
 
 	//Consultorías
-	Route::get('/{lang?}/sparen/consultorias/editar', 'ConsultancyController@edit')->name('consultoria.edit');
-	Route::put('/{lang?}/sparen/consultorias/editar/{id}', 'ConsultancyController@update')->name('consultoria.update');
+	Route::get('/{lang?}/consultorias/editar', 'ConsultancyController@edit')->name('consultoria.edit');
+	Route::put('/{lang?}/consultorias/editar/{id}', 'ConsultancyController@update')->name('consultoria.update');
+	Route::put('/{lang?}/consultancies/editar/{id}', 'ConsultancyController@updateEnglish')->name('consultancy.update');
 
 	//Objetivos
-	Route::get('/{lang?}/sparen/objetivos/editar', 'ObjectiveController@edit')->name('objetivo.edit');
-	Route::put('/{lang?}/sparen/objetivos/editar/{id}', 'ObjectiveController@update')->name('objetivo.update');
+	Route::get('/{lang?}/objetivos/editar', 'ObjectiveController@edit')->name('objetivo.edit');
+	Route::put('/{lang?}/objetivos/editar/{id}', 'ObjectiveController@update')->name('objetivo.update');
+	Route::put('/{lang?}/objectives/editar/{id}', 'ObjectiveController@updateEnglish')->name('objective.update');
 
 	//Banner
-	Route::get('/{lang?}/sparen/banner/editar', 'BannerController@edit')->name('banner.edit');
-	Route::put('/{lang?}/sparen/banner/editar/{id}', 'BannerController@update')->name('banner.update');
+	Route::get('/{lang?}/banner/editar', 'BannerController@edit')->name('banner.edit');
+	Route::put('/{lang?}/banner/editar/{id}', 'BannerController@update')->name('banner.update');
+	Route::put('/{lang?}/banners/editar/{id}', 'BannerController@updateEnglish')->name('banners.update');
 });

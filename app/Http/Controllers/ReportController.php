@@ -8,6 +8,8 @@ use App\Binnacle;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use App\Http\Requests\ReportStoreSpanishRequest;
+use App\Http\Requests\ReportStoreEnglishRequest;
 
 class ReportController extends Controller
 {
@@ -42,7 +44,7 @@ class ReportController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ReportStoreSpanishRequest $request)
     {
 
 
@@ -119,6 +121,10 @@ class ReportController extends Controller
         // } else {
         //     return redirect()->route('informe.index')->with(['type' => 'error', 'title' => 'Registro fallido', 'msg' => 'Ha ocurrido un error durante el proceso, intentelo nuevamente.']);
         // } 
+    }
+
+    public function storeEnlgish(ReportStoreEnglishRequest $request) {
+
     }
 
     /**
