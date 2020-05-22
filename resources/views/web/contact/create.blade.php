@@ -27,7 +27,7 @@
 				<h2 class="contact-title">Contáctanos</h2>
 			</div>
 			<div class="col-lg-8">
-				<form class="form-contact contact_form" action="{{ route('contacto.store') }}" method="POST"  >
+				<form class="form-contact contact_form" action="{{ route('contacto.store') }}" method="POST">
 					@csrf
 					<div class="row">
 						<div class="col-sm-6">

@@ -43,7 +43,7 @@ Route::put('/sparen/informes/editar/{slug}', 'ReportController@update')->name('i
 
 //Contacto
 Route::get('/sparen/contacto', 'ContactController@create')->name('contacto.index');
-Route::post('/sparen/contacto', 'ContactController@store')->name('contacto.store');
+Route::post('/sparen/contacto/registrar', 'ContactController@store')->name('contacto.store');
 
 
 //bitacora

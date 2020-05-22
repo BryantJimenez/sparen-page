@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Http\Request;
-use App\Http\Requests;
-use App\Contact;
-use Mail;
 use App\Http\Requests\ContactStoreRequest;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Http\Request;
+use App\Contact;
+
 
 
 class ContactController extends Controller
@@ -41,7 +41,7 @@ class ContactController extends Controller
     public function store(ContactStoreRequest $request)
     {
 
-
+      
 
    }
 
