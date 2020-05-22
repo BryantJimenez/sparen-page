@@ -105,18 +105,25 @@
                             @enderror
                         </div>
                         <div class="col-xl-12">
-                            <button type="submit" class="boxed-btn3">@lang('messages.sign in')</button>
+                            <button type="submit" action="login" class="boxed-btn3">@lang('messages.sign in')</button>
                         </div>
                         <div class="col-xl-12">
-                         @if (Route::has('password.request'))
-                         <a class="btn btn-link" href="{{ route('password.request') }}">@lang('messages.forgot your password')</a>
-                        @endif
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</form>
-<!-- form itself end -->
+                           @if (Route::has('password.request'))
+                           <a class="btn btn-link" href="{{ route('password.request') }}">@lang('messages.forgot your password')</a>
+                           @endif
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </form>
+   <!-- form itself end -->
 </header>
-    <!-- header-end -->
+<!-- header-end -->
+
+@section('script')
+<script src="{{ asset('/web/vendors/validate/jquery.validate.js') }}"></script>
+<script src="{{ asset('/web/vendors/validate/additional-methods.js') }}"></script>
+<script src="{{ asset('/web/vendors/validate/messages_es.js') }}"></script>
+<script src="{{ asset('/web/js/validate.js') }}"></script>
+@endsection

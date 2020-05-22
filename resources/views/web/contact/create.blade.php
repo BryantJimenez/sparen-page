@@ -24,10 +24,11 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-12">
+				@include('web.partials.errors')
 				<h2 class="contact-title">@lang('messages.contact us')</h2>
 			</div>
 			<div class="col-lg-8">
-				<form class="form-contact contact_form" action="{{ route('contacto.store') }}" method="POST">
+				<form class="form-contact contact_form" action="{{ route('contacto.store') }}" method="POST" id="formContact">
 					@csrf
 					<div class="row">
 						<div class="col-sm-6">
@@ -48,7 +49,7 @@
 						</div>
 					</div>
 					<div class="form-group mt-3">
-						<button type="submit" class="button button-contactForm boxed-btn">@lang('messages.send')</button>
+						<button type="submit" action="contact" class="button button-contactForm boxed-btn">@lang('messages.send')</button>
 					</div>
 				</form>
 			</div>
@@ -78,4 +79,11 @@
 </section>
 <!-- ================ contact section end ================= -->
 
+@endsection
+
+@section('script')
+<script src="{{ asset('/web/vendors/validate/jquery.validate.js') }}"></script>
+<script src="{{ asset('/web/vendors/validate/additional-methods.js') }}"></script>
+<script src="{{ asset('/web/vendors/validate/messages_es.js') }}"></script>
+<script src="{{ asset('/web/js/validate.js') }}"></script>
 @endsection
