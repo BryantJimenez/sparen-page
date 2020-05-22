@@ -1,7 +1,6 @@
 @extends('layouts.web')
 
-@section('title', 'Bitácora')
-
+@section('title', __('messages.binnacle'))
 
 @section('content')
 
@@ -10,25 +9,24 @@
 		<div class="row">
 			<div class="col-xl-12">
 				<div class="bradcam_text text-center">
-					<h3>Bitácora</h3>
+					<h3>@lang('messages.binnacle')</h3>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
 
-
 <section class="contact-section">
 	<div class="container">
 		<div class="row">
 			<div class="col-12">
-				<table id="tabla" class="table table-striped">
+				<table id="@if($lang=="es"){{ "tabla" }}@else{{ "table-en" }}@endif" class="table table-striped">
 					<thead>
 						<tr>
 							<th scope="col">#</th>
-							<th scope="col">Usuario</th>
-							<th scope="col">Actividad</th>
-							<th scope="col">Fecha</th>
+							<th scope="col">@lang('messages.user')</th>
+							<th scope="col">@lang('messages.activity')</th>
+							<th scope="col">@lang('messages.date')</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -40,7 +38,6 @@
 							<td>{{ $b->created_at }}</td>
 						</tr>
 						@endforeach
-
 					</tbody>
 				</table>
 			</div>
@@ -49,4 +46,3 @@
 </section>
 
 @endsection
-

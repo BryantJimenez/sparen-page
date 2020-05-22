@@ -5,8 +5,10 @@ namespace App\Http\Controllers;
 use App\Http\Requests\ContactStoreRequest;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\App;
 use Illuminate\Http\Request;
 use App\Contact;
+use Mail;
 
 
 
@@ -19,7 +21,7 @@ class ContactController extends Controller
      */
     public function index()
     {
-        
+
     }
 
     /**
@@ -27,9 +29,10 @@ class ContactController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($lang)
     {
-       return view('web.contact.create');
+        App::setlocale($lang);
+        return view('web.contact.create', compact('lang'));
     }
 
     /**
@@ -43,7 +46,7 @@ class ContactController extends Controller
 
       
 
-   }
+    }
 
 
     /**

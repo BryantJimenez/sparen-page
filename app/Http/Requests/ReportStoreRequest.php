@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class AboutUpdateSpanishRequest extends FormRequest
+class ReportStoreRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,12 +24,12 @@ class AboutUpdateSpanishRequest extends FormRequest
     public function rules()
     {
         return [
-            'paragraph1_spanish' => 'required|string|min:2|max:191',
-            'paragraph2_spanish' => 'required|string|min:2|max:191',
-            'list1_spanish' => 'required|string|min:2|max:191',
-            'list2_spanish' => 'required|string|min:2|max:191',
-            'list3_spanish' => 'required|string|min:2|max:191',
-            'picture' => 'nullable'
+            'title_spanish' => 'required|string|min:2|max:191',
+            'description_spanish' => 'required|string|min:2|max:191',
+            'pdf_spanish' => 'required',
+            'title_english' => 'required|string|min:2|max:191',
+            'description_english' => 'required|string|min:2|max:191',
+            'pdf_english' => 'required'
         ];
     }
 }
