@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class ServiceUpdateSpanishRequest extends FormRequest
+class ObjectiveUpdateRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -30,9 +30,13 @@ class ServiceUpdateSpanishRequest extends FormRequest
             'content2_spanish' => 'required|string|min:2|max:191',
             'title3_spanish' => 'required|string|min:2|max:191',
             'content3_spanish' => 'required|string|min:2|max:191',
-            'picture1' => 'nullable',
-            'picture2' => 'nullable',
-            'picture3' => 'nullable'
+            'title1_english' => 'required|string|min:2|max:191',
+            'content1_english' => 'required|string|min:2|max:191',
+            'title2_english' => 'required|string|min:2|max:191',
+            'content2_english' => 'required|string|min:2|max:191',
+            'title3_english' => 'required|string|min:2|max:191',
+            'content3_english' => 'required|string|min:2|max:191',
+            'picture' => 'nullable'
         ];
     }
 }

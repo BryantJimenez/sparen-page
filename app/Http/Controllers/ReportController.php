@@ -48,14 +48,14 @@ class ReportController extends Controller
     public function store(ReportStoreRequest $request, $lang)
     {
 
-        $count=Report::where('slug', "report-spanish")->count();
-        $slug=Str::slug("report-spanish", '-');
+        $count=Report::where('slug', request("title_spanish"))->count();
+        $slug=Str::slug(request("title_spanish"), '-');
 
         $num=0;
         while (true) {
             $count2 = Report::where('slug', $slug)->count();
             if ($count2>0) {
-                $slug="report-spanish-".$num;
+                $slug=Str::slug(request("title_spanish"), '-')."-".$num;
                 $num++;
             } else {
                 $data=array('title_spanish' => request('title_spanish'), 'slug' => $slug, 'description_spanish' => request('description_spanish'), 'title_english' => request('title_english'), 'description_english' => request('description_english'), 'user_id' => Auth::user()->id);

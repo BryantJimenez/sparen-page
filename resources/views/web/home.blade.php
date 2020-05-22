@@ -248,7 +248,7 @@
             </div>
             <div class="col-xl-6 col-lg-6">
                 <div class="finance_thumb">
-                    <img src="{{ asset('/web/images/consultancy/finance.png') }}" alt="">
+                    <img src="{{ asset('/web/images/consultancy/'.$consultancy->picture) }}" alt="">
                 </div>
             </div>
             @guest

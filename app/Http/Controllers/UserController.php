@@ -110,7 +110,7 @@ class UserController extends Controller
      * @param  \App\Web  $web
      * @return \Illuminate\Http\Response
      */
-    public function update(UserUpdateRequest $request,$slug) {
+    public function update(UserUpdateRequest $request, $lang, $slug) {
 
         $user = User::where('slug', $slug)->firstOrFail();
         $user->fill($request->all())->save();
@@ -125,9 +125,9 @@ class UserController extends Controller
         //Fin Bitácora
 
         if ($user && $binnacle) {
-            return redirect()->route('usuario.index', ['slug' => $slug])->with(['type' => 'success', 'title' => 'Edición exitosa', 'msg' => 'El usuario ha sido editado exitosamente.']);
+            return redirect()->route('usuario.edit', ['lang' => $lang, 'slug' => $slug])->with(['type' => 'success', 'title' => 'Edición exitosa', 'msg' => 'El usuario ha sido editado exitosamente.']);
         } else {
-            return redirect()->route('usuario.index', ['slug' => $slug])->with(['type' => 'error', 'title' => 'Edición fallida', 'msg' => 'Ha ocurrido un error durante el proceso, intentelo nuevamente.']);
+            return redirect()->route('usuario.edit', ['lang' => $lang, 'slug' => $slug])->with(['type' => 'error', 'title' => 'Edición fallida', 'msg' => 'Ha ocurrido un error durante el proceso, intentelo nuevamente.']);
         }
     }
 }

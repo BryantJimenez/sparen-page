@@ -7,63 +7,22 @@ use App\User;
 use App\Binnacle;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
-use App\Http\Requests\ObjectiveUpdateSpanishRequest;
-use App\Http\Requests\ObjectiveUpdateEnglishRequest;
+use App\Http\Requests\ObjectiveUpdateRequest;
+use Illuminate\Support\Facades\App;
 
 class ObjectiveController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Objective  $objective
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Objective $objective)
-    {
-        //
-    }
-
     /**
      * Show the form for editing the specified resource.
      *
      * @param  \App\Objective  $objective
      * @return \Illuminate\Http\Response
      */
-    public function edit(Objective $objective)
+    public function edit($lang)
     {
+        App::setlocale($lang);
         $objective = Objective::where('id', 1)->firstOrFail();
-        return view('web.objectives.edit', compact('objective'));
+        return view('web.objectives.edit', compact('lang', 'objective'));
     }
 
     /**
@@ -73,74 +32,32 @@ class ObjectiveController extends Controller
      * @param  \App\Objective  $objective
      * @return \Illuminate\Http\Response
      */
-    public function update(ObjectiveUpdateSpanishRequest $request, $id) {
+    public function update(ObjectiveUpdateRequest $request, $lang) {
 
-        $objective = Objective::where('id', $id)->firstOrFail();
+        $objective = Objective::where('id', 1)->firstOrFail();
+        $data=array('title1_spanish' => request('title1_spanish'), 'title2_spanish' => request('title2_spanish'), 'title3_spanish' => request('title3_spanish'), 'title1_english' => request('title1_english'), 'title2_english' => request('title2_english'), 'title3_english' => request('title3_english'), 'content1_spanish' => request('content1_spanish'), 'content2_spanish' => request('content2_spanish'), 'content3_spanish' => request('content3_spanish'), 'content1_english' => request('content1_english'), 'content2_english' => request('content2_english'), 'content3_english' => request('content3_english'));
 
         if ($request->hasFile('picture')) {
             $file = $request->file('picture');
             $picture = time()."_".$file->getClientOriginalName();
             $file->move(public_path().'/web/images/objective', $picture);
-            $request['picture'] = $picture;
+            $data['picture'] = $picture;
         }
 
-        $objective->fill($request->all())->save();
+        $objective->fill($data)->save();
 
-         //Bitácora
-
+        //Bitácora
         $activity = 'Ha editado la sección "Objetivos" en Español';
         $us = Auth::user()->id;
         $data = array('user_id' => $us, 'activity' => $activity );
         $binnacle = Binnacle::create($data);
-
         //Fin Bitácora
 
 
         if ($objective && $binnacle) {
-            return redirect()->route('home')->with(['type' => 'success', 'title' => 'Edición exitosa', 'msg' => 'La sección "Consultorías" ha sido editada exitosamente.']);
+            return redirect()->route('objetivo.edit', ['lang' => $lang])->with(['type' => 'success', 'title' => 'Edición exitosa', 'msg' => 'La sección "Consultorías" ha sido editada exitosamente.']);
         } else {
-            return redirect()->route('home')->with(['type' => 'error', 'title' => 'Edición fallida', 'msg' => 'Ha ocurrido un error durante el proceso, intentelo nuevamente.']);
+            return redirect()->route('objetivo.edit', ['lang' => $lang])->with(['type' => 'error', 'title' => 'Edición fallida', 'msg' => 'Ha ocurrido un error durante el proceso, intentelo nuevamente.']);
         }
-    }
-
-    public function updateEnglish(ObjectiveUpdateEnglishRequest $request, $id) {
-
-        $objective = Objective::where('id', $id)->firstOrFail();
-
-        if ($request->hasFile('picture')) {
-            $file = $request->file('picture');
-            $picture = time()."_".$file->getClientOriginalName();
-            $file->move(public_path().'/web/images/objective', $picture);
-            $request['picture'] = $picture;
-        }
-
-        $objective->fill($request->all())->save();
-
-         //Bitácora
-
-        $activity = 'Ha editado la sección "Objetivos" en Inglés';
-        $us = Auth::user()->id;
-        $data = array('user_id' => $us, 'activity' => $activity );
-        $binnacle = Binnacle::create($data);
-
-        //Fin Bitácora
-
-
-        if ($objective && $binnacle) {
-            return redirect()->route('home')->with(['type' => 'success', 'title' => 'Edición exitosa', 'msg' => 'La sección "Consultorías" ha sido editada exitosamente.']);
-        } else {
-            return redirect()->route('home')->with(['type' => 'error', 'title' => 'Edición fallida', 'msg' => 'Ha ocurrido un error durante el proceso, intentelo nuevamente.']);
-        }
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Objective  $objective
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Objective $objective)
-    {
-        //
     }
 }

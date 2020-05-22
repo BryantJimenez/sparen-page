@@ -91,5 +91,17 @@ return [
     'second list english' => 'Segundo Elemento de la Lista en Ingles',
     'third list english' => 'Tercer Elemento de la Lista en Ingles',
     'edit about' => 'Editar Nosotros',
-    'image' => 'Imagen'
+    'image' => 'Imagen',
+    'first title spanish' => 'Primer Título en Español',
+    'second title spanish' => 'Segundo Título en Español',
+    'third title spanish' => 'Tercer Título en Español',
+    'first title english' => 'Primer Título en Ingles',
+    'second title english' => 'Segundo Título en Ingles',
+    'third title english' => 'Tercer Título en Ingles',
+    'edit targets' => 'Editar Objetivos',
+    'edit consultancies' => 'Editar Consultorías',
+    'edit services' => 'Editar Servicios',
+    'first image' => 'Primera Imagen',
+    'second image' => 'Segunda Imagen',
+    'third image' => 'Tercera Imagen'
 ];

@@ -91,5 +91,17 @@ return [
     'second list english' => 'Second Element in the List English',
     'third list english' => 'Third Element in the List English',
     'edit about' => 'Edit Us',
-    'image' => 'Image'
+    'image' => 'Image',
+    'first title spanish' => 'First Title in Spanish',
+    'second title spanish' => 'Second Title in Spanish',
+    'third title spanish' => 'Third Title in Spanish',
+    'first title english' => 'First Title in English',
+    'second title english' => 'Second Title in English',
+    'third title english' => 'Third Title in English',
+    'edit targets' => 'Edit Targets',
+    'edit consultancies' => 'Edit Consultancies',
+    'edit services' => 'Edit Services',
+    'first image' => 'First Image',
+    'second image' => 'Second Image',
+    'third image' => 'Third Image'
 ];
