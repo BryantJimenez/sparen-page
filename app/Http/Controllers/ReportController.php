@@ -45,7 +45,7 @@ class ReportController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(ReportStoreRequest $request)
+    public function store(ReportStoreRequest $request, $lang)
     {
 
         $count=Report::where('slug', "report-spanish")->count();
