@@ -9,20 +9,18 @@
                                 <img src="{{ asset('/web/images/logo.png') }}" alt="">
                             </a>
                         </div>
-                        <p>
-                            Buscamos que nuestros clientes manejen sus fondos con transparencia.
-                        </p>
+                        <p>@lang('messages.description')</p>
 
                     </div>
                 </div>
                 <div class="col-xl-2 offset-xl-1 col-md-6 col-lg-3">
                     <div class="footer_widget">
                         <h3 class="footer_title">
-                            Servicios
+                            @lang('messages.services')
                         </h3> 
                         <ul>
-                            <li><a href="#servicios">Servicios</a></li>
-                            <li><a href="#sobre">Nosotros</a></li>
+                            <li><a href="/{{ $lang }}/#servicios">@lang('messages.services')</a></li>
+                            <li><a href="/{{ $lang }}/#sobre">@lang('messages.about')</a></li>
                         </ul>
 
                     </div>
@@ -30,27 +28,27 @@
                 <div class="col-xl-2 col-md-6 col-lg-2">
                     <div class="footer_widget">
                         <h3 class="footer_title">
-                         Links
+                         @lang('messages.pages')
                      </h3>
                      <ul>
-                        <li><a href="{{ route('informe.index') }}">Informes</a></li>
-                        <li><a href="{{ route('contacto.index') }}">Contacto</a></li>
+                        <li><a href="{{ route('informe.index', ['lang' => $lang]) }}">@lang('messages.reports')</a></li>
+                        <li><a href="{{ route('contacto.index', ['lang' => $lang]) }}">@lang('messages.contact')</a></li>
                     </ul>
                 </div>
             </div>
             <div class="col-xl-3 col-md-6 col-lg-3">
                 <div class="footer_widget">
                     <h3 class="footer_title">
-                        Dirección
+                        @lang('messages.address')
                     </h3>
                     <ul>
                         <li>Rondeau 69 5°Piso (CP 5000) Nueva-Cordoba - CORDOBA - ARGENTINA</li>
                         <li>+54 367 467 8934</li>
                         <li>info@sparen.com.ar</li>
                         @guest
-                        <li><a class="popup-with-form" href="#test-form">INICIAR SESIÓN</a></li>
+                        <li><a class="popup-with-form" href="#test-form">@lang('messages.login')</a></li>
                         @else
-                        <li><a class="popup-with-form" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">CERRAR SESIÓN</a></li>
+                        <li><a class="popup-with-form" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">@lang('messages.logout')</a></li>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                             @csrf
                         </form>
@@ -67,7 +65,7 @@
         <div class="row">
             <div class="col-xl-12">
                 <p class="copy_right text-center">
-                 Sparen &copy;<script>document.write(new Date().getFullYear());</script> Todos los derechos reservados | Realizado por <a href="https://www.otterscompany.com" target="_blank">Otters Company <i class="fa fa-heart-o" aria-hidden="true"></i></a>
+                 Sparen &copy;<script>document.write(new Date().getFullYear());</script> @lang('messages.copyright') | @lang('messages.make') <a href="https://www.otterscompany.com" target="_blank">Otters Company <i class="fa fa-heart-o" aria-hidden="true"></i></a>
              </p>
          </div>
      </div>

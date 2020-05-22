@@ -334,6 +334,10 @@ $(document).ready(function($) {
     });
   }
 
+  if ($('#table-en').length) {
+    $('#table-en').DataTable();
+  }
+
   // blog-dtails-page
 
   //project-active

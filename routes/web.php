@@ -20,13 +20,10 @@ Auth::routes();
 Route::group(['middleware' => ['lang']], function () {
 	// Inicio
 	Route::get('/{lang?}', 'WebController@index')->name('home');
-	Route::get('/{lang?}/#sobre', 'WebController@index')->name('home.sobre');
-	Route::get('/{lang?}/#servicios', 'WebController@index')->name('home.servicios');
 
 	//Sobre Sparen
 	Route::get('/{lang?}/sobre-sparen/editar', 'AboutController@edit')->name('sobre.edit');
-	Route::put('/{lang?}/sobre-sparen/{id}', 'AboutController@update')->name('sobre.update');
-	Route::put('/{lang?}/about-sparen/{id}', 'AboutController@updateEnglish')->name('about.update');
+	Route::put('/{lang?}/sobre-sparen', 'AboutController@update')->name('sobre.update');
 
 	//Servicios
 	Route::get('/{lang?}/servicios/editar', 'ServiceController@edit')->name('servicio.edit');
@@ -54,8 +51,8 @@ Route::group(['middleware' => ['lang']], function () {
 	Route::post('/{lang?}/usuarios', 'UserController@store')->name('usuario.store');
 	Route::get('/{lang?}/usuario/{slug}/editar', 'UserController@edit')->name('usuario.edit');
 	Route::put('/{lang?}/usuario/{slug}', 'UserController@update')->name('usuario.update');
-	Route::put('/{lang?}/usuario/activar/{slug}', 'UserController@activate')->name('usuario.activate');
-	Route::put('/{lang?}/usuario/desactivar/{slug}', 'UserController@deactivate')->name('usuario.deactivate');
+	Route::put('/{lang?}/usuario/{slug}/activar', 'UserController@activate')->name('usuario.activate');
+	Route::put('/{lang?}/usuario/{slug}/desactivar', 'UserController@deactivate')->name('usuario.deactivate');
 	Route::get('/{lang?}/perfil', 'UserController@profile')->name('usuario.profile');
 
 	//Consultorías
@@ -70,6 +67,5 @@ Route::group(['middleware' => ['lang']], function () {
 
 	//Banner
 	Route::get('/{lang?}/banner/editar', 'BannerController@edit')->name('banner.edit');
-	Route::put('/{lang?}/banner/editar/{id}', 'BannerController@update')->name('banner.update');
-	Route::put('/{lang?}/banners/editar/{id}', 'BannerController@updateEnglish')->name('banners.update');
+	Route::put('/{lang?}/banner/editar', 'BannerController@update')->name('banner.update');
 });

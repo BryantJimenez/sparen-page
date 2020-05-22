@@ -7,63 +7,22 @@ use App\User;
 use App\Binnacle;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
-use App\Http\Requests\BannerUpdateSpanishRequest;
-use App\Http\Requests\BannerUpdateEnglishRequest;
+use App\Http\Requests\BannerUpdateRequest;
+use Illuminate\Support\Facades\App;
 
 class BannerController extends Controller
 {
-    /** 
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Banner  $banner
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Banner $banner)
-    {
-        
-    }
-
     /**
      * Show the form for editing the specified resource.
      *
      * @param  \App\Banner  $banner
      * @return \Illuminate\Http\Response
      */
-    public function edit(Banner $banner)
+    public function edit($lang)
     {
+        App::setlocale($lang);
         $banner = Banner::where('id', '1')->firstOrFail();
-        return view('web.banner.edit', compact('banner'));
+        return view('web.banner.edit', compact('lang', 'banner'));
     }
 
     /**
@@ -73,9 +32,10 @@ class BannerController extends Controller
      * @param  \App\Banner  $banner
      * @return \Illuminate\Http\Response
      */
-    public function update(BannerUpdateSpanishRequest $request,  $id) {
+    public function update(BannerUpdateRequest $request, $lang) {
+        $banner = Banner::where('id', 1)->firstOrFail();
 
-        $banner = Banner::where('id', $id)->firstOrFail();
+        $data=array('banner1_spanish' => request('banner1_spanish'), 'banner2_spanish' => request('banner2_spanish'), 'banner3_spanish' => request('banner3_spanish'), 'banner1_english' => request('banner1_english'), 'banner2_english' => request('banner2_english'), 'banner3_english' => request('banner3_english'));
 
         if ($request->hasFile('picture1')) {
             $file = $request->file('picture1');
@@ -98,77 +58,22 @@ class BannerController extends Controller
             $data['picture3'] = $picture3;
         }
 
-        $banner->fill($request->all())->save();
+        $banner->fill($data)->save();
 
-         //Bitácora
+        //Bitácora
 
         $activity = 'Ha editado la sección "Banner" en Español';
         $us = Auth::user()->id;
         $data = array('user_id' => $us, 'activity' => $activity );
-        $binnacle = Binnacle::create($data);
+        $binnacle = Binnacle::create($data)->save();
 
         //Fin Bitácora
 
 
         if ($banner && $binnacle) {
-            return redirect()->route('home')->with(['type' => 'success', 'title' => 'Edición exitosa', 'msg' => 'La sección "Banner" ha sido editada exitosamente.']);
+            return redirect()->route('banner.edit', ['lang' => $lang])->with(['type' => 'success', 'title' => 'Edición exitosa', 'msg' => 'La sección "Banner" ha sido editada exitosamente.']);
         } else {
-            return redirect()->route('home')->with(['type' => 'error', 'title' => 'Edición fallida', 'msg' => 'Ha ocurrido un error durante el proceso, intentelo nuevamente.']);
+            return redirect()->route('banner.edit', ['lang' => $lang])->with(['type' => 'error', 'title' => 'Edición fallida', 'msg' => 'Ha ocurrido un error durante el proceso, intentelo nuevamente.']);
         }
-    }
-
-    public function updateEnglish(BannerUpdateEnglishRequest $request,  $id) {
-
-        $banner = Banner::where('id', $id)->firstOrFail();
-
-        if ($request->hasFile('picture1')) {
-            $file = $request->file('picture1');
-            $picture1 = time()."_".$file->getClientOriginalName();
-            $file->move(public_path().'/web/images/banner/', $picture1);
-            $data['picture1'] = $picture1;
-        }
-
-         if ($request->hasFile('picture2')) {
-            $file = $request->file('picture2');
-            $picture2 = time()."_".$file->getClientOriginalName();
-            $file->move(public_path().'/web/images/banner/', $picture2);
-            $data['picture2'] = $picture2;
-        }
-
-         if ($request->hasFile('picture3')) {
-            $file = $request->file('picture3');
-            $picture3 = time()."_".$file->getClientOriginalName();
-            $file->move(public_path().'/web/images/banner/', $picture3);
-            $data['picture3'] = $picture3;
-        }
-
-        $banner->fill($request->all())->save();
-
-         //Bitácora
-
-        $activity = 'Ha editado la sección "Banner" en Inglés';
-        $us = Auth::user()->id;
-        $data = array('user_id' => $us, 'activity' => $activity );
-        $binnacle = Binnacle::create($data);
-
-        //Fin Bitácora
-
-
-        if ($banner && $binnacle) {
-            return redirect()->route('home')->with(['type' => 'success', 'title' => 'Edición exitosa', 'msg' => 'La sección "Banner" ha sido editada exitosamente.']);
-        } else {
-            return redirect()->route('home')->with(['type' => 'error', 'title' => 'Edición fallida', 'msg' => 'Ha ocurrido un error durante el proceso, intentelo nuevamente.']);
-        }
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Banner  $banner
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Banner $banner)
-    {
-        //
     }
 }

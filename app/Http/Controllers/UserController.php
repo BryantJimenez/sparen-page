@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use App\Http\Requests\UserStoreRequest;
 use App\Http\Requests\UserUpdateRequest;
+use Illuminate\Support\Facades\App;
 
 class UserController extends Controller
 {
@@ -18,11 +19,12 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($lang)
     {
+        App::setlocale($lang);
         $num = 1;
         $users = User::all();
-        return view('web.users.index', compact('num', 'users'));
+        return view('web.users.index', compact('lang', 'num', 'users'));
     }
 
     /**
@@ -30,9 +32,10 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($lang)
     {
-        return view('web.users.create');
+        App::setlocale($lang);
+        return view('web.users.create', compact('lang'));
     }
 
     /**
@@ -41,11 +44,9 @@ class UserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(UserStoreRequest $request)
+    public function store(UserStoreRequest $request, $lang)
     {
-
         //Registro de Usuarios
-
         $count=User::where('name', request('name'))->where('lastname', request('lastname'))->count();
         $slug=Str::slug(request('name')." ".request('lastname'), '-');
         if ($count>0) {
@@ -73,36 +74,20 @@ class UserController extends Controller
             $data['photo'] = $photo;
         }
         $user=User::create($data);
-
         //Fin Registro de Usuarios
 
-
         //Bitácora
-
         $activity = 'Ha registrado a un usuario';
         $us = Auth::user()->id;
         $data = array('user_id' => $us, 'activity' => $activity );
         $binnacle = Binnacle::create($data);
-
         //Fin Bitácora
 
-
         if ($user && $binnacle) {
-            return redirect()->route('usuario.index')->with(['type' => 'success', 'title' => 'Registro exitoso', 'msg' => 'El usuario ha sido registrado exitosamente.']);
+            return redirect()->route('usuario.index', ['lang' => $lang])->with(['type' => 'success', 'title' => 'Registro exitoso', 'msg' => 'El usuario ha sido registrado exitosamente.']);
         } else {
-            return redirect()->route('usuario.index')->with(['type' => 'error', 'title' => 'Registro fallido', 'msg' => 'Ha ocurrido un error durante el proceso, intentelo nuevamente.']);
+            return redirect()->route('usuario.index', ['lang' => $lang])->with(['type' => 'error', 'title' => 'Registro fallido', 'msg' => 'Ha ocurrido un error durante el proceso, intentelo nuevamente.']);
         }
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Web  $web
-     * @return \Illuminate\Http\Response
-     */
-    public function show(user $web)
-    {
-        //
     }
 
     /**
@@ -111,10 +96,10 @@ class UserController extends Controller
      * @param  \App\Web  $web
      * @return \Illuminate\Http\Response
      */
-    public function edit($slug) {
-
+    public function edit($lang, $slug) {
+        App::setlocale($lang);
         $user=User::where('slug', $slug)->firstOrFail();
-        return view('web.users.edit', compact("user"));
+        return view('web.users.edit', compact("lang", "user"));
 
     }
 
@@ -145,17 +130,4 @@ class UserController extends Controller
             return redirect()->route('usuario.index', ['slug' => $slug])->with(['type' => 'error', 'title' => 'Edición fallida', 'msg' => 'Ha ocurrido un error durante el proceso, intentelo nuevamente.']);
         }
     }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Web  $web
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($slug)
-    {
-        //
-    }
-
-
 }

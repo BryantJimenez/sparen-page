@@ -9,61 +9,20 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Http\Requests\ConsultancyUpdateSpanishRequest;
 use App\Http\Requests\ConsultancyUpdateEnglishRequest;
+use Illuminate\Support\Facades\App;
 
 class ConsultancyController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Consultancy  $consultancy
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Consultancy $consultancy)
-    {
-        //
-    }
-
     /**
      * Show the form for editing the specified resource.
      *
      * @param  \App\Consultancy  $consultancy
      * @return \Illuminate\Http\Response
      */
-    public function edit(Consultancy $consultancy)
+    public function edit($lang)
     {
         $consultancy = Consultancy::where('id', 1)->firstOrFail();
-        return view('web.consultancy.edit', compact('consultancy'));
+        return view('web.consultancy.edit', compact('lang', 'consultancy'));
     }
 
     /**

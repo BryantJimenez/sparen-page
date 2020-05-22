@@ -8,7 +8,7 @@ use App\Http\Requests;
 use App\Contact;
 use Mail;
 use App\Http\Requests\ContactStoreRequest;
-
+use Illuminate\Support\Facades\App;
 
 class ContactController extends Controller
 {
@@ -19,7 +19,7 @@ class ContactController extends Controller
      */
     public function index()
     {
-        
+
     }
 
     /**
@@ -27,9 +27,10 @@ class ContactController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($lang)
     {
-       return view('web.contact.create');
+        App::setlocale($lang);
+        return view('web.contact.create', compact('lang'));
     }
 
     /**
@@ -43,7 +44,7 @@ class ContactController extends Controller
 
 
 
-   }
+    }
 
 
     /**
