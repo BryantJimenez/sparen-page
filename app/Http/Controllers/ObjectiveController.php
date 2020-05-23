@@ -55,7 +55,7 @@ class ObjectiveController extends Controller
 
 
         if ($objective && $binnacle) {
-            return redirect()->route('objetivo.edit', ['lang' => $lang])->with(['type' => 'success', 'title' => 'Edición exitosa', 'msg' => 'La sección "Consultorías" ha sido editada exitosamente.']);
+            return redirect()->route('objetivo.edit', ['lang' => $lang])->with(['type' => 'success', 'title' => 'Edición exitosa', 'msg' => 'La sección "Objetivos" ha sido editada exitosamente.']);
         } else {
             return redirect()->route('objetivo.edit', ['lang' => $lang])->with(['type' => 'error', 'title' => 'Edición fallida', 'msg' => 'Ha ocurrido un error durante el proceso, intentelo nuevamente.']);
         }

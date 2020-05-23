@@ -27,11 +27,7 @@
 				<h2 class="contact-title">@lang('messages.contact us')</h2>
 			</div>
 			<div class="col-lg-8">
-<<<<<<< HEAD
-				<form class="form-contact contact_form" action="{{ route('contacto.store', ['lang' => $lang]) }}" method="POST"  >
-=======
-				<form class="form-contact contact_form" action="{{ route('contacto.store') }}" method="POST" id="formContact">
->>>>>>> a9323a6b5e7cdd17d2c8fc217b6872dcc52f441e
+				<form class="form-contact contact_form" action="{{ route('contacto.store', ['lang' => $lang]) }}" method="POST" id="formContact">
 					@csrf
 					<div class="row">
 						<div class="col-sm-6">
