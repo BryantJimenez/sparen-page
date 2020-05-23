@@ -53,27 +53,46 @@
 					</div>
 				</form>
 			</div>
+		{{-- BRYANT LUIS, POR FAVOR NO BORRAR	 --}}
 			<div class="col-lg-3 offset-lg-1">
 				<div class="media contact-info">
 					<span class="contact-info__icon"><i class="ti-home"></i></span>
 					<div class="media-body">
-						<h3>Nueva-Cordoba - CORDOBA - ARGENTINA</h3>
-						<p>Rondeau 69 5°Piso (CP 5000)</p>
+						<h3>{{ $info->address }}</h3>
 					</div>
 				</div>
 				<div class="media contact-info">
 					<span class="contact-info__icon"><i class="ti-tablet"></i></span>
 					<div class="media-body">
-						<h3>+54 367 467 8934</h3>
+						<h3>{{ $info->phone }}</h3>
 					</div>
 				</div>
 				<div class="media contact-info">
 					<span class="contact-info__icon"><i class="ti-email"></i></span>
 					<div class="media-body">
-						<h3>info@sparen.com.ar</h3>
+						<h3>{{ $info->email }}</h3>
 					</div>
 				</div>
+				<div class="media contact-info">
+					<span class="contact-info__icon"><i class="ti-facebook"></i></span>
+					<div class="media-body">
+						<h3>{{ $info->facebook }}</h3>
+					</div>
+				</div>
+				<div class="media contact-info">
+					<span class="contact-info__icon"><i class="ti-twitter"></i></span>
+					<div class="media-body">
+						<h3>{{ $info->twitter}}</h3>
+					</div>
+				</div>
+				@guest
+				@else
+				<div class="video_service_btn">
+					<a href="{{ route('contacto.edit', ['lang' => $lang]) }}" class="boxed-btn3">@lang('messages.edit')</a>
+				</div>
+				@endguest
 			</div>
+			{{-- GRACIAS, BUENAS NOCHES XD --}}
 		</div>
 	</div>
 </section>

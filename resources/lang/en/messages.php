@@ -103,5 +103,16 @@ return [
     'edit services' => 'Edit Services',
     'first image' => 'First Image',
     'second image' => 'Second Image',
-    'third image' => 'Third Image'
+    'third image' => 'Third Image',
+    'edit info contact' => 'Edit Info Contact',
+    'address' => 'Address',
+    'phone' => 'Phone',
+    'email' => 'Email',
+    'facebook' => 'Facebook',
+    'twitter' => 'Twitter',
+    'enter your address' => 'Enter your address',
+    'enter your phone' => 'Enter your phone',
+    'enter your email' => 'Enter your email'
+
+
 ];

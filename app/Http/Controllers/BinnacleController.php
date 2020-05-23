@@ -17,7 +17,7 @@ class BinnacleController extends Controller
     public function index($lang)
     {
         App::setlocale($lang);
-        $binnacle = Binnacle::all();
+        $binnacle = Binnacle::orderBy('id', 'DESC')->get();
         $num = 1;
         return view('web.binnacle', compact('lang', 'binnacle', 'num'));
     }
