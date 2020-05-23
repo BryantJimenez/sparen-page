@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ContactStoreRequest;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\App;
 use Illuminate\Http\Request;
-use App\Http\Requests;
 use App\Contact;
 use App\User;
 use App\Notifications\ContactMailNotification;
@@ -30,7 +32,7 @@ class ContactController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(ContactStoreRequest $request)
+    public function store(ContactStoreRequest $request, $lang)
     {
         $data =new User;
         $data->email = 'otters.c.01@gmail.com';
@@ -39,6 +41,6 @@ class ContactController extends Controller
         $data->message = request('message');
         $data->notify(new ContactMailNotification());
 
-
+        return view('web.contact.create', compact('lang'));
     }
 }

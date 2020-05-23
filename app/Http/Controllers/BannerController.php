@@ -62,7 +62,7 @@ class BannerController extends Controller
 
         //Bitácora
 
-        $activity = 'Ha editado la sección "Banner" en Español';
+        $activity = 'Ha editado la sección "Banner"';
         $us = Auth::user()->id;
         $data = array('user_id' => $us, 'activity' => $activity );
         $binnacle = Binnacle::create($data)->save();

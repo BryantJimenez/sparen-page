@@ -47,7 +47,7 @@ class ObjectiveController extends Controller
         $objective->fill($data)->save();
 
         //Bitácora
-        $activity = 'Ha editado la sección "Objetivos" en Español';
+        $activity = 'Ha editado la sección "Objetivos"';
         $us = Auth::user()->id;
         $data = array('user_id' => $us, 'activity' => $activity );
         $binnacle = Binnacle::create($data);

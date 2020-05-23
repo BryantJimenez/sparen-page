@@ -48,7 +48,7 @@ class AboutController extends Controller
 
          //Bitácora
 
-        $activity = 'Ha editado la sección "Nosotros" en español';
+        $activity = 'Ha editado la sección "Nosotros"';
         $us = Auth::user()->id;
         $data = array('user_id' => $us, 'activity' => $activity );
         $binnacle = Binnacle::create($data);

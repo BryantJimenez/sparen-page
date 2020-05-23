@@ -26,8 +26,9 @@
 			<div class="col-12">
 				<div class="card">
 					<div class="card-body">
+						@include('web.partials.errors')
 						<h6 class="card-subtitle">@lang('messages.required fields') (<b class="text-danger">*</b>)</h6>
-						<form  method="POST" action="{{ route('informe.store', ['lang' => $lang]) }}" class="form" enctype="multipart/form-data">
+						<form  method="POST" action="{{ route('informe.store', ['lang' => $lang]) }}" class="form" enctype="multipart/form-data" id="formReport">
 							@csrf
 							<div class="row">
 								<div class="form-group col-12">
@@ -62,7 +63,7 @@
 
 								<div class="form-group col-12">
 									<div class="btn-group" role="group">
-										<button type="submit" class="btn btn-primary" action="user">@lang('messages.save')</button>
+										<button type="submit" class="btn btn-primary" action="report">@lang('messages.save')</button>
 									</div>
 								</div>
 							</div>
@@ -78,4 +79,8 @@
 
 @section('script')
 <script src="{{ asset('/web/vendors/dropify/js/dropify.min.js') }}"></script>
+<script src="{{ asset('/web/vendors/validate/jquery.validate.js') }}"></script>
+<script src="{{ asset('/web/vendors/validate/additional-methods.js') }}"></script>
+<script src="{{ asset('/web/vendors/validate/messages_es.js') }}"></script>
+<script src="{{ asset('/web/js/validate.js') }}"></script>
 @endsection

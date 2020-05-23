@@ -23,6 +23,7 @@ class ReportController extends Controller
         App::setlocale($lang);
         $report = $request->get('report');
         $reports = Report::where('title_spanish','like',"%$report%")
+        ->orWhere('title_english','like',"%$report%")
         ->orderBy('id', 'DESC')
         ->paginate(3);
         return view('web.reports.index', compact('lang', 'reports'));

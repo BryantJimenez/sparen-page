@@ -28,10 +28,11 @@
 			<div class="col-12">
 				<div class="card">
 					<div class="card-body">
+						@include('web.partials.errors')
 						<h3 class="text-heading">@lang('messages.edit targets')</h3>
 
 						<h6 class="card-subtitle">@lang('messages.required fields') (<b class="text-danger">*</b>)</h6>
-						<form  method="POST" class="form" action="{{ route('objetivo.update', ['lang' => $lang]) }}" enctype="multipart/form-data">
+						<form  method="POST" class="form" id="formObjective" action="{{ route('objetivo.update', ['lang' => $lang]) }}" enctype="multipart/form-data">
 							@method('PUT')
 							@csrf
 							<div class="row">
@@ -103,7 +104,7 @@
 
 								<div class="form-group col-12">
 									<div class="btn-group" role="group">
-										<button type="submit" class="btn btn-primary" action="user">@lang('messages.save')</button>
+										<button type="submit" class="btn btn-primary" action="objective">@lang('messages.save')</button>
 									</div>
 								</div>
 
@@ -122,4 +123,8 @@
 @section('script')
 <script src="{{ asset('/web/vendors/lobibox/Lobibox.js') }}"></script>
 <script src="{{ asset('/web/vendors/dropify/js/dropify.min.js') }}"></script>
+<script src="{{ asset('/web/vendors/validate/jquery.validate.js') }}"></script>
+<script src="{{ asset('/web/vendors/validate/additional-methods.js') }}"></script>
+<script src="{{ asset('/web/vendors/validate/messages_es.js') }}"></script>
+<script src="{{ asset('/web/js/validate.js') }}"></script>
 @endsection

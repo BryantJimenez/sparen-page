@@ -27,7 +27,7 @@
 			<div class="col-12">
 				<div class="card">
 					<div class="card-body">
-
+						@include('web.partials.errors')
 						<h6 class="card-subtitle">@lang('messages.required fields') (<b class="text-danger">*</b>)</h6>
 						<form action="{{ route('usuario.update', ['slug' => $user->slug]) }}" method="POST" class="form" id="formUser" enctype="multipart/form-data">
 							@method('PUT')
@@ -79,4 +79,8 @@
 
 @section('script')
 <script src="{{ asset('/web/vendors/dropify/js/dropify.min.js') }}"></script>
+<script src="{{ asset('/admins/vendors/validate/jquery.validate.js') }}"></script>
+<script src="{{ asset('/admins/vendors/validate/additional-methods.js') }}"></script>
+<script src="{{ asset('/admins/vendors/validate/messages_es.js') }}"></script>
+<script src="{{ asset('/admins/js/validate.js') }}"></script>
 @endsection

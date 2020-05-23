@@ -61,7 +61,7 @@ class ServiceController extends Controller
         $service->fill($data)->save();
 
         //Bitácora
-        $activity = 'Ha editado la sección "Servicios" en Español';
+        $activity = 'Ha editado la sección "Servicios" en';
         $us = Auth::user()->id;
         $data = array('user_id' => $us, 'activity' => $activity );
         $binnacle = Binnacle::create($data);

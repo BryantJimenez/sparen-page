@@ -17,7 +17,7 @@
 					<h3>@lang('messages.edit banners')</h3>
 				</div>
 			</div>
-		</div>
+		</div> 
 	</div>
 </div>
  
@@ -29,6 +29,7 @@
 			<div class="col-12">
 				<div class="card">
 					<div class="card-body">
+						@include('web.partials.errors')
 						<h3 class="text-heading">@lang('messages.edit banners')</h3>
 
 						<h6 class="card-subtitle">@lang('messages.required fields') (<b class="text-danger">*</b>)</h6>
@@ -100,4 +101,8 @@
 @section('script')
 <script src="{{ asset('/web/vendors/lobibox/Lobibox.js') }}"></script>
 <script src="{{ asset('/web/vendors/dropify/js/dropify.min.js') }}"></script>
+<script src="{{ asset('/web/vendors/validate/jquery.validate.js') }}"></script>
+<script src="{{ asset('/web/vendors/validate/additional-methods.js') }}"></script>
+<script src="{{ asset('/web/vendors/validate/messages_es.js') }}"></script>
+<script src="{{ asset('/web/js/validate.js') }}"></script>
 @endsection

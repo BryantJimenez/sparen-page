@@ -47,7 +47,7 @@ class ConsultancyController extends Controller
 
          //Bitácora
 
-        $activity = 'Ha editado la sección "Consultorías" en Español';
+        $activity = 'Ha editado la sección "Consultorías"';
         $us = Auth::user()->id;
         $data = array('user_id' => $us, 'activity' => $activity );
         $binnacle = Binnacle::create($data);

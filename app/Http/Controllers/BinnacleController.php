@@ -19,7 +19,6 @@ class BinnacleController extends Controller
         App::setlocale($lang);
         $binnacle = Binnacle::all();
         $num = 1;
-
         return view('web.binnacle', compact('lang', 'binnacle', 'num'));
     }
 }
