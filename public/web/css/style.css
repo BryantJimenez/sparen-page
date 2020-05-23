@@ -2900,6 +2900,14 @@ h3 {
   background-image: url(../images/banner/banner.png);
 }
 
+.breadcam_bg_contact {
+  background-image: url(../images/contact.jpg);
+}
+
+.breadcam_bg_report {
+  background-image: url(../images/report.jpg);
+}
+
 /* line 7, ../../Arafath/CL/CL October/213. Business/HTML/scss/_bradcam.scss */
 .breadcam_bg_3 {
   background-image: url(../images/banner/bradcam3.png);

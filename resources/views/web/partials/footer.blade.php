@@ -51,7 +51,7 @@
                         </h3>
                         <ul>
                             <li>Rondeau 69 5°Piso (CP 5000) Nueva-Cordoba - CORDOBA - ARGENTINA</li>
-                            <li>+54 367 467 8934</li>
+                            {{-- <li>+54 367 467 8934</li> --}}
                             <li>info@sparen.com.ar</li>
                         </ul>
                     </div>

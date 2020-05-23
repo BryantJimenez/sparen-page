@@ -5,7 +5,7 @@
 @section('content')
 
 <!-- bradcam_area  -->
-<div class="bradcam_area breadcam_bg_4">
+<div class="bradcam_area breadcam_bg_report">
     <div class="container">
         <div class="row">
             <div class="col-xl-12">

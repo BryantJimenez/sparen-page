@@ -14,7 +14,7 @@
                         </div>
                         @guest 
 
-                        <div class="col-xl-8 col-lg-8">
+                        <div class="col-xl-10 col-lg-10">
                             <div class="main-menu  d-none d-lg-block">
                                 <nav> 
                                     <ul id="navigation">
@@ -28,15 +28,9 @@
                             </div>
                         </div>
                         
-                        <div class="col-xl-2 col-lg-2 d-none d-lg-block">
-                            <div class="Appointment">
-                                <div class="book_btn d-none d-lg-block">
-                                    <a class="popup-with-form">@lang('messages.welcome')</a>
-                                </div>
-                            </div>
-                        </div>
+                       
                         @else
-                        <div class="col-xl-8 col-lg-8">
+                        <div class="col-xl-10 col-lg-10">
                             <div class="main-menu  d-none d-lg-block">
                                 <nav> 
                                     <ul id="navigation">
@@ -54,13 +48,6 @@
                                         </li>
                                     </ul>
                                 </nav>
-                            </div>
-                        </div>
-                        <div class="col-xl-2 col-lg-2 d-none d-lg-block">
-                            <div class="Appointment">
-                                <div class="book_btn d-none d-lg-block">
-                                    <a class="popup-with-form">{{ Auth::user()->name." ".Auth::user()->lastname }}</a>
-                                </div>
                             </div>
                         </div>
                         @endguest
