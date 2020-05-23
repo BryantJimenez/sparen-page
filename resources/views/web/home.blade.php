@@ -66,6 +66,40 @@
 </div>
 <!-- slider_area_end -->
 
+<!-- about  -->
+<div class="about_area ">
+    <div class="container-fluid">
+        <div class="row no-gutters align-items-center">
+            <div class="col-xl-6 col-lg-6">
+                <div class="about_image">
+                    <a  name="sobre" id="sobre"> <img src="{{ asset('/web/images/about/'.$about->picture) }}" alt=""></a>
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-6">
+                <div class="about_info">
+                    <h3>@lang('messages.about us')</h3>
+                    <p>@if($lang=="es") {{ $about->paragraph1_spanish }}<br><br>{{ $about->paragraph2_spanish }} @else {{ $about->paragraph1_english }}<br><br>{{ $about->paragraph2_english }} @endif</p>
+                    <ul>
+                        <li>@if($lang=="es") {{ $about->list1_spanish }} @else {{ $about->list1_english }} @endif</li>
+                        <li>@if($lang=="es") {{ $about->list2_spanish }} @else {{ $about->list2_english }} @endif</li>
+                        <li>@if($lang=="es") {{ $about->list3_spanish }} @else {{ $about->list3_english }} @endif</li>
+                    </ul>
+
+                    @guest         
+                    @else     
+                    <div class="video_service_btn">
+                        <a href="{{ route('sobre.edit', ['lang' => $lang]) }}" class="boxed-btn3">@lang('messages.edit')</a>
+                    </div>
+                    @endguest             
+                    <br>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--/ about  -->
+
 <!-- service_area_start -->
 <div class="service_area">
     <div class="container">
@@ -130,62 +164,6 @@
 </div>
 <!-- service_area_end -->
 
-<!-- about  -->
-<div class="about_area ">
-    <div class="container-fluid p-0">
-        <div class="row no-gutters align-items-center">
-            <div class="col-xl-6 col-lg-6">
-                <div class="about_image">
-                    <a  name="sobre" id="sobre"> <img src="{{ asset('/web/images/about/'.$about->picture) }}" alt=""></a>
-                </div>
-            </div>
-            <div class="col-xl-6 col-lg-6">
-                <div class="about_info">
-                    <h3>@lang('messages.about us')</h3>
-                    <p>@if($lang=="es") {{ $about->paragraph1_spanish }}<br><br>{{ $about->paragraph2_spanish }} @else {{ $about->paragraph1_english }}<br><br>{{ $about->paragraph2_english }} @endif</p>
-                    <ul>
-                        <li>@if($lang=="es") {{ $about->list1_spanish }} @else {{ $about->list1_english }} @endif</li>
-                        <li>@if($lang=="es") {{ $about->list2_spanish }} @else {{ $about->list2_english }} @endif</li>
-                        <li>@if($lang=="es") {{ $about->list3_spanish }} @else {{ $about->list3_english }} @endif</li>
-                    </ul>
-
-                    @guest         
-                    @else     
-                    <div class="video_service_btn">
-                        <a href="{{ route('sobre.edit', ['lang' => $lang]) }}" class="boxed-btn3">@lang('messages.edit')</a>
-                    </div>
-                    @endguest             
-                    <br>
-
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!--/ about  -->
-
-<!-- counter  -->
-<div class="counter_area">
-    <div class="container">
-        <div class="row">
-            <div class="col-xl-6 col-md-6">
-                <div class="single_counter text-center">
-                    <h3> <span class="counter" >520</span> <span>+</span> </h3>
-                    <span>@lang('messages.visits')</span>
-                </div>
-            </div>
-            <div class="col-xl-6 col-md-6">
-                <div class="single_counter text-center">
-                    <h3> <span class="counter" >{{ $reports }}</span></h3>
-                    <span>@lang('messages.stored reports')</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!--/ counter  -->
-
-
 <!-- about wrap  -->
 <div class="about_wrap_area" style="background-image: url(/web/images/objective/{{ $objective->picture }});">
     <div class="container">
@@ -224,7 +202,7 @@
 
 
 <!-- financial_solution -->
-<div class="financial_solution_area">
+{{-- <div class="financial_solution_area">
     <div class="container">
         <div class="row">
             <div class="col-xl-6 col-lg-6">
@@ -259,7 +237,7 @@
             @endguest
         </div>
     </div>
-</div>
+</div> --}}
 <!--/ financial_solution -->
 
 <!-- project  -->
@@ -277,28 +255,6 @@
     </div>
 </div>
 <!--/ project  -->
-
-{{-- Inicio del Modal --}}
-<div class="modal" id="modal" tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Modal title</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <p>Modal body text goes here.</p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-primary">Save changes</button>
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            </div>
-        </div>
-    </div>
-</div>
-{{-- Fin del Modal --}}
 
 @endsection
 
