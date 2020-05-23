@@ -432,21 +432,6 @@ $(document).ready(function() {
 	});
 });
 
-//funciones para desactivar y activar usuarios
-function deactiveUser(slug) {
-  $("#deactiveUser").modal();
-  $('#formDeactiveUser').attr('action', '/maesma/usuarios/desactivar/' + slug);
-}
-
-function activeUser(slug) {
-  $("#activeUser").modal();
-  $('#formActiveUser').attr('action', '/maesma/usuarios/activar/' + slug);
-}
-
-
-
-
-
 //------- Mailchimp js --------//  
 function mailChimp() {
   $('#mc_embed_signup').find('form').ajaxChimp();

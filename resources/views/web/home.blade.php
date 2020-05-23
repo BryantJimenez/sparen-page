@@ -67,7 +67,7 @@
 <!-- slider_area_end -->
 
 <!-- about  -->
-<div class="about_area ">
+<div class="about_area pt-5">
     <div class="container-fluid">
         <div class="row no-gutters align-items-center">
             <div class="col-xl-6 col-lg-6">
@@ -101,7 +101,7 @@
 <!--/ about  -->
 
 <!-- service_area_start -->
-<div class="service_area">
+<div class="service_area pt-2">
     <div class="container">
         <div class="row">
             <div class="col-xl-12">
