@@ -16,7 +16,7 @@
                 <div class="row">
                     <div class="col-xl-12">
                         <div class="slider_text ">
-                            <h3 style="margin-right: 30%">@if($lang=="es") {{ $banner->banner1_spanish }} @else {{ $banner->banner1_english }} @endif</h3>
+                            <h3 style="margin-right: 30%">@if($lang=="es") {!! $banner->banner1_spanish !!} @else {!! $banner->banner1_english !!} @endif</h3>
                         </div>
                         @guest
                         @else
@@ -33,7 +33,7 @@
                 <div class="row">
                     <div class="col-xl-12">
                         <div class="slider_text ">
-                            <h3 style="margin-right: 30%">@if($lang=="es") {{ $banner->banner2_spanish }} @else {{ $banner->banner2_english }} @endif</h3>
+                            <h3 style="margin-right: 30%">@if($lang=="es") {!! $banner->banner2_spanish !!} @else {!! $banner->banner2_english !!} @endif</h3>
                         </div>
                         @guest
                         @else
@@ -50,7 +50,7 @@
                 <div class="row">
                     <div class="col-xl-12">
                         <div class="slider_text ">
-                            <h3 style="margin-right: 30%">@if($lang=="es") {{ $banner->banner3_spanish }} @else {{ $banner->banner3_english }} @endif</h3>
+                            <h3 style="margin-right: 30%">@if($lang=="es") {!! $banner->banner3_spanish !!} @else {!! $banner->banner3_english !!} @endif</h3>
                         </div>
                         @guest
                         @else
@@ -78,11 +78,12 @@
             <div class="col-xl-6 col-lg-6">
                 <div class="about_info">
                     <h3>@lang('messages.about us')</h3>
-                    <p>@if($lang=="es") {{ $about->paragraph1_spanish }}<br><br>{{ $about->paragraph2_spanish }} @else {{ $about->paragraph1_english }}<br><br>{{ $about->paragraph2_english }} @endif</p>
+                    <p>@if($lang=="es") {!! $about->paragraph_spanish !!} @else {!! $about->paragraph_english !!} @endif</p>
                     <ul>
                         <li>@if($lang=="es") {{ $about->list1_spanish }} @else {{ $about->list1_english }} @endif</li>
                         <li>@if($lang=="es") {{ $about->list2_spanish }} @else {{ $about->list2_english }} @endif</li>
                         <li>@if($lang=="es") {{ $about->list3_spanish }} @else {{ $about->list3_english }} @endif</li>
+                        <li>@if($lang=="es") {{ $about->list4_spanish }} @else {{ $about->list4_english }} @endif</li>
                     </ul>
 
                     @guest         
@@ -172,21 +173,21 @@
                 <div class="single_service_wrap text-center">
                     <img src="{{ asset('/web/images/svg_icon/controls.svg') }}" alt="Controles">
                     <h3>@if($lang=="es") {{ $objective->title1_spanish }} @else {{ $objective->title1_english }} @endif</h3>
-                    <p>@if($lang=="es") {{ $objective->content1_spanish }} @else {{ $objective->content1_english }} @endif</p>
+                    <p>@if($lang=="es") {!! $objective->content1_spanish !!} @else {!! $objective->content1_english !!} @endif</p>
                 </div>
             </div>
             <div class="col-xl-4 col-md-6 col-lg-4">
                 <div class="single_service_wrap text-center">
                     <img src="{{ asset('/web/images/svg_icon/bar-chart.svg') }}" alt="Gráficas">
                     <h3>@if($lang=="es") {{ $objective->title2_spanish }} @else {{ $objective->title2_english }} @endif</h3>
-                    <p>@if($lang=="es") {{ $objective->content2_spanish }} @else {{ $objective->content2_english }} @endif</p>
+                    <p>@if($lang=="es") {!! $objective->content2_spanish !!} @else {!! $objective->content2_english !!} @endif</p>
                 </div>
             </div>
             <div class="col-xl-4 col-md-6 col-lg-4">
                 <div class="single_service_wrap text-center">
                     <img src="{{ asset('/web/images/svg_icon/puzzle.svg') }}" alt="Inversión">
                     <h3>@if($lang=="es") {{ $objective->title3_spanish }} @else {{ $objective->title3_english }} @endif</h3>
-                    <p>@if($lang=="es") {{ $objective->content3_spanish }} @else {{ $objective->content3_english }} @endif</p>
+                    <p>@if($lang=="es") {!! $objective->content3_spanish !!} @else {!! $objective->content3_english !!} @endif</p>
                 </div>
             </div>
         </div>

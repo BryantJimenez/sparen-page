@@ -6,21 +6,17 @@ use Illuminate\Database\Eloquent\Model;
 
 class About extends Model
 {
-	protected $table = "abouts";
-
 	protected $fillable = [
-		'paragraph1_spanish',
-		'paragraph1_english',
-		'paragraph2_spanish',
-		'paragraph2_english',
+		'paragraph_spanish',
+		'paragraph_english',
 		'list1_spanish',
 		'list1_english',
 		'list2_spanish',
 		'list2_english',
 		'list3_spanish',
 		'list3_english',
-		'content3_spanish',
-		'content3_english',
-		'visits'
+		'list4_spanish',
+		'list4_english',
+		'picture'
 	];
 }

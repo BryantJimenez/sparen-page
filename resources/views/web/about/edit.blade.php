@@ -38,57 +38,54 @@
 							<div class="row">
 
 								<div class="form-group col-12">
-									<label class="col-form-label">@lang('messages.first paragraph spanish')<b class="text-danger">*</b></label>
-									<textarea class="form-control"name="paragraph1_spanish" placeholder="Introduzca el contenido del párrafo 1" id="paragraph1_spanish" minlength="2" maxlength="191">{{ $about->paragraph1_spanish }}</textarea> 
+									<label class="col-form-label">@lang('messages.paragraph spanish')<b class="text-danger">*</b></label>
+									<textarea class="form-control"name="paragraph_spanish" placeholder="" minlength="2" maxlength="191">{{ $about->paragraph_spanish }}</textarea> 
 								</div>
 
-								<div class="form-group col-12">
-									<label class="col-form-label">@lang('messages.second paragraph spanish')<b class="text-danger">*</b></label>
-									<textarea class="form-control" name="paragraph2_spanish" required placeholder="Introduzca el contenido del párrafo 2" minlength="5" maxlength="191">{{ $about->paragraph2_spanish }}</textarea>
-								</div>
-
-								<div class="form-group col-lg-4 col-md-4 col-12">
+								<div class="form-group col-lg-6 col-md-6 col-12">
 									<label class="col-form-label">@lang('messages.first list spanish')<b class="text-danger">*</b></label>
-									<input class="form-control" type="text" name="list1_spanish" required placeholder="Introduzca el conteido del primer check" value="{{ $about->list1_spanish }}" minlength="5" maxlength="191">
+									<input class="form-control" type="text" name="list1_spanish" required placeholder="" value="{{ $about->list1_spanish }}" minlength="2" maxlength="191">
 								</div>
 
-								<div class="form-group col-lg-4 col-md-4 col-12">
+								<div class="form-group col-lg-6 col-md-6 col-12">
 									<label class="col-form-label">@lang('messages.second list spanish')<b class="text-danger">*</b></label>
-									<input class="form-control" type="text" name="list2_spanish" required placeholder="Introduzca el conteido del segundo check" value="{{ $about->list2_spanish }}" minlength="5" maxlength="191">
+									<input class="form-control" type="text" name="list2_spanish" required placeholder="" value="{{ $about->list2_spanish }}" minlength="2" maxlength="191">
 								</div>
 
-
-								<div class="form-group col-lg-4 col-md-4 col-12">
+								<div class="form-group col-lg-6 col-md-6 col-12">
 									<label class="col-form-label">@lang('messages.third list spanish')<b class="text-danger">*</b></label>
-									<input class="form-control" type="text" name="list3_spanish" required placeholder="Introduzca el conteido del tercer check" value="{{ $about->list3_spanish }}" minlength="5" maxlength="191">
+									<input class="form-control" type="text" name="list3_spanish" required placeholder="Introduzca el conteido del tercer check" value="{{ $about->list3_spanish }}" minlength="2" maxlength="191">
+								</div>
+
+								<div class="form-group col-lg-6 col-md-6 col-12">
+									<label class="col-form-label">@lang('messages.four list spanish')<b class="text-danger">*</b></label>
+									<input class="form-control" type="text" name="list4_spanish" required placeholder="" value="{{ $about->list4_spanish }}" minlength="2" maxlength="191">
 								</div>
 
 								<div class="form-group col-12">
-									<label class="col-form-label">@lang('messages.first paragraph english')<b class="text-danger">*</b></label>
-									<textarea class="form-control" name="paragraph1_english" required id="paragraph1_english" minlength="2" maxlength="191">{{ $about->paragraph1_english }}</textarea>
+									<label class="col-form-label">@lang('messages.paragraph english')<b class="text-danger">*</b></label>
+									<textarea class="form-control" name="paragraph_english" required minlength="2" maxlength="191">{{ $about->paragraph_english }}</textarea>
 								</div>
 
-								<div class="form-group col-12">
-									<label class="col-form-label">@lang('messages.second paragraph english')<b class="text-danger">*</b></label>
-									<textarea class="form-control" name="paragraph2_english" required minlength="5" maxlength="191">{{ $about->paragraph2_english }}</textarea>
-								</div>
-
-								<div class="form-group col-lg-4 col-md-4 col-12">
+								<div class="form-group col-lg-6 col-md-6 col-12">
 									<label class="col-form-label">@lang('messages.first list english')<b class="text-danger">*</b></label>
-									<input class="form-control" type="text" name="list1_english" required value="{{ $about->list1_english }}" minlength="5" maxlength="191">
+									<input class="form-control" type="text" name="list1_english" required value="{{ $about->list1_english }}" minlength="2" maxlength="191">
 								</div>
 
-								<div class="form-group col-lg-4 col-md-4 col-12">
+								<div class="form-group col-lg-6 col-md-6 col-12">
 									<label class="col-form-label">@lang('messages.second list english')<b class="text-danger">*</b></label>
-									<input class="form-control" type="text" name="list2_english" required value="{{ $about->list2_english }}" minlength="5" maxlength="191">
+									<input class="form-control" type="text" name="list2_english" required value="{{ $about->list2_english }}" minlength="2" maxlength="191">
 								</div>
 
-
-								<div class="form-group col-lg-4 col-md-4 col-12">
+								<div class="form-group col-lg-6 col-md-6 col-12">
 									<label class="col-form-label">@lang('messages.third list english')<b class="text-danger">*</b></label>
-									<input class="form-control" type="text" name="list3_english" required value="{{ $about->list3_english }}" minlength="5" maxlength="191">
+									<input class="form-control" type="text" name="list3_english" required value="{{ $about->list3_english }}" minlength="2" maxlength="191">
 								</div>
 
+								<div class="form-group col-lg-6 col-md-6 col-12">
+									<label class="col-form-label">@lang('messages.four list english')<b class="text-danger">*</b></label>
+									<input class="form-control" type="text" name="list4_english" required value="{{ $about->list4_english }}" minlength="2" maxlength="191">
+								</div>
 
 								<div class="form-group col-12">
 									<label class="col-form-label">@lang('messages.image')<b class="text-danger">*</b></label>

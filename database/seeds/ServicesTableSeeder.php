@@ -24,7 +24,7 @@ class ServicesTableSeeder extends Seeder
     			'content2_english' => 'Strategic Financial Planning, Treasury Optimization, Budgets and Cash Flows, Investment and Risk, Diversification, Control and Correction of Deviations',
     			'title3_spanish' => 'Consultorías de Inversión',
     			'title3_english' => 'Investment Consulting',
-    			'content3_spanish' => 'Planes y Modelos de NegocioFusiones y Adquisiciones M&A, Valuaciones de Empresas, Evaluación de Proyectos de Inversión, Estudios de Factibilidad, Análisis y Gestión del Riesgo, Fuentes de F',
+    			'content3_spanish' => 'Planes y Modelos de Negocio, Fusiones y Adquisiciones M&A, Valuaciones de Empresas, Evaluación de Proyectos de Inversión, Estudios de Factibilidad, Análisis y Gestión del Riesgo, Fuentes de F',
     			'content3_english' => 'Business Plans and Models, M&A Mergers and Acquisitions, Business Valuations, Investment Project Evaluation, Feasibility Studies, Risk Analysis and Management, Financing Sources, Sponsored In',
     			'picture1' => '1.jpg',
     			'picture2' => '2.jpg',

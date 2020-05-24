@@ -6,8 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Service extends Model
 {
-	protected $table = "services";
-
 	protected $fillable = [
 		'title1_spanish',
 		'title1_english',
@@ -20,6 +18,9 @@ class Service extends Model
 		'title3_spanish',
 		'title3_english',
 		'content3_spanish',
-		'content3_english'
+		'content3_english',
+		'picture1',
+		'picture2',
+		'picture3'
 	];
 }

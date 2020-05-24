@@ -15,18 +15,17 @@ class CreateAboutsTable extends Migration
     {
         Schema::create('abouts', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('paragraph1_spanish')->nullable();
-            $table->string('paragraph1_english')->nullable();
-            $table->string('paragraph2_spanish')->nullable();
-            $table->string('paragraph2_english')->nullable();
+            $table->text('paragraph_spanish')->nullable();
+            $table->text('paragraph_english')->nullable();
             $table->string('list1_spanish')->nullable();
             $table->string('list1_english')->nullable();
             $table->string('list2_spanish')->nullable();
             $table->string('list2_english')->nullable();
             $table->string('list3_spanish')->nullable();
             $table->string('list3_english')->nullable();
+            $table->string('list4_spanish')->nullable();
+            $table->string('list4_english')->nullable();
             $table->string('picture');
-            $table->integer('visits');
             $table->timestamps();
         });
     }

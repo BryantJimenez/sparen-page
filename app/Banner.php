@@ -6,8 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Banner extends Model
 {
-	protected $table = "banners";
-
 	protected $fillable = [
 		'banner1_spanish',
 		'banner1_english',

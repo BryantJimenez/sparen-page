@@ -8,8 +8,6 @@ use App\Service;
 use App\Consultancy;
 use App\Objective;
 use App\Banner;
-use App\Binnacle;
-use App\Report;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
@@ -26,11 +24,10 @@ class WebController extends Controller
         App::setlocale($lang);
         $about = About::where('id', 1)->firstOrFail();
         $service = Service::where('id', 1)->firstOrFail();
-        $consultancy = Consultancy::where('id', 1)->firstOrFail();
+        // $consultancy = Consultancy::where('id', 1)->firstOrFail();
         $objective = Objective::where('id', 1)->firstOrFail();
         $banner = Banner::where('id', 1)->firstOrFail();
-        $reports = Report::all()->count();
         
-        return view('web.home', compact('about', 'service', 'consultancy', 'objective', 'banner', 'reports', 'lang'));
+        return view('web.home', compact('about', 'service', 'consultancy', 'objective', 'banner', 'lang'));
     }
 }

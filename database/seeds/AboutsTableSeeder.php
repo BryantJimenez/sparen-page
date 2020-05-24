@@ -11,20 +11,22 @@ class AboutsTableSeeder extends Seeder
      */
     public function run()
     {
-        $banners = [
+        $abouts = [
     		array(
     			'id' => 1,
-    			'banner1_spanish' => 'Economía Finanzas Inversión',
-    			'banner1_english' => 'Economics Finance Investment',
-    			'banner2_spanish' => 'Consultorías para empresas, inversores e instituciones',
-    			'banner2_english' => 'Consulting for companies, investors and institutions',
-    			'banner3_spanish' => 'Compromiso, profesionalismo, responsabilidad y  creatividad son valores que nos guían',
-    			'banner3_english' => 'Commitment, professionalism, responsibility and creativity are values ​​that guide us',
-    			'picture1' => 'banner2.jpg',
-    			'picture2' => 'banner1.png',
-    			'picture3' => 'about_banner.png'
+    			'paragraph_spanish' => 'Compañía especializada en brindar consultorías en Economía, Finanzas e Inversión a Empresas, Inversores e Instituciones. A través de un estudio personalizado y objetivo proponemos soluciones concretas a las necesidades de nuestros clientes, con el objetivo de agregar valor y simplificar la complejidad de la realidad económica.',
+    			'paragraph_english' => 'Company specialized in providing consulting in Economics, Finance and Investment to Companies, Investors and Institutions. Through a personalized and objective study, we propose concrete solutions to the needs of our clients, with the aim of adding value and simplifying the complexity of the economic reality.',
+    			'list1_spanish' => 'Compromiso',
+    			'list1_english' => 'Commitment',
+    			'list2_spanish' => 'Profesionalismo',
+    			'list2_english' => 'Professionalism',
+    			'list3_spanish' => 'Responsabilidad',
+    			'list3_english' => 'Responsibility',
+    			'list4_spanish' => 'creatividad',
+    			'list4_english' => 'Creativity',
+    			'picture' => 'logo.jpg'
     		)
     	];
-    	DB::table('banners')->insert($banners);
+    	DB::table('abouts')->insert($abouts);
     }
 }
