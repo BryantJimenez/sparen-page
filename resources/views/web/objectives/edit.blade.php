@@ -39,62 +39,62 @@
 
 								<div class="form-group col-12">
 									<label class="col-form-label">@lang('messages.first title spanish')<b class="text-danger">*</b></label>
-									<input class="form-control" type="text" name="title1_spanish" required value="{{ $objective->title1_spanish }}" minlength="5" maxlength="191">
+									<input class="form-control" type="text" name="title1_spanish" required value="{{ $objective->title1_spanish }}" minlength="2" maxlength="191">
 								</div>
 
 								<div class="form-group col-12">
 									<label class="col-form-label">@lang('messages.first title english')<b class="text-danger">*</b></label>
-									<input class="form-control" type="text" name="title1_english" required value="{{ $objective->title1_english }}" minlength="5" maxlength="191">
+									<input class="form-control" type="text" name="title1_english" required value="{{ $objective->title1_english }}" minlength="2" maxlength="191">
 								</div>
 
 								<div class="form-group col-12">
 									<label class="col-form-label">@lang('messages.first content spanish')<b class="text-danger">*</b></label>
-									<textarea class="form-control"name="content1_spanish" required  value="" id="paragraph1_spanish" minlength="2" maxlength="191">{{ $objective->content1_spanish }}</textarea> 
+									<textarea class="form-control" name="content1_spanish" required minlength="2" maxlength="1000">{{ $objective->content1_spanish }}</textarea> 
 								</div>
 
 								<div class="form-group col-12">
 									<label class="col-form-label">@lang('messages.first content english')<b class="text-danger">*</b></label>
-									<textarea class="form-control"name="content1_english" required  value="" id="paragraph1_spanish" minlength="2" maxlength="191">{{ $objective->content1_english }}</textarea> 
+									<textarea class="form-control" name="content1_english" required minlength="2" maxlength="1000">{{ $objective->content1_english }}</textarea> 
 								</div>
 
 								<div class="form-group col-12">
 									<label class="col-form-label">@lang('messages.second title spanish')<b class="text-danger">*</b></label>
-									<input class="form-control" type="text" name="title2_spanish" required value="{{ $objective->title2_spanish }}" minlength="5" maxlength="191">
+									<input class="form-control" type="text" name="title2_spanish" required value="{{ $objective->title2_spanish }}" minlength="2" maxlength="191">
 								</div>
 
 								<div class="form-group col-12">
 									<label class="col-form-label">@lang('messages.second title english')<b class="text-danger">*</b></label>
-									<input class="form-control" type="text" name="title2_english" required value="{{ $objective->title2_english }}" minlength="5" maxlength="191">
+									<input class="form-control" type="text" name="title2_english" required value="{{ $objective->title2_english }}" minlength="2" maxlength="191">
 								</div>
 
 								<div class="form-group col-12">
 									<label class="col-form-label">@lang('messages.second content spanish')<b class="text-danger">*</b></label>
-									<textarea class="form-control"name="content2_spanish" required  value="" id="paragraph1_spanish" minlength="2" maxlength="191">{{ $objective->content2_spanish }}</textarea> 
+									<textarea class="form-control"name="content2_spanish" required minlength="2" maxlength="1000">{{ $objective->content2_spanish }}</textarea> 
 								</div>
 
 								<div class="form-group col-12">
 									<label class="col-form-label">@lang('messages.second content english')<b class="text-danger">*</b></label>
-									<textarea class="form-control"name="content2_english" required  value="" id="paragraph1_spanish" minlength="2" maxlength="191">{{ $objective->content2_english }}</textarea> 
+									<textarea class="form-control"name="content2_english" required minlength="2" maxlength="1000">{{ $objective->content2_english }}</textarea> 
 								</div>
 
 								<div class="form-group col-12">
 									<label class="col-form-label">@lang('messages.third title spanish')<b class="text-danger">*</b></label>
-									<input class="form-control" type="text" name="title3_spanish" required value="{{ $objective->title3_spanish }}" minlength="5" maxlength="191">
+									<input class="form-control" type="text" name="title3_spanish" required value="{{ $objective->title3_spanish }}" minlength="2" maxlength="191">
 								</div>
 
 								<div class="form-group col-12">
 									<label class="col-form-label">@lang('messages.third title english')<b class="text-danger">*</b></label>
-									<input class="form-control" type="text" name="title3_english" required value="{{ $objective->title3_english }}" minlength="5" maxlength="191">
+									<input class="form-control" type="text" name="title3_english" required value="{{ $objective->title3_english }}" minlength="2" maxlength="191">
 								</div>
 
 								<div class="form-group col-12">
 									<label class="col-form-label">@lang('messages.third content spanish')<b class="text-danger">*</b></label>
-									<textarea class="form-control"name="content3_spanish" required  value="" id="paragraph1_spanish" minlength="2" maxlength="191">{{ $objective->content3_spanish }}</textarea> 
+									<textarea class="form-control"name="content3_spanish" required minlength="2" maxlength="1000">{{ $objective->content3_spanish }}</textarea> 
 								</div>
 
 								<div class="form-group col-12">
 									<label class="col-form-label">@lang('messages.third content english')<b class="text-danger">*</b></label>
-									<textarea class="form-control"name="content3_english" required  value="" id="paragraph1_spanish" minlength="2" maxlength="191">{{ $objective->content3_english }}</textarea> 
+									<textarea class="form-control"name="content3_english" required minlength="2" maxlength="1000">{{ $objective->content3_english }}</textarea> 
 								</div>
 
 								<div class="form-group col-12">

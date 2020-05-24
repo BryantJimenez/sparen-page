@@ -35,7 +35,7 @@ class AboutController extends Controller
     public function update(AboutUpdateRequest $request, $lang) {
 
         $about = About::where('id', 1)->firstOrFail();
-        $data=array('paragraph1_spanish' => request('paragraph1_spanish'), 'paragraph2_spanish' => request('paragraph2_spanish'), 'paragraph1_english' => request('paragraph1_english'), 'paragraph2_english' => request('paragraph2_english'), 'list1_spanish' => request('list1_spanish'), 'list2_spanish' => request('list2_spanish'), 'list3_spanish' => request('list3_spanish'), 'list1_english' => request('list1_english'), 'list2_english' => request('list2_english'), 'list3_english' => request('list3_english'));
+        $data=array('paragraph_spanish' => request('paragraph_spanish'), 'paragraph_english' => request('paragraph_english'), 'list1_spanish' => request('list1_spanish'), 'list2_spanish' => request('list2_spanish'), 'list3_spanish' => request('list3_spanish'), 'list1_english' => request('list1_english'), 'list2_english' => request('list2_english'), 'list3_english' => request('list3_english'), 'list4_english' => request('list4_english'));
 
         if ($request->hasFile('picture')) {
             $file = $request->file('picture');

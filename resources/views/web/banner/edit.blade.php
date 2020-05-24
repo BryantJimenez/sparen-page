@@ -39,12 +39,12 @@
 							<div class="row">
 								<div class="form-group col-12">
 									<label class="col-form-label">@lang('messages.first content spanish')<b class="text-danger">*</b></label>
-									<input type="text" class="form-control" name="banner1_spanish" required value="{{ $banner->banner1_spanish }}" minlength="2" maxlength="191"> 
+									<textarea class="form-control" name="banner1_spanish" required minlength="2" maxlength="191">{{ $banner->banner1_spanish }}</textarea> 
 								</div>
 
 								<div class="form-group col-12">
 									<label class="col-form-label">@lang('messages.first content english')<b class="text-danger">*</b></label>
-									<input type="text" value="{{ $banner->banner1_english }}" class="form-control"name="banner1_english" require minlength="2" maxlength="191"> 
+									<textarea class="form-control" name="banner1_english" required minlength="2" maxlength="191">{{ $banner->banner1_english }}</textarea>
 								</div>
 
 								<div class="form-group col-12">
@@ -54,12 +54,12 @@
 
 								<div class="form-group col-12">
 									<label class="col-form-label">@lang('messages.second content spanish')<b class="text-danger">*</b></label>
-									<input type="text" class="form-control" name="banner2_spanish" required  value="{{ $banner->banner2_spanish }}" minlength="2" maxlength="191"> 
+									<textarea class="form-control" name="banner2_spanish" required minlength="2" maxlength="191">{{ $banner->banner2_spanish }}</textarea>
 								</div>
 
 								<div class="form-group col-12">
 									<label class="col-form-label">@lang('messages.second content english')<b class="text-danger">*</b></label>
-									<input type="text" class="form-control"name="banner2_english" value="{{ $banner->banner2_english }}" required minlength="2" maxlength="191"> 
+									<textarea class="form-control" name="banner2_english" required minlength="2" maxlength="191">{{ $banner->banner2_english }}</textarea>
 								</div>
 
 								<div class="form-group col-12">
@@ -69,12 +69,12 @@
 
 								<div class="form-group col-12">
 									<label class="col-form-label">@lang('messages.third content spanish')<b class="text-danger">*</b></label>
-									<input type="text" class="form-control"name="banner3_spanish" required  value="{{ $banner->banner3_spanish }}" minlength="2" maxlength="191"> 
+									<textarea class="form-control" name="banner3_spanish" required minlength="2" maxlength="191">{{ $banner->banner3_spanish }}</textarea>
 								</div>
 
 								<div class="form-group col-12">
 									<label class="col-form-label">@lang('messages.third content english')<b class="text-danger">*</b></label>
-									<input type="text" class="form-control"name="banner3_english" required value="{{ $banner->banner3_english }}" minlength="2" maxlength="191"> 
+									<textarea class="form-control" name="banner3_english" required minlength="2" maxlength="191">{{ $banner->banner3_english }}</textarea>
 								</div>
 
 								<div class="form-group col-12">

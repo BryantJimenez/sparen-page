@@ -25,17 +25,17 @@ class ObjectiveUpdateRequest extends FormRequest
     {
         return [
             'title1_spanish' => 'required|string|min:2|max:191',
-            'content1_spanish' => 'required|string|min:2|max:191',
+            'content1_spanish' => 'required|string|min:2|max:1000',
             'title2_spanish' => 'required|string|min:2|max:191',
-            'content2_spanish' => 'required|string|min:2|max:191',
+            'content2_spanish' => 'required|string|min:2|max:1000',
             'title3_spanish' => 'required|string|min:2|max:191',
-            'content3_spanish' => 'required|string|min:2|max:191',
+            'content3_spanish' => 'required|string|min:2|max:1000',
             'title1_english' => 'required|string|min:2|max:191',
-            'content1_english' => 'required|string|min:2|max:191',
+            'content1_english' => 'required|string|min:2|max:1000',
             'title2_english' => 'required|string|min:2|max:191',
-            'content2_english' => 'required|string|min:2|max:191',
+            'content2_english' => 'required|string|min:2|max:1000',
             'title3_english' => 'required|string|min:2|max:191',
-            'content3_english' => 'required|string|min:2|max:191',
+            'content3_english' => 'required|string|min:2|max:1000',
             'picture' => 'nullable'
         ];
     }

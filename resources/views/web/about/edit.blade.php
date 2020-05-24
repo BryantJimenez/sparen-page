@@ -42,6 +42,11 @@
 									<textarea class="form-control"name="paragraph_spanish" placeholder="" minlength="2" maxlength="191">{{ $about->paragraph_spanish }}</textarea> 
 								</div>
 
+								<div class="form-group col-12">
+									<label class="col-form-label">@lang('messages.paragraph english')<b class="text-danger">*</b></label>
+									<textarea class="form-control"name="paragraph_english" placeholder="" minlength="2" maxlength="191">{{ $about->paragraph_english }}</textarea> 
+								</div>
+
 								<div class="form-group col-lg-6 col-md-6 col-12">
 									<label class="col-form-label">@lang('messages.first list spanish')<b class="text-danger">*</b></label>
 									<input class="form-control" type="text" name="list1_spanish" required placeholder="" value="{{ $about->list1_spanish }}" minlength="2" maxlength="191">
