@@ -35,7 +35,7 @@ class BannerController extends Controller
     public function update(BannerUpdateRequest $request, $lang) {
         $banner = Banner::where('id', 1)->firstOrFail();
 
-        $data=array('banner1_spanish' => request('banner1_spanish'), 'banner2_spanish' => request('banner2_spanish'), 'banner3_spanish' => request('banner3_spanish'), 'banner1_english' => request('banner1_english'), 'banner2_english' => request('banner2_english'), 'banner3_english' => request('banner3_english'));
+        $data=array('banner1_spanish' => nl2br(request('banner1_spanish')), 'banner2_spanish' => nl2br(request('banner2_spanish')), 'banner3_spanish' => nl2br(request('banner3_spanish')), 'banner1_english' => nl2br(request('banner1_english')), 'banner2_english' => nl2br(request('banner2_english')), 'banner3_english' => nl2br(request('banner3_english')));
 
         if ($request->hasFile('picture1')) {
             $file = $request->file('picture1');

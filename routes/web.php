@@ -67,9 +67,5 @@ Route::group(['middleware' => ['lang']], function () {
 		//Contacto
 		Route::get('/{lang?}/contacto/editar', 'InfoContactController@edit')->name('contacto.edit');
 		Route::put('/{lang?}/contacto/editar', 'InfoContactController@update')->name('contacto.update');
-
-		
-
-
 	});
 });

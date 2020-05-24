@@ -39,47 +39,47 @@
 							<div class="row">
 								<div class="form-group col-12">
 									<label class="col-form-label">@lang('messages.first content spanish')<b class="text-danger">*</b></label>
-									<textarea class="form-control" name="banner1_spanish" required minlength="2" maxlength="191">{{ $banner->banner1_spanish }}</textarea> 
+									<textarea class="form-control" name="banner1_spanish" required minlength="2" maxlength="191">{!! $banner->banner1_spanish !!}</textarea> 
 								</div>
 
 								<div class="form-group col-12">
 									<label class="col-form-label">@lang('messages.first content english')<b class="text-danger">*</b></label>
-									<textarea class="form-control" name="banner1_english" required minlength="2" maxlength="191">{{ $banner->banner1_english }}</textarea>
+									<textarea class="form-control" name="banner1_english" required minlength="2" maxlength="191">{!! $banner->banner1_english !!}</textarea>
 								</div>
 
 								<div class="form-group col-12">
 									<label class="col-form-label">@lang('messages.first banner')<b class="text-danger">*</b></label>
-									<input type="file" name="picture1" accept="image/*" id="input-file-now" class="dropify" data-height="125" data-max-file-size="20M" data-allowed-file-extensions="jpg png jpeg web3" data-default-file="{{ '/web/images/banner/'.$banner->picture1 }}" />
+									<input type="file" name="picture1" accept="image/*" class="dropify" data-height="125" data-max-file-size="20M" data-allowed-file-extensions="jpg png jpeg web3" data-default-file="{{ '/web/images/banner/'.$banner->picture1 }}" />
 								</div>
 
 								<div class="form-group col-12">
 									<label class="col-form-label">@lang('messages.second content spanish')<b class="text-danger">*</b></label>
-									<textarea class="form-control" name="banner2_spanish" required minlength="2" maxlength="191">{{ $banner->banner2_spanish }}</textarea>
+									<textarea class="form-control" name="banner2_spanish" required minlength="2" maxlength="191">{!! $banner->banner2_spanish !!}</textarea>
 								</div>
 
 								<div class="form-group col-12">
 									<label class="col-form-label">@lang('messages.second content english')<b class="text-danger">*</b></label>
-									<textarea class="form-control" name="banner2_english" required minlength="2" maxlength="191">{{ $banner->banner2_english }}</textarea>
+									<textarea class="form-control" name="banner2_english" required minlength="2" maxlength="191">{!! $banner->banner2_english !!}</textarea>
 								</div>
 
 								<div class="form-group col-12">
 									<label class="col-form-label">@lang('messages.second banner')<b class="text-danger">*</b></label>
-									<input type="file" name="picture2" accept="image/*" id="input-file-now" class="dropify" data-height="125" data-max-file-size="20M" data-allowed-file-extensions="jpg png jpeg web3" data-default-file="{{ '/web/images/banner/'.$banner->picture2 }}" />
+									<input type="file" name="picture2" accept="image/*" class="dropify" data-height="125" data-max-file-size="20M" data-allowed-file-extensions="jpg png jpeg web3" data-default-file="{{ '/web/images/banner/'.$banner->picture2 }}" />
 								</div> 
 
 								<div class="form-group col-12">
 									<label class="col-form-label">@lang('messages.third content spanish')<b class="text-danger">*</b></label>
-									<textarea class="form-control" name="banner3_spanish" required minlength="2" maxlength="191">{{ $banner->banner3_spanish }}</textarea>
+									<textarea class="form-control" name="banner3_spanish" required minlength="2" maxlength="191">{!! $banner->banner3_spanish !!}</textarea>
 								</div>
 
 								<div class="form-group col-12">
 									<label class="col-form-label">@lang('messages.third content english')<b class="text-danger">*</b></label>
-									<textarea class="form-control" name="banner3_english" required minlength="2" maxlength="191">{{ $banner->banner3_english }}</textarea>
+									<textarea class="form-control" name="banner3_english" required minlength="2" maxlength="191">{!! $banner->banner3_english !!}</textarea>
 								</div>
 
 								<div class="form-group col-12">
 									<label class="col-form-label">@lang('messages.third banner')<b class="text-danger">*</b></label>
-									<input type="file" name="picture2" accept="image/*" id="input-file-now" class="dropify" data-height="125" data-max-file-size="20M" data-allowed-file-extensions="jpg png jpeg web3" data-default-file="{{ '/web/images/banner/'.$banner->picture3 }}" />
+									<input type="file" name="picture2" accept="image/*" class="dropify" data-height="125" data-max-file-size="20M" data-allowed-file-extensions="jpg png jpeg web3" data-default-file="{{ '/web/images/banner/'.$banner->picture3 }}" />
 								</div> 
 
 								<div class="form-group col-12">

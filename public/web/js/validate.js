@@ -268,13 +268,13 @@ $(document).ready(function(){
 					maxlength: 191
 				},
 				picture1: {
-					required: true
+					required: false
 				},
 				picture2: {
-					required: true
+					required: false
 				},
 				picture3: {
-					required: true
+					required: false
 				}
 			},
 			messages:
@@ -302,15 +302,6 @@ $(document).ready(function(){
 				banner3_english: {
 					minlength: 'Escribe mínimo {0} caracteres.',
 					maxlength: 'Escribe máximo {0} caracteres.'
-				},
-				picture1: {
-					required: 'Seleccione una imágen.'
-				},
-				picture2: {
-					required: 'Seleccione una imágen.'
-				},
-				picture3: {
-					required: 'Seleccione una imágen.'
 				}
 			}
 		});

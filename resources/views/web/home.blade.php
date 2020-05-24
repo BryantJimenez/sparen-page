@@ -16,7 +16,7 @@
                 <div class="row">
                     <div class="col-xl-12">
                         <div class="slider_text ">
-                            <h3 style="margin-right: 30%">@if($lang=="es") {!! $banner->banner1_spanish !!} @else {!! $banner->banner1_english !!} @endif</h3>
+                            <h3>@if($lang=="es") {!! $banner->banner1_spanish !!} @else {!! $banner->banner1_english !!} @endif</h3>
                         </div>
                         @guest
                         @else
@@ -33,7 +33,7 @@
                 <div class="row">
                     <div class="col-xl-12">
                         <div class="slider_text ">
-                            <h3 style="margin-right: 30%">@if($lang=="es") {!! $banner->banner2_spanish !!} @else {!! $banner->banner2_english !!} @endif</h3>
+                            <h3>@if($lang=="es") {!! $banner->banner2_spanish !!} @else {!! $banner->banner2_english !!} @endif</h3>
                         </div>
                         @guest
                         @else
@@ -50,7 +50,7 @@
                 <div class="row">
                     <div class="col-xl-12">
                         <div class="slider_text ">
-                            <h3 style="margin-right: 30%">@if($lang=="es") {!! $banner->banner3_spanish !!} @else {!! $banner->banner3_english !!} @endif</h3>
+                            <h3>@if($lang=="es") {!! $banner->banner3_spanish !!} @else {!! $banner->banner3_english !!} @endif</h3>
                         </div>
                         @guest
                         @else

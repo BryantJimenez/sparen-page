@@ -8,13 +8,12 @@
                         <div class="col-xl-2 col-lg-2">
                             <div class="logo">
                                 <a href="{{ route('home') }}">
-                                    <img src="{{ asset('/web/images/logo.png') }}" alt="Logo">
+                                    <img src="{{ asset('/web/images/logo.png') }}" width="120" alt="Logo">
                                 </a>
                             </div>
                         </div>
                         @guest 
-
-                        <div class="col-xl-10 col-lg-10">
+                        <div class="col-xl-8 col-lg-8">
                             <div class="main-menu  d-none d-lg-block">
                                 <nav> 
                                     <ul id="navigation">
@@ -27,10 +26,8 @@
                                 </nav>
                             </div>
                         </div>
-                        
-                       
                         @else
-                        <div class="col-xl-10 col-lg-10">
+                        <div class="col-xl-8 col-lg-8">
                             <div class="main-menu  d-none d-lg-block">
                                 <nav> 
                                     <ul id="navigation">
@@ -51,7 +48,18 @@
                             </div>
                         </div>
                         @endguest
-                        
+                        <div class="col-xl-2 col-lg-2 d-none d-lg-block">
+                            <div class="Appointment">
+                                <div class="search_button">
+                                    <a href="#">
+                                        <i class="ti-search"></i>
+                                    </a>
+                                </div>
+                                <div class="book_btn d-none d-lg-block">
+                                    <a class="popup-with-form" href="#test-form">Get a Quote</a>
+                                </div>
+                            </div>
+                        </div>
                         <div class="col-12">
                             <div class="mobile_menu d-block d-lg-none"></div>
                         </div>
@@ -95,16 +103,16 @@
                             <button type="submit" action="login" class="boxed-btn3">@lang('messages.sign in')</button>
                         </div>
                         <div class="col-xl-12">
-                           @if (Route::has('password.request'))
-                           <a class="btn btn-link" href="{{ route('password.request') }}">@lang('messages.forgot your password')</a>
-                           @endif
-                       </div>
-                   </div>
-               </div>
-           </div>
-       </div>
-   </form>
-   <!-- form itself end -->
+                         @if (Route::has('password.request'))
+                         <a class="btn btn-link" href="{{ route('password.request') }}">@lang('messages.forgot your password')</a>
+                         @endif
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+ </form>
+ <!-- form itself end -->
 </header>
 <!-- header-end -->
 
