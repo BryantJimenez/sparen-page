@@ -6,7 +6,7 @@
                     <div class="footer_widget">
                         <div class="footer_logo">
                             <a href="#">
-                                <img src="{{ asset('/web/images/logo.png') }}" alt="">
+                                <img src="{{ asset('/web/images/logo.png') }}" alt="Logo" width="120">
                             </a>
                         </div>
                         <p>@lang('messages.description')</p>

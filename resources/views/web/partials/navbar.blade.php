@@ -50,14 +50,8 @@
                         @endguest
                         <div class="col-xl-2 col-lg-2 d-none d-lg-block">
                             <div class="Appointment">
-                                <div class="search_button">
-                                    <a href="#">
-                                        <i class="ti-search"></i>
-                                    </a>
-                                </div>
-                                <div class="book_btn d-none d-lg-block">
-                                    <a class="popup-with-form" href="#test-form">Get a Quote</a>
-                                </div>
+                                <a href="{{ route('home', ['lang' => 'es']) }}"><img src="{{ asset('/web/images/spain.svg') }}" alt="Español" width="40" class="mr-3"></a>
+                                <a href="{{ route('home', ['lang' => 'en']) }}"><img src="{{ asset('/web/images/english.jpg') }}" alt="Ingles" width="40"></a>
                             </div>
                         </div>
                         <div class="col-12">

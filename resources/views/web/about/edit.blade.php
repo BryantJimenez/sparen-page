@@ -39,12 +39,7 @@
 
 								<div class="form-group col-12">
 									<label class="col-form-label">@lang('messages.paragraph spanish')<b class="text-danger">*</b></label>
-									<textarea class="form-control"name="paragraph_spanish" placeholder="" minlength="2" maxlength="191">{{ $about->paragraph_spanish }}</textarea> 
-								</div>
-
-								<div class="form-group col-12">
-									<label class="col-form-label">@lang('messages.paragraph english')<b class="text-danger">*</b></label>
-									<textarea class="form-control"name="paragraph_english" placeholder="" minlength="2" maxlength="191">{{ $about->paragraph_english }}</textarea> 
+									<textarea class="form-control"name="paragraph_spanish" placeholder="" minlength="2" maxlength="1000">{{ $about->paragraph_spanish }}</textarea> 
 								</div>
 
 								<div class="form-group col-lg-6 col-md-6 col-12">
@@ -69,7 +64,7 @@
 
 								<div class="form-group col-12">
 									<label class="col-form-label">@lang('messages.paragraph english')<b class="text-danger">*</b></label>
-									<textarea class="form-control" name="paragraph_english" required minlength="2" maxlength="191">{{ $about->paragraph_english }}</textarea>
+									<textarea class="form-control" name="paragraph_english" required minlength="2" maxlength="1000">{{ $about->paragraph_english }}</textarea>
 								</div>
 
 								<div class="form-group col-lg-6 col-md-6 col-12">

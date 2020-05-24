@@ -129,25 +129,15 @@ $(document).ready(function(){
 		$("#formAbout").validate({
 			rules:
 			{
-				paragraph1_spanish: {
+				paragraph_spanish: {
 					required: true,
 					minlength: 2,
-					maxlength: 191
+					maxlength: 1000
 				},
-				paragraph1_english: {
+				paragraph_english: {
 					required: true,
 					minlength: 2,
-					maxlength: 191
-				},
-				paragraph2_spanish: {
-					required: true,
-					minlength: 2,
-					maxlength: 191
-				},
-				paragraph2_english: {
-					required: true,
-					minlength: 2,
-					maxlength: 191
+					maxlength: 1000
 				},
 				list1_spanish: {
 					required: true,
@@ -179,25 +169,27 @@ $(document).ready(function(){
 					minlength: 2,
 					maxlength: 191
 				},
+				list4_spanish: {
+					required: true,
+					minlength: 2,
+					maxlength: 191
+				},
+				list4_english: {
+					required: true,
+					minlength: 2,
+					maxlength: 191
+				},
 				picture: {
-					required: true
+					required: false
 				}
 			},
 			messages:
 			{
-				paragraph1_spanish: {
+				paragraph_spanish: {
 					minlength: 'Escribe mínimo {0} caracteres.',
 					maxlength: 'Escribe máximo {0} caracteres.'
 				},
-				paragraph1_english: {
-					minlength: 'Escribe mínimo {0} caracteres.',
-					maxlength: 'Escribe máximo {0} caracteres.'
-				},
-				paragraph2_spanish: {
-					minlength: 'Escribe mínimo {0} caracteres.',
-					maxlength: 'Escribe máximo {0} caracteres.'
-				},
-				paragraph2_english: {
+				paragraph_english: {
 					minlength: 'Escribe mínimo {0} caracteres.',
 					maxlength: 'Escribe máximo {0} caracteres.'
 				},
@@ -225,8 +217,13 @@ $(document).ready(function(){
 					minlength: 'Escribe mínimo {0} caracteres.',
 					maxlength: 'Escribe máximo {0} caracteres.'
 				},
-				picture: {
-					required: 'Seleccione una imágen.'
+				list4_spanish: {
+					minlength: 'Escribe mínimo {0} caracteres.',
+					maxlength: 'Escribe máximo {0} caracteres.'
+				},
+				list4_english: {
+					minlength: 'Escribe mínimo {0} caracteres.',
+					maxlength: 'Escribe máximo {0} caracteres.'
 				}
 			}
 		});
@@ -351,41 +348,41 @@ $(document).ready(function(){
 				content1_spanish: {
 					required: true,
 					minlength: 2,
-					maxlength: 191
+					maxlength: 1000
 				},
 
 				content1_english: {
 					required: true,
 					minlength: 2,
-					maxlength: 191
+					maxlength: 1000
 				},
 
 				content2_spanish: {
 					required: true,
 					minlength: 2,
-					maxlength: 191
+					maxlength: 1000
 				},
 
 				content2_english: {
 					required: true,
 					minlength: 2,
-					maxlength: 191
+					maxlength: 1000
 				},
 
 				content3_spanish: {
 					required: true,
 					minlength: 2,
-					maxlength: 191
+					maxlength: 1000
 				},
 
 				content3_english: {
 					required: true,
 					minlength: 2,
-					maxlength: 191
+					maxlength: 1000
 				},
 
 				picture: {
-					required: true
+					required: false
 				}
 			},
 			messages:
@@ -437,9 +434,6 @@ $(document).ready(function(){
 				content3_english: {
 					minlength: 'Escribe mínimo {0} caracteres.',
 					maxlength: 'Escribe máximo {0} caracteres.'
-				},
-				picture: {
-					required: 'Seleccione una imágen.'
 				}
 			}
 		});
@@ -661,13 +655,13 @@ $(document).ready(function(){
 				},
 
 				picture1: {
-					required: true
+					required: false
 				},
 				picture2: {
-					required: true
+					required: false
 				},
 				picture3: {
-					required: true
+					required: false
 				}
 			},
 			messages:
@@ -719,206 +713,182 @@ $(document).ready(function(){
 				content3_english: {
 					minlength: 'Escribe mínimo {0} caracteres.',
 					maxlength: 'Escribe máximo {0} caracteres.'
-				},
-				picture1: {
-					required: true
-				},
-				picture2: {
-					required: true
-				},
-				picture3: {
-					required: true
 				}
 			}
 		});
 	});
 
-		//Contact Register
-		$("button[action='contact']").on("click",function(){
-			$("#formContact").validate({
-				rules:
-				{
-					name: {
-						required: true,
-						minlength: 8,
-						maxlength: 191
-					}, 
+	//Contact Register
+	$("button[action='contact']").on("click",function(){
+		$("#formContact").validate({
+			rules:
+			{
+				name: {
+					required: true,
+					minlength: 8,
+					maxlength: 191
+				}, 
 
-					email: {
-						required: true,
-						email: true,
-						minlength: 8,
-						maxlength: 191
-					},
-
-					message: {
-						required: true,
-						minlength: 8,
-						maxlength: 191
-					},
+				email: {
+					required: true,
+					email: true,
+					minlength: 8,
+					maxlength: 191
 				},
-				messages:
-				{
-					name: {
-						minlength: 'Escribe mínimo {0} caracteres.',
-						maxlength: 'Escribe máximo {0} caracteres.'
-					},
 
-					email: {
-						email: 'Introduce una dirección de correo valida.',
-						minlength: 'Escribe mínimo {0} caracteres.',
-						maxlength: 'Escribe máximo {0} caracteres.'
-					},
-
-					message: {
-						minlength: 'Escribe mínimo {0} caracteres.',
-						maxlength: 'Escribe máximo {0} caracteres.'
-					}
-				}
-			});
-		});
-
-		//Report
-		$("button[action='report']").on("click",function(){
-			$("#formReport").validate({
-				rules:
-				{
-					title_spanish: {
-						required: true,
-						minlength: 8,
-						maxlength: 191
-					}, 
-
-					title_english: {
-						required: true,
-						minlength: 8,
-						maxlength: 191
-					}, 
-
-					content_spanish: {
-						required: true,
-						minlength: 8,
-						maxlength: 191
-					},
-
-					content_english: {
-						required: true,
-						minlength: 8,
-						maxlength: 191
-					},
-
-					pdf_spanish: {
-						required: true
-					},
-
-					pdf_english: {
-						required: true
-					}
+				message: {
+					required: true,
+					minlength: 8,
+					maxlength: 191
 				},
-				messages:
-				{
-					title_spanish: {
-						minlength: 'Escribe mínimo {0} caracteres.',
-						maxlength: 'Escribe máximo {0} caracteres.'
-					},
-
-					title_english: {
-						minlength: 'Escribe mínimo {0} caracteres.',
-						maxlength: 'Escribe máximo {0} caracteres.'
-					},
-
-					content_spanish: {
-						minlength: 'Escribe mínimo {0} caracteres.',
-						maxlength: 'Escribe máximo {0} caracteres.'
-					},
-
-					content_english: {
-						minlength: 'Escribe mínimo {0} caracteres.',
-						maxlength: 'Escribe máximo {0} caracteres.'
-					},
-
-					pdf_spanish: {
-						required: true
-					},
-
-					pdf_english: {
-						required: true
-					}
-				}
-			});
-		});
-
-		//Info Contact Update
-		$("button[action='contact']").on("click",function(){
-			$("#formContact").validate({
-				rules:
-				{
-					address: {
-						required: true,
-						minlength: 8,
-						maxlength: 191
-					}, 
-
-					phone: {
-						required: true,
-						minlength: 8,
-						maxlength: 191
-					},
-
-					email: {
-						required: true,
-						email: true,
-						minlength: 8,
-						maxlength: 191
-					},
-
-					facebook: {
-						required: true,
-						minlength: 8,
-						maxlength: 191
-					},
-
-					twitter: {
-						required: true,
-						minlength: 8,
-						maxlength: 191
-					}
+			},
+			messages:
+			{
+				name: {
+					minlength: 'Escribe mínimo {0} caracteres.',
+					maxlength: 'Escribe máximo {0} caracteres.'
 				},
-				messages:
-				{
-					address: {
-						minlength: 'Escribe mínimo {0} caracteres.',
-						maxlength: 'Escribe máximo {0} caracteres.'
-					},
 
-					phone: {
-						minlength: 'Escribe mínimo {0} caracteres.',
-						maxlength: 'Escribe máximo {0} caracteres.'
-					},
+				email: {
+					email: 'Introduce una dirección de correo valida.',
+					minlength: 'Escribe mínimo {0} caracteres.',
+					maxlength: 'Escribe máximo {0} caracteres.'
+				},
 
-					email: {
-						email: 'Introduce una dirección de correo valida.',
-						minlength: 'Escribe mínimo {0} caracteres.',
-						maxlength: 'Escribe máximo {0} caracteres.'
-					},
-
-					facebook: {
-						minlength: 'Escribe mínimo {0} caracteres.',
-						maxlength: 'Escribe máximo {0} caracteres.'
-					},
-
-					twitter: {
-						minlength: 'Escribe mínimo {0} caracteres.',
-						maxlength: 'Escribe máximo {0} caracteres.'
-					}
+				message: {
+					minlength: 'Escribe mínimo {0} caracteres.',
+					maxlength: 'Escribe máximo {0} caracteres.'
 				}
-			});
+			}
 		});
-
-
-
-
-
-
-
 	});
+
+	//Report
+	$("button[action='report']").on("click",function(){
+		$("#formReport").validate({
+			rules:
+			{
+				title_spanish: {
+					required: true,
+					minlength: 8,
+					maxlength: 191
+				}, 
+
+				title_english: {
+					required: true,
+					minlength: 8,
+					maxlength: 191
+				}, 
+
+				content_spanish: {
+					required: true,
+					minlength: 8,
+					maxlength: 191
+				},
+
+				content_english: {
+					required: true,
+					minlength: 8,
+					maxlength: 191
+				},
+
+				pdf_spanish: {
+					required: true
+				},
+
+				pdf_english: {
+					required: true
+				}
+			},
+			messages:
+			{
+				title_spanish: {
+					minlength: 'Escribe mínimo {0} caracteres.',
+					maxlength: 'Escribe máximo {0} caracteres.'
+				},
+
+				title_english: {
+					minlength: 'Escribe mínimo {0} caracteres.',
+					maxlength: 'Escribe máximo {0} caracteres.'
+				},
+
+				content_spanish: {
+					minlength: 'Escribe mínimo {0} caracteres.',
+					maxlength: 'Escribe máximo {0} caracteres.'
+				},
+
+				content_english: {
+					minlength: 'Escribe mínimo {0} caracteres.',
+					maxlength: 'Escribe máximo {0} caracteres.'
+				}
+			}
+		});
+	});
+
+	//Info Contact Update
+	$("button[action='contact']").on("click",function(){
+		$("#formContact").validate({
+			rules:
+			{
+				address: {
+					required: true,
+					minlength: 8,
+					maxlength: 191
+				}, 
+
+				phone: {
+					required: true,
+					minlength: 8,
+					maxlength: 191
+				},
+
+				email: {
+					required: true,
+					email: true,
+					minlength: 8,
+					maxlength: 191
+				},
+
+				facebook: {
+					required: true,
+					minlength: 8,
+					maxlength: 191
+				},
+
+				twitter: {
+					required: true,
+					minlength: 8,
+					maxlength: 191
+				}
+			},
+			messages:
+			{
+				address: {
+					minlength: 'Escribe mínimo {0} caracteres.',
+					maxlength: 'Escribe máximo {0} caracteres.'
+				},
+
+				phone: {
+					minlength: 'Escribe mínimo {0} caracteres.',
+					maxlength: 'Escribe máximo {0} caracteres.'
+				},
+
+				email: {
+					email: 'Introduce una dirección de correo valida.',
+					minlength: 'Escribe mínimo {0} caracteres.',
+					maxlength: 'Escribe máximo {0} caracteres.'
+				},
+
+				facebook: {
+					minlength: 'Escribe mínimo {0} caracteres.',
+					maxlength: 'Escribe máximo {0} caracteres.'
+				},
+
+				twitter: {
+					minlength: 'Escribe mínimo {0} caracteres.',
+					maxlength: 'Escribe máximo {0} caracteres.'
+				}
+			}
+		});
+	});
+});
