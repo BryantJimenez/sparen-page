@@ -24,6 +24,7 @@ Route::group(['middleware' => ['lang']], function () {
 	//Contacto
 	Route::get('/{lang?}/contacto', 'ContactController@create')->name('contacto.index');
 	Route::post('/{lang?}/contacto', 'ContactController@store')->name('contacto.store');
+	
 
 	//Informes
 	Route::get('/{lang?}/informes', 'ReportController@index')->name('informe.index');
@@ -62,5 +63,13 @@ Route::group(['middleware' => ['lang']], function () {
 		//Banner
 		Route::get('/{lang?}/banner/editar', 'BannerController@edit')->name('banner.edit');
 		Route::put('/{lang?}/banner/editar', 'BannerController@update')->name('banner.update');
+
+		//Contacto
+		Route::get('/{lang?}/contacto/editar', 'InfoContactController@edit')->name('contacto.edit');
+		Route::put('/{lang?}/contacto/editar', 'InfoContactController@update')->name('contacto.update');
+
+		
+
+
 	});
 });

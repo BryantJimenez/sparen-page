@@ -103,5 +103,14 @@ return [
     'edit services' => 'Editar Servicios',
     'first image' => 'Primera Imagen',
     'second image' => 'Segunda Imagen',
-    'third image' => 'Tercera Imagen'
+    'third image' => 'Tercera Imagen',
+    'edit info contact' => 'Editar Contacto',
+    'address' => 'Dirección',
+    'phone' => 'Teléfono',
+    'email' => 'Correo Electrónico',
+    'facebook' => 'Facebook',
+    'twitter' => 'Twitter',
+    'enter your address' => 'Introduzca su dirección',
+    'enter your phone' => 'Introduzca su teléfono',
+    'enter your email' => 'Introduzca su correo electrónico'
 ];

@@ -28,7 +28,7 @@
 			<div class="col-12">
 				<div class="card">
 					<div class="card-body"> 
-						@include('partials.errors')
+						@include('web.partials.errors')
 						<h3 class="text-heading">@lang('messages.edit about')</h3>
 
 						<h6 class="card-subtitle">@lang('messages.required fields') (<b class="text-danger">*</b>)</h6>

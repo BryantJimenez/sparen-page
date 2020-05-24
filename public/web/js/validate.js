@@ -742,7 +742,7 @@ $(document).ready(function(){
 		});
 	});
 
-		//Usuarios register
+		//Contact Register
 		$("button[action='contact']").on("click",function(){
 			$("#formContact").validate({
 				rules:
@@ -852,6 +852,73 @@ $(document).ready(function(){
 
 					pdf_english: {
 						required: true
+					}
+				}
+			});
+		});
+
+		//Info Contact Update
+		$("button[action='contact']").on("click",function(){
+			$("#formContact").validate({
+				rules:
+				{
+					address: {
+						required: true,
+						minlength: 8,
+						maxlength: 191
+					}, 
+
+					phone: {
+						required: true,
+						minlength: 8,
+						maxlength: 191
+					},
+
+					email: {
+						required: true,
+						email: true,
+						minlength: 8,
+						maxlength: 191
+					},
+
+					facebook: {
+						required: true,
+						minlength: 8,
+						maxlength: 191
+					},
+
+					twitter: {
+						required: true,
+						minlength: 8,
+						maxlength: 191
+					}
+				},
+				messages:
+				{
+					address: {
+						minlength: 'Escribe mínimo {0} caracteres.',
+						maxlength: 'Escribe máximo {0} caracteres.'
+					},
+
+					phone: {
+						minlength: 'Escribe mínimo {0} caracteres.',
+						maxlength: 'Escribe máximo {0} caracteres.'
+					},
+
+					email: {
+						email: 'Introduce una dirección de correo valida.',
+						minlength: 'Escribe mínimo {0} caracteres.',
+						maxlength: 'Escribe máximo {0} caracteres.'
+					},
+
+					facebook: {
+						minlength: 'Escribe mínimo {0} caracteres.',
+						maxlength: 'Escribe máximo {0} caracteres.'
+					},
+
+					twitter: {
+						minlength: 'Escribe mínimo {0} caracteres.',
+						maxlength: 'Escribe máximo {0} caracteres.'
 					}
 				}
 			});

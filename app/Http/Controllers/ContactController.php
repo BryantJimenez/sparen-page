@@ -7,11 +7,10 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\App;
 use Illuminate\Http\Request;
+use App\InfoContact;
 use App\Contact;
 use App\User;
 use App\Notifications\ContactMailNotification;
-use App\Http\Requests\ContactStoreRequest;
-use Illuminate\Support\Facades\App;
 
 class ContactController extends Controller
 {
@@ -23,7 +22,8 @@ class ContactController extends Controller
     public function create($lang)
     {
         App::setlocale($lang);
-        return view('web.contact.create', compact('lang'));
+        $info = InfoContact::where('id', 1)->firstOrFail();
+        return view('web.contact.create', compact('lang', 'info'));
     }
 
     /**
