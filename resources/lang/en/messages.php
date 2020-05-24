@@ -17,7 +17,7 @@ return [
 	'list' => 'List',
     'edit' => 'Edit',
     'our services' => 'Our Services',
-    'about us' => 'About Us / Sparen',
+    'about us' => 'About Sparen',
     'visits' => 'Visits',
     'stored reports' => 'Stired Reports',
     'do you have any project' => 'Do you have any project?',

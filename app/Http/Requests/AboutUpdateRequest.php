@@ -24,16 +24,16 @@ class AboutUpdateRequest extends FormRequest
     public function rules()
     {
         return [
-            'paragraph1_spanish' => 'required|string|min:2|max:191',
-            'paragraph2_spanish' => 'required|string|min:2|max:191',
+            'paragraph_spanish' => 'required|string|min:2|max:1000',
             'list1_spanish' => 'required|string|min:2|max:191',
             'list2_spanish' => 'required|string|min:2|max:191',
             'list3_spanish' => 'required|string|min:2|max:191',
-            'paragraph1_english' => 'required|string|min:2|max:191',
-            'paragraph2_english' => 'required|string|min:2|max:191',
+            'list4_spanish' => 'required|string|min:2|max:191',
+            'paragraph_english' => 'required|string|min:2|max:1000',
             'list1_english' => 'required|string|min:2|max:191',
             'list2_english' => 'required|string|min:2|max:191',
             'list3_english' => 'required|string|min:2|max:191',
+            'list4_english' => 'required|string|min:2|max:191',
             'picture' => 'nullable'
         ];
     }

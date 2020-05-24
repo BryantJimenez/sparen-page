@@ -16,10 +16,10 @@ class CreateInfoContactsTable extends Migration
         Schema::create('info_contacts', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->text('address');
-            $table->string('phone');
-            $table->string('email');
-            $table->string('facebook');
-            $table->string('twitter');
+            $table->string('phone')->nullable();
+            $table->string('email')->nullable();
+            $table->string('facebook')->nullable();
+            $table->string('twitter')->nullable();
             $table->timestamps();
         });
     }

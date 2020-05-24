@@ -59,30 +59,38 @@
 						<h3>{{ $info->address }}</h3>
 					</div>
 				</div>
-				{{-- <div class="media contact-info">
+				@if($info->phone!=NULL)
+				<div class="media contact-info">
 					<span class="contact-info__icon"><i class="ti-tablet"></i></span>
 					<div class="media-body">
 						<h3>{{ $info->phone }}</h3>
 					</div>
-				</div> --}}
+				</div>
+				@endif
+				@if($info->email!=NULL)
 				<div class="media contact-info">
 					<span class="contact-info__icon"><i class="ti-email"></i></span>
 					<div class="media-body">
 						<h3>{{ $info->email }}</h3>
 					</div>
 				</div>
+				@endif
+				@if($info->facebook!=NULL)
 				<div class="media contact-info">
 					<span class="contact-info__icon"><i class="ti-facebook"></i></span>
 					<div class="media-body">
 						<h3>{{ $info->facebook }}</h3>
 					</div>
 				</div>
+				@endif
+				@if($info->twitter!=NULL)
 				<div class="media contact-info">
 					<span class="contact-info__icon"><i class="ti-twitter"></i></span>
 					<div class="media-body">
 						<h3>{{ $info->twitter}}</h3>
 					</div>
 				</div>
+				@endif
 				@guest
 				@else
 				<div class="video_service_btn">
