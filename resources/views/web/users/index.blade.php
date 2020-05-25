@@ -3,9 +3,9 @@
 @section('title', __('messages.user list'))
 
 @section('links')
+<link rel="stylesheet" href="{{ asset('/web/vendors/datatables/jquery.dataTables.min.css') }}">
 <link rel="stylesheet" href="{{ asset('/web/vendors/lobibox/Lobibox.min.css') }}">
 @endsection
-
 
 @section('content')
 
@@ -57,5 +57,6 @@
 @endsection
 
 @section('script')
+<script src="{{ asset('/web/vendors/datatables/jquery.dataTables.min.js') }}"></script>
 <script src="{{ asset('/web/vendors/lobibox/Lobibox.js') }}"></script>
 @endsection

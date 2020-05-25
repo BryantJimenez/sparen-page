@@ -40,82 +40,82 @@
 
 								<div class="form-group col-12">
 									<label class="col-form-label">@lang('messages.first title spanish')<b class="text-danger">*</b></label>
-									<input class="form-control" type="text" name="title1_spanish" required value="{{ $service->title1_spanish }}" minlength="5" maxlength="191">
+									<input class="form-control" type="text" name="title1_spanish" required value="{{ $service->title1_spanish }}" minlength="2" maxlength="191">
 								</div>
 
 								<div class="form-group col-12">
 									<label class="col-form-label">@lang('messages.first title english')<b class="text-danger">*</b></label>
-									<input class="form-control" type="text" name="title1_english" required value="{{ $service->title1_english }}" minlength="5" maxlength="191">
+									<input class="form-control" type="text" name="title1_english" required value="{{ $service->title1_english }}" minlength="2" maxlength="191">
 								</div>
 
 								<div class="form-group col-12">
 									<label class="col-form-label">@lang('messages.first content spanish')<b class="text-danger">*</b></label>
-									<textarea class="form-control"name="content1_spanish" required  value="" id="paragraph1_spanish" minlength="2" maxlength="191">{{ $service->content1_spanish }}</textarea> 
+									<textarea class="form-control"name="content1_spanish" required minlength="2" maxlength="191">{{ $service->content1_spanish }}</textarea> 
 								</div>
 
 								<div class="form-group col-12">
 									<label class="col-form-label">@lang('messages.first content english')<b class="text-danger">*</b></label>
-									<textarea class="form-control"name="content1_english" required  value="" id="paragraph1_spanish" minlength="2" maxlength="191">{{ $service->content1_english }}</textarea> 
+									<textarea class="form-control"name="content1_english" required minlength="2" maxlength="191">{{ $service->content1_english }}</textarea> 
 								</div>
 
 								<div class="form-group col-12">
 									<label class="col-form-label">@lang('messages.second title spanish')<b class="text-danger">*</b></label>
-									<input class="form-control" type="text" name="title2_spanish" required value="{{ $service->title2_spanish }}" minlength="5" maxlength="191">
+									<input class="form-control" type="text" name="title2_spanish" required value="{{ $service->title2_spanish }}" minlength="2" maxlength="191">
 								</div>
 
 								<div class="form-group col-12">
 									<label class="col-form-label">@lang('messages.second title english')<b class="text-danger">*</b></label>
-									<input class="form-control" type="text" name="title2_english" required value="{{ $service->title2_english }}" minlength="5" maxlength="191">
+									<input class="form-control" type="text" name="title2_english" required value="{{ $service->title2_english }}" minlength="2" maxlength="191">
 								</div>
 
 								<div class="form-group col-12">
 									<label class="col-form-label">@lang('messages.second content spanish')<b class="text-danger">*</b></label>
-									<textarea class="form-control"name="content2_spanish" required  value="" id="paragraph1_spanish" minlength="2" maxlength="191">{{ $service->content2_spanish }}</textarea> 
+									<textarea class="form-control"name="content2_spanish" required minlength="2" maxlength="191">{{ $service->content2_spanish }}</textarea> 
 								</div>
 
 								<div class="form-group col-12">
 									<label class="col-form-label">@lang('messages.second content english')<b class="text-danger">*</b></label>
-									<textarea class="form-control"name="content2_english" required  value="" id="paragraph1_spanish" minlength="2" maxlength="191">{{ $service->content2_english }}</textarea> 
+									<textarea class="form-control"name="content2_english" required minlength="2" maxlength="191">{{ $service->content2_english }}</textarea> 
 								</div>
 
 								<div class="form-group col-12">
 									<label class="col-form-label">@lang('messages.third title spanish')<b class="text-danger">*</b></label>
-									<input class="form-control" type="text" name="title3_spanish" required value="{{ $service->title3_spanish }}" minlength="5" maxlength="191">
+									<input class="form-control" type="text" name="title3_spanish" required value="{{ $service->title3_spanish }}" minlength="2" maxlength="191">
 								</div>
 
 								<div class="form-group col-12">
 									<label class="col-form-label">@lang('messages.third title english')<b class="text-danger">*</b></label>
-									<input class="form-control" type="text" name="title3_english" required value="{{ $service->title3_english }}" minlength="5" maxlength="191">
+									<input class="form-control" type="text" name="title3_english" required value="{{ $service->title3_english }}" minlength="2" maxlength="191">
 								</div>
 
 								<div class="form-group col-12">
 									<label class="col-form-label">@lang('messages.third content spanish')<b class="text-danger">*</b></label>
-									<textarea class="form-control"name="content3_spanish" required  value="" id="paragraph1_spanish" minlength="2" maxlength="191">{{ $service->content3_spanish }}</textarea> 
+									<textarea class="form-control"name="content3_spanish" required minlength="2" maxlength="191">{{ $service->content3_spanish }}</textarea> 
 								</div>
 
 								<div class="form-group col-12">
 									<label class="col-form-label">@lang('messages.third content english')<b class="text-danger">*</b></label>
-									<textarea class="form-control"name="content3_english" required  value="" id="paragraph1_spanish" minlength="2" maxlength="191">{{ $service->content3_english }}</textarea> 
+									<textarea class="form-control"name="content3_english" required minlength="2" maxlength="191">{{ $service->content3_english }}</textarea> 
 								</div>
 
 								<div class="col-12">
 									<div class="form-group col-12">
 										<label class="col-form-label">@lang('messages.first image')<b class="text-danger">*</b></label>
-										<input type="file" name="picture1" accept="image/*" id="input-file-now" class="dropify" data-height="125" data-max-file-size="20M" data-allowed-file-extensions="jpg png jpeg web3" data-default-file="{{ '/web/images/service/'.$service->picture1 }}" />
+										<input type="file" name="picture1" accept="image/*" class="@if($lang=="es"){{ 'dropify' }}@else{{ 'dropifys' }}@endif" data-height="125" data-max-file-size="20M" data-allowed-file-extensions="jpg png jpeg web3" data-default-file="{{ '/web/images/service/'.$service->picture1 }}" />
 									</div> 
 								</div>
 
 								<div class="col-12">
 									<div class="form-group col-12">
 										<label class="col-form-label">@lang('messages.second image')<b class="text-danger">*</b></label>
-										<input type="file" name="picture2" accept="image/*" id="input-file-now" class="dropify" data-height="125" data-max-file-size="20M" data-allowed-file-extensions="jpg png jpeg web3" data-default-file="{{ '/web/images/service/'.$service->picture2 }}" />
+										<input type="file" name="picture2" accept="image/*" class="@if($lang=="es"){{ 'dropify' }}@else{{ 'dropifys' }}@endif" data-height="125" data-max-file-size="20M" data-allowed-file-extensions="jpg png jpeg web3" data-default-file="{{ '/web/images/service/'.$service->picture2 }}" />
 									</div> 
 								</div>
 
 								<div class="col-12">
 									<div class="form-group col-12">
 										<label class="col-form-label">@lang('messages.third image')<b class="text-danger">*</b></label>
-										<input type="file" name="picture3" accept="image/*" id="input-file-now" class="dropify" data-height="125" data-max-file-size="20M" data-allowed-file-extensions="jpg png jpeg web3" data-default-file="{{ '/web/images/service/'.$service->picture3 }}" />
+										<input type="file" name="picture3" accept="image/*" class="@if($lang=="es"){{ 'dropify' }}@else{{ 'dropifys' }}@endif" data-height="125" data-max-file-size="20M" data-allowed-file-extensions="jpg png jpeg web3" data-default-file="{{ '/web/images/service/'.$service->picture3 }}" />
 									</div> 
 								</div>
 

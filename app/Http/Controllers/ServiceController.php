@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Service;
 use App\User;
 use App\Binnacle;
+use App\InfoContact;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Http\Requests\ServiceUpdateRequest;
@@ -22,7 +23,8 @@ class ServiceController extends Controller
     {
         App::setlocale($lang);
         $service = Service::where('id', 1)->firstOrFail();
-        return view('web.service.edit', compact('lang', 'service'));
+        $info = InfoContact::where('id', 1)->firstOrFail();
+        return view('web.service.edit', compact('lang', 'service', 'info'));
     }
 
     /**

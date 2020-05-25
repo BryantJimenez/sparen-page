@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\About;
 use App\User;
 use App\Binnacle;
+use App\InfoContact;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Http\Requests\AboutUpdateRequest;
@@ -22,7 +23,8 @@ class AboutController extends Controller
     {
         App::setlocale($lang);
         $about = About::where('id', 1)->firstOrFail();
-        return view('web.about.edit', compact('lang', 'about'));
+        $info = InfoContact::where('id', 1)->firstOrFail();
+        return view('web.about.edit', compact('lang', 'about', 'info'));
     }
 
     /**
@@ -35,7 +37,7 @@ class AboutController extends Controller
     public function update(AboutUpdateRequest $request, $lang) {
 
         $about = About::where('id', 1)->firstOrFail();
-        $data=array('paragraph_spanish' => request('paragraph_spanish'), 'paragraph_english' => request('paragraph_english'), 'list1_spanish' => request('list1_spanish'), 'list2_spanish' => request('list2_spanish'), 'list3_spanish' => request('list3_spanish'), 'list1_english' => request('list1_english'), 'list2_english' => request('list2_english'), 'list3_english' => request('list3_english'), 'list4_english' => request('list4_english'));
+        $data=array('paragraph_spanish' => request('paragraph_spanish'), 'paragraph_english' => request('paragraph_english'), 'list1_spanish' => request('list1_spanish'), 'list2_spanish' => request('list2_spanish'), 'list3_spanish' => request('list3_spanish'), 'list4_spanish' => request('list4_spanish'), 'list1_english' => request('list1_english'), 'list2_english' => request('list2_english'), 'list3_english' => request('list3_english'), 'list4_english' => request('list4_english'));
 
         if ($request->hasFile('picture')) {
             $file = $request->file('picture');

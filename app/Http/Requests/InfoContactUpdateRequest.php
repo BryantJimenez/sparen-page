@@ -25,10 +25,10 @@ class InfoContactUpdateRequest extends FormRequest
     {
         return [
             'address' => 'required|string|min:2|max:191',
-            'phone' => 'required|string|min:2|max:191',
-            'email' => 'required|string|email|min:5|max:191',
-            'facebook' => 'required|string|min:2|max:191',
-            'twitter' => 'required|string|min:2|max:191'
+            'phone' => 'nullable|string|min:2|max:191',
+            'email' => 'nullable|string|email|min:5|max:191',
+            'facebook' => 'nullable|string|min:2|max:191',
+            'twitter' => 'nullable|string|min:2|max:191'
         ];
     }
 }

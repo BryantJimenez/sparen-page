@@ -40,12 +40,12 @@
 
 								<div class="form-group col-lg-6 col-md-6 col-12">
 									<label class="col-form-label">@lang('messages.lastname')<b class="text-danger">*</b></label>
-									<input class="form-control" type="text" name="lastname" required placeholder="@lang('messages.enter a lastname')" value="{{ old('lastname') }}" id="lastname" minlength="2" maxlength="191">
+									<input class="form-control" type="text" name="lastname" required placeholder="@lang('messages.enter a lastname')" value="{{ old('lastname') }}" minlength="2" maxlength="191">
 								</div>
 
 								<div class="form-group col-lg-6 col-md-6 col-12">
 									<label class="col-form-label">@lang('messages.dni') (@lang('messages.optional'))</label>
-									<input class="form-control" type="text" name="dni" placeholder="@lang('messages.enter a dni')" value="{{ old('dni') }}" id="dni" minlength="5" maxlength="15">
+									<input class="form-control" type="text" name="dni" placeholder="@lang('messages.enter a dni')" value="{{ old('dni') }}" minlength="5" maxlength="15">
 								</div>
 
 								<div class="form-group col-lg-6 col-md-6 col-12">
@@ -76,7 +76,7 @@
 
 								<div class="form-group col-12">
 									<label class="col-form-label">@lang('messages.photo') (@lang('messages.optional'))</label>
-									<input type="file" name="photo" accept="image/*" id="input-file-now" class="dropify" data-height="125" data-max-file-size="20M" data-allowed-file-extensions="jpg png jpeg web3" />
+									<input type="file" name="photo" accept="image/*" id="input-file-now" class="@if($lang=="es"){{ 'dropify' }}@else{{ 'dropifys' }}@endif" data-height="125" data-max-file-size="20M" data-allowed-file-extensions="jpg png jpeg web3" />
 								</div> 
 
 								<div class="form-group col-12">

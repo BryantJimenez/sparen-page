@@ -2,6 +2,10 @@
 
 @section('title', __('messages.binnacle'))
 
+@section('links')
+<link rel="stylesheet" href="{{ asset('/web/vendors/datatables/jquery.dataTables.min.css') }}">
+@endsection
+
 @section('content')
 
 <div class="bradcam_area breadcam_bg_2">
@@ -45,4 +49,8 @@
 	</div>
 </section>
 
+@endsection
+
+@section('script')
+<script src="{{ asset('/web/vendors/datatables/jquery.dataTables.min.js') }}"></script>
 @endsection

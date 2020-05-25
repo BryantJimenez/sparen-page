@@ -7,7 +7,7 @@ $(document).ready(function(){
 				email: {
 					required: true,
 					email: true,
-					minlength: 8,
+					minlength: 5,
 					maxlength: 191
 				},
 
@@ -58,21 +58,21 @@ $(document).ready(function(){
 				},
 
 				phone: {
-					required: true,
+					required: false,
 					minlength: 5,
 					maxlength: 15
 				},
 
 				dni: {
-					required: true,
+					required: false,
 					minlength: 5,
 					maxlength: 15
 				},
 
-				phone: {
+				password: {
 					required: true,
-					minlength: 5,
-					maxlength: 15
+					minlength: 8,
+					maxlength: 40
 				},
 
 				password_confirmation: { 
@@ -579,7 +579,7 @@ $(document).ready(function(){
 
 	//Servicios
 	$("button[action='service']").on("click",function(){
-		$("#formOService").validate({
+		$("#formService").validate({
 			rules:
 			{
 				title1_spanish: {
@@ -725,21 +725,21 @@ $(document).ready(function(){
 			{
 				name: {
 					required: true,
-					minlength: 8,
+					minlength: 2,
 					maxlength: 191
 				}, 
 
 				email: {
 					required: true,
 					email: true,
-					minlength: 8,
+					minlength: 5,
 					maxlength: 191
 				},
 
 				message: {
 					required: true,
-					minlength: 8,
-					maxlength: 191
+					minlength: 10,
+					maxlength: 1000
 				},
 			},
 			messages:
@@ -770,25 +770,25 @@ $(document).ready(function(){
 			{
 				title_spanish: {
 					required: true,
-					minlength: 8,
+					minlength: 2,
 					maxlength: 191
 				}, 
 
 				title_english: {
 					required: true,
-					minlength: 8,
+					minlength: 2,
 					maxlength: 191
 				}, 
 
 				content_spanish: {
 					required: true,
-					minlength: 8,
+					minlength: 10,
 					maxlength: 191
 				},
 
 				content_english: {
 					required: true,
-					minlength: 8,
+					minlength: 10,
 					maxlength: 191
 				},
 
@@ -832,32 +832,32 @@ $(document).ready(function(){
 			{
 				address: {
 					required: true,
-					minlength: 8,
+					minlength: 5,
 					maxlength: 191
 				}, 
 
 				phone: {
-					required: true,
-					minlength: 8,
+					required: false,
+					minlength: 5,
 					maxlength: 191
 				},
 
 				email: {
-					required: true,
+					required: false,
 					email: true,
-					minlength: 8,
+					minlength: 5,
 					maxlength: 191
 				},
 
 				facebook: {
-					required: true,
-					minlength: 8,
+					required: false,
+					minlength: 5,
 					maxlength: 191
 				},
 
 				twitter: {
-					required: true,
-					minlength: 8,
+					required: false,
+					minlength: 5,
 					maxlength: 191
 				}
 			},

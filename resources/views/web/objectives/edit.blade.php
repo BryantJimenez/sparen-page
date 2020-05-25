@@ -99,7 +99,7 @@
 
 								<div class="form-group col-12">
 									<label class="col-form-label">@lang('messages.image')<b class="text-danger">*</b></label>
-									<input type="file" name="picture" accept="image/*" id="input-file-now" class="dropify" data-height="125" data-max-file-size="20M" data-allowed-file-extensions="jpg png jpeg web3" data-default-file="{{ '/web/images/objective/'.$objective->picture }}" />
+									<input type="file" name="picture" accept="image/*" id="input-file-now" class="@if($lang=="es"){{ 'dropify' }}@else{{ 'dropifys' }}@endif" data-height="125" data-max-file-size="20M" data-allowed-file-extensions="jpg png jpeg web3" data-default-file="{{ '/web/images/objective/'.$objective->picture }}" />
 								</div> 
 
 								<div class="form-group col-12">

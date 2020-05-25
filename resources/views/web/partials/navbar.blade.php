@@ -1,4 +1,3 @@
-
 <header>
     <div class="header-area ">
         <div id="sticky-header" class="main-header-area">
@@ -8,7 +7,7 @@
                         <div class="col-xl-2 col-lg-2">
                             <div class="logo">
                                 <a href="{{ route('home') }}">
-                                    <img src="{{ asset('/web/images/logo.png') }}" width="120" alt="Logo">
+                                    <img src="{{ asset('/web/images/logo.png') }}" width="150" alt="Logo">
                                 </a>
                             </div>
                         </div>
@@ -63,56 +62,5 @@
             </div>
         </div>
     </div>
-
-    <!-- form itself end-->
-    <form id="test-form" class="white-popup-block mfp-hide"method="POST" action="{{ route('login') }}">
-        @csrf
-        <div class="popup_box ">
-            <div class="popup_inner">
-                <div class="popup_header">
-                    <h3>@lang('messages.login')</h3>
-                </div>
-                <div class="custom_form">
-                    <div class="row">
-                        <div class="col-xl-12">
-                            <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="@lang('messages.enter your email')">
-
-                            @error('email')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                            @enderror
-
-                        </div>
-                        <div class="col-xl-12">
-                            <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="@lang('messages.enter your password')" >
-
-                            @error('password')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                            @enderror
-                        </div>
-                        <div class="col-xl-12">
-                            <button type="submit" action="login" class="boxed-btn3">@lang('messages.sign in')</button>
-                        </div>
-                        <div class="col-xl-12">
-                         @if (Route::has('password.request'))
-                         <a class="btn btn-link" href="{{ route('password.request') }}">@lang('messages.forgot your password')</a>
-                         @endif
-                     </div>
-                 </div>
-             </div>
-         </div>
-     </div>
- </form>
- <!-- form itself end -->
 </header>
 <!-- header-end -->
-
-@section('script')
-<script src="{{ asset('/web/vendors/validate/jquery.validate.js') }}"></script>
-<script src="{{ asset('/web/vendors/validate/additional-methods.js') }}"></script>
-<script src="{{ asset('/web/vendors/validate/messages_es.js') }}"></script>
-<script src="{{ asset('/web/js/validate.js') }}"></script>
-@endsection

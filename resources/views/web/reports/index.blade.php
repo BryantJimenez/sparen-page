@@ -21,7 +21,7 @@
 <section class="blog_area section-padding">
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 mb-5 mb-lg-0">
+            <div class="col-lg-8 mb-5 mb-lg-0 order-xl-1 order-lg-1 order-md-2 order-sm-2">
                 <div class="blog_left_sidebar">
                     @foreach($reports as $r)
 
@@ -47,7 +47,7 @@
 
                 </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-4 order-xl-2 order-lg-2 order-md-1 order-sm-1">
                 <div class="blog_right_sidebar">
                     <aside class="single_sidebar_widget search_widget">
                         <form action="#">
@@ -68,7 +68,7 @@
                     @else
                     <aside class="single_sidebar_widget newsletter_widget">
                         <h4 class="widget_title">@lang('messages.register a new report')</h4>
-                        <a href=" {{ route('informe.create', ['lang' => $lang]) }} "><button class="button rounded-0 genric-btn success-border w-100 btn_1 boxed-btn">@lang('messages.register')</button></a>
+                        <a href=" {{ route('informe.create', ['lang' => $lang]) }} "><button class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn">@lang('messages.register')</button></a>
                     </aside>
                     @endguest
                 </div>
@@ -78,4 +78,11 @@
 </section>
 <!--================Blog Area =================-->
 
+@endsection
+
+@section('script')
+<script src="{{ asset('/web/vendors/validate/jquery.validate.js') }}"></script>
+<script src="{{ asset('/web/vendors/validate/additional-methods.js') }}"></script>
+<script src="{{ asset('/web/vendors/validate/messages_es.js') }}"></script>
+<script src="{{ asset('/web/js/validate.js') }}"></script>
 @endsection

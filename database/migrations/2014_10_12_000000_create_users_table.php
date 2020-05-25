@@ -22,11 +22,11 @@ class CreateUsersTable extends Migration
             $table->string('dni')->nullable();
             $table->string('phone')->nullable();
             $table->string('address')->nullable();
-            $table->string('email')->unique()->nullable();
+            $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
-            $table->string('password')->nullable();
+            $table->string('password');
             $table->enum('state', [0, 1])->default(1);
-            $table->enum('type', [1, 2, 3])->default(1)->nullable();
+            $table->enum('type', [1])->default(1);
             $table->timestamps();
         });
     }

@@ -2,11 +2,6 @@
 
 @section('title', __('messages.edit user'))
 
-@section('links')
-<link rel="stylesheet" href="{{ asset('/web/vendors/dropify/css/dropify.min.css') }}">
-@endsection
-
-
 @section('content')
 
 <div class="bradcam_area breadcam_bg_5">

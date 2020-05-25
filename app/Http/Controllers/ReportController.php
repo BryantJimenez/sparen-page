@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Report;
 use App\User;
 use App\Binnacle;
+use App\InfoContact;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
@@ -26,7 +27,8 @@ class ReportController extends Controller
         ->orWhere('title_english','like',"%$report%")
         ->orderBy('id', 'DESC')
         ->paginate(3);
-        return view('web.reports.index', compact('lang', 'reports'));
+        $info = InfoContact::where('id', 1)->firstOrFail();
+        return view('web.reports.index', compact('lang', 'reports', 'info'));
     }
 
     /** 
@@ -37,7 +39,8 @@ class ReportController extends Controller
     public function create($lang)
     {
         App::setlocale($lang);
-        return view('web.reports.create', compact('lang'));
+        $info = InfoContact::where('id', 1)->firstOrFail();
+        return view('web.reports.create', compact('lang', 'info'));
     }
 
     /**
@@ -86,50 +89,5 @@ class ReportController extends Controller
             return redirect()->route('informe.index', ['lang' => $lang])->with(['type' => 'error', 'title' => 'Registro fallido', 'msg' => 'Ha ocurrido un error durante el proceso, intentelo nuevamente.']);
         } 
 
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Report  $report
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Report $report)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Report  $report
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Report $report)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Report  $report
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Report $report)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Report  $report
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Report $report)
-    {
-        //
     }
 }

@@ -2,10 +2,6 @@
 
 @section('title', 'Sparen')
 
-@section('links')
-<link rel="stylesheet" href="{{ asset('/web/vendors/dropify/css/dropify.min.css') }}">
-@endsection
-
 @section('content')
 
 <!-- slider_area_start -->
@@ -260,6 +256,8 @@
 @endsection
 
 @section('script')
-<script src="{{ asset('/web/vendors/dropify/js/dropify.min.js') }}"></script>
+<script src="{{ asset('/web/vendors/validate/jquery.validate.js') }}"></script>
+<script src="{{ asset('/web/vendors/validate/additional-methods.js') }}"></script>
+<script src="{{ asset('/web/vendors/validate/messages_es.js') }}"></script>
+<script src="{{ asset('/web/js/validate.js') }}"></script>
 @endsection
-

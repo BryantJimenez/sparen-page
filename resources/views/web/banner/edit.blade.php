@@ -49,7 +49,7 @@
 
 								<div class="form-group col-12">
 									<label class="col-form-label">@lang('messages.first banner')<b class="text-danger">*</b></label>
-									<input type="file" name="picture1" accept="image/*" class="dropify" data-height="125" data-max-file-size="20M" data-allowed-file-extensions="jpg png jpeg web3" data-default-file="{{ '/web/images/banner/'.$banner->picture1 }}" />
+									<input type="file" name="picture1" accept="image/*" class="@if($lang=="es"){{ 'dropify' }}@else{{ 'dropifys' }}@endif" data-height="125" data-max-file-size="20M" data-allowed-file-extensions="jpg png jpeg web3" data-default-file="{{ '/web/images/banner/'.$banner->picture1 }}" />
 								</div>
 
 								<div class="form-group col-12">
@@ -64,7 +64,7 @@
 
 								<div class="form-group col-12">
 									<label class="col-form-label">@lang('messages.second banner')<b class="text-danger">*</b></label>
-									<input type="file" name="picture2" accept="image/*" class="dropify" data-height="125" data-max-file-size="20M" data-allowed-file-extensions="jpg png jpeg web3" data-default-file="{{ '/web/images/banner/'.$banner->picture2 }}" />
+									<input type="file" name="picture2" accept="image/*" class="@if($lang=="es"){{ 'dropify' }}@else{{ 'dropifys' }}@endif" data-height="125" data-max-file-size="20M" data-allowed-file-extensions="jpg png jpeg web3" data-default-file="{{ '/web/images/banner/'.$banner->picture2 }}" />
 								</div> 
 
 								<div class="form-group col-12">
@@ -79,7 +79,7 @@
 
 								<div class="form-group col-12">
 									<label class="col-form-label">@lang('messages.third banner')<b class="text-danger">*</b></label>
-									<input type="file" name="picture2" accept="image/*" class="dropify" data-height="125" data-max-file-size="20M" data-allowed-file-extensions="jpg png jpeg web3" data-default-file="{{ '/web/images/banner/'.$banner->picture3 }}" />
+									<input type="file" name="picture3" accept="image/*" class="@if($lang=="es"){{ 'dropify' }}@else{{ 'dropifys' }}@endif" data-height="125" data-max-file-size="20M" data-allowed-file-extensions="jpg png jpeg web3" data-default-file="{{ '/web/images/banner/'.$banner->picture3 }}" />
 								</div> 
 
 								<div class="form-group col-12">

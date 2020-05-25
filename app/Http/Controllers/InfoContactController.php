@@ -50,7 +50,7 @@ class InfoContactController extends Controller
 
 
         if ($info && $binnacle) {
-            return redirect()->route('contacto.create', ['lang' => $lang])->with(['type' => 'success', 'title' => 'Edición exitosa', 'msg' => 'La sección "Contacto" ha sido createada exitosamente.']);
+            return redirect()->route('contacto.edit', ['lang' => $lang])->with(['type' => 'success', 'title' => 'Edición exitosa', 'msg' => 'La sección "Contacto" ha sido editada exitosamente.']);
         } else {
             return redirect()->route('contacto.edit', ['lang' => $lang])->with(['type' => 'error', 'title' => 'Edición fallida', 'msg' => 'Ha ocurrido un error durante el proceso, intentelo nuevamente.']);
         }

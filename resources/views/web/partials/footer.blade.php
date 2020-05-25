@@ -6,7 +6,7 @@
                     <div class="footer_widget">
                         <div class="footer_logo">
                             <a href="#">
-                                <img src="{{ asset('/web/images/logo.png') }}" alt="Logo" width="120">
+                                <img src="{{ asset('/web/images/logo.png') }}" alt="Logo" width="180">
                             </a>
                         </div>
                         <p>@lang('messages.description')</p>
@@ -50,9 +50,19 @@
                             @lang('messages.address')
                         </h3>
                         <ul>
-                            <li>Rondeau 69 5°Piso (CP 5000) Nueva-Cordoba - CORDOBA - ARGENTINA</li>
-                            {{-- <li>+54 367 467 8934</li> --}}
-                            <li>info@sparen.com.ar</li>
+                            <li>{{ $info->address }}</li>
+                            @if($info->phone!=NULL)
+                            <li>{{ $info->phone }}</li>
+                            @endif
+                            @if($info->email!=NULL)
+                            <li>{{ $info->email }}</li>
+                            @endif
+                            @if($info->facebook!=NULL)
+                            <li><i class="ti-facebook"></i> {{ $info->facebook }}</li>
+                            @endif
+                            @if($info->twitter!=NULL)
+                            <li><i class="ti-twitter"></i> {{ $info->twitter}}</li>
+                            @endif
                         </ul>
                     </div>
                 </div>
@@ -72,3 +82,41 @@
 </footer>
 <!--/ footer end  -->
 
+<!-- form itself end-->
+<form id="test-form" class="white-popup-block mfp-hide"method="POST" action="{{ route('login') }}">
+    @csrf
+    <div class="popup_box ">
+        <div class="popup_inner">
+            <div class="popup_header">
+                <h3>@lang('messages.login')</h3>
+            </div>
+            <div class="custom_form">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="@lang('messages.enter your email')">
+
+                        @error('email')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                        @enderror
+
+                    </div>
+                    <div class="col-xl-12">
+                        <input type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="@lang('messages.enter your password')" >
+
+                        @error('password')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                        @enderror
+                    </div>
+                    <div class="col-xl-12">
+                        <button type="submit" action="login" class="boxed-btn3">@lang('messages.sign in')</button>
+                    </div>
+               </div>
+           </div>
+       </div>
+   </div>
+</form>
+ <!-- form itself end -->

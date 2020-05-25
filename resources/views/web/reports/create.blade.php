@@ -33,32 +33,32 @@
 							<div class="row">
 								<div class="form-group col-12">
 									<label class="col-form-label">@lang('messages.title spanish')<b class="text-danger">*</b></label>
-									<input class="form-control" type="text" name="title_spanish" required placeholder="Introduzca un nombre" value="{{ old('title_spanish') }}" id="name" minlength="2" maxlength="191">
+									<input class="form-control" type="text" name="title_spanish" required placeholder="" value="{{ old('title_spanish') }}" minlength="2" maxlength="191">
 								</div>
 
 								<div class="form-group col-12">
 									<label class="col-form-label">@lang('messages.title english')<b class="text-danger">*</b></label>
-									<input class="form-control" type="text" name="title_english" required placeholder="Enter the name" value="{{ old('title_english') }}" id="name" minlength="2" maxlength="191">
+									<input class="form-control" type="text" name="title_english" required placeholder="" value="{{ old('title_english') }}" minlength="2" maxlength="191">
 								</div>
 
 								<div class="form-group col-12">
 									<label class="col-form-label">@lang('messages.description spanish')<b class="text-danger">*</b></label>
-									<input class="form-control" type="text"  name="description_spanish" required placeholder="Introduzca su dirección exacta" value="{{ old('description_spanish') }}" minlength="5" maxlength="191">
+									<input class="form-control" type="text"  name="description_spanish" required placeholder="" value="{{ old('description_spanish') }}" minlength="5" maxlength="191">
 								</div>
 
 								<div class="form-group col-12">
 									<label class="col-form-label">@lang('messages.description english')<b class="text-danger">*</b></label>
-									<input class="form-control" type="text"  name="description_english" required placeholder="Enter the Description" value="{{ old('description_english') }}" minlength="5" maxlength="191">
+									<input class="form-control" type="text"  name="description_english" required placeholder="" value="{{ old('description_english') }}" minlength="5" maxlength="191">
 								</div>
 
 								<div class="form-group col-12">
 									<label class="col-form-label">@lang('messages.archive spanish')<b class="text-danger">*</b></label>
-									<input type="file" name="pdf_spanish" required accept="pdf/*" id="input-file-now" class="dropify" data-allowed-file-extensions="pdf" />
+									<input type="file" name="pdf_spanish" required accept="application/pdf" class="@if($lang=="es"){{ 'dropify' }}@else{{ 'dropifys' }}@endif" data-allowed-file-extensions="pdf" />
 								</div>
 
 								<div class="form-group col-12">
 									<label class="col-form-label">@lang('messages.archive english')<b class="text-danger">*</b></label>
-									<input type="file" name="pdf_english" required accept="pdf/*" id="input-file-now" class="dropifys" data-allowed-file-extensions="pdf" />
+									<input type="file" name="pdf_english" required accept="application/pdf" class="@if($lang=="es"){{ 'dropify' }}@else{{ 'dropifys' }}@endif" data-allowed-file-extensions="pdf" />
 								</div>
 
 								<div class="form-group col-12">

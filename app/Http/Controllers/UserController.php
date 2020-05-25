@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\User;
 use App\Binnacle;
+use App\InfoContact;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Auth;
@@ -24,7 +25,8 @@ class UserController extends Controller
         App::setlocale($lang);
         $num = 1;
         $users = User::all();
-        return view('web.users.index', compact('lang', 'num', 'users'));
+        $info = InfoContact::where('id', 1)->firstOrFail();
+        return view('web.users.index', compact('lang', 'num', 'users', 'info'));
     }
 
     /**
@@ -35,7 +37,8 @@ class UserController extends Controller
     public function create($lang)
     {
         App::setlocale($lang);
-        return view('web.users.create', compact('lang'));
+        $info = InfoContact::where('id', 1)->firstOrFail();
+        return view('web.users.create', compact('lang', 'info'));
     }
 
     /**
@@ -99,7 +102,8 @@ class UserController extends Controller
     public function edit($lang, $slug) {
         App::setlocale($lang);
         $user=User::where('slug', $slug)->firstOrFail();
-        return view('web.users.edit', compact("lang", "user"));
+        $info = InfoContact::where('id', 1)->firstOrFail();
+        return view('web.users.edit', compact("lang", "user", 'info'));
 
     }
 

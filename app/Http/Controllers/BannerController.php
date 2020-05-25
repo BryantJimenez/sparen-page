@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Banner;
 use App\User;
 use App\Binnacle;
+use App\InfoContact;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Http\Requests\BannerUpdateRequest;
@@ -22,7 +23,8 @@ class BannerController extends Controller
     {
         App::setlocale($lang);
         $banner = Banner::where('id', '1')->firstOrFail();
-        return view('web.banner.edit', compact('lang', 'banner'));
+        $info = InfoContact::where('id', 1)->firstOrFail();
+        return view('web.banner.edit', compact('lang', 'banner', 'info'));
     }
 
     /**

@@ -2,6 +2,10 @@
 
 @section('title', __('messages.contact'))
 
+@section('links')
+<link rel="stylesheet" href="{{ asset('/web/vendors/lobibox/Lobibox.min.css') }}">
+@endsection
+
 @section('content')
 
 <!-- bradcam_area  -->
@@ -23,36 +27,36 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-12">
-				@include('web.partials.errors')
 				<h2 class="contact-title">@lang('messages.contact us')</h2>
 			</div>
-			<div class="col-lg-8">
+			<div class="col-lg-8 order-xl-1 order-lg-1 order-md-2 order-sm-2">
+				@include('web.partials.errors')
 				<form class="form-contact contact_form" action="{{ route('contacto.store', ['lang' => $lang]) }}" method="POST" id="formContact">
 					@csrf
 					<div class="row">
 						<div class="col-sm-6">
 							<div class="form-group">
-								<input class="form-control valid" name="name" id="name" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = '@lang('messages.enter your name and lastname')'" placeholder="@lang('messages.enter your name and lastname')">
+								<input class="form-control valid" name="name" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = '@lang('messages.enter your name and lastname')'" placeholder="@lang('messages.enter your name and lastname')" minlength="2" maxlength="191">
 							</div>
 						</div>
 						<div class="col-sm-6">
 							<div class="form-group">
-								<input class="form-control valid" name="email" id="email" type="email" onfocus="this.placeholder = ''" onblur="this.placeholder = '@lang('messages.enter your email')'" placeholder="@lang('messages.enter your email')">
+								<input class="form-control valid" name="email" type="email" onfocus="this.placeholder = ''" onblur="this.placeholder = '@lang('messages.enter your email')'" placeholder="@lang('messages.enter your email')" minlength="5" maxlength="191">
 							</div>
 						</div>
 
 						<div class="col-12">
 							<div class="form-group">
-								<textarea class="form-control w-100" name="message" id="message" cols="30" rows="9" onfocus="this.placeholder = ''" onblur="this.placeholder = '@lang('messages.enter your message')'" placeholder="@lang('messages.enter your message')"></textarea>
+								<textarea class="form-control w-100" name="message" cols="30" rows="9" onfocus="this.placeholder = ''" onblur="this.placeholder = '@lang('messages.enter your message')'" placeholder="@lang('messages.enter your message')" minlength="5" maxlength=""></textarea>
 							</div>
 						</div>
 					</div>
 					<div class="form-group mt-3">
-						<button type="submit" action="contact" class="button button-contactForm boxed-btn">@lang('messages.send')</button>
+						<button type="submit" action="contact" class="button button-contactForm boxed-btn g-recaptcha" data-sitekey="6LeH7fsUAAAAAO73JQ4PU27ZyYFIaEXIdD5bDxkd" data-callback='onSubmit' data-action='submit'>@lang('messages.send')</button>
 					</div>
 				</form>
 			</div>
-			<div class="col-lg-3 offset-lg-1">
+			<div class="col-lg-3 offset-lg-1 order-xl-2 order-lg-2 order-md-1 order-sm-1">
 				<div class="media contact-info">
 					<span class="contact-info__icon"><i class="ti-home"></i></span>
 					<div class="media-body">
@@ -106,8 +110,15 @@
 @endsection
 
 @section('script')
+<script src="{{ asset('/web/vendors/lobibox/Lobibox.js') }}"></script>
 <script src="{{ asset('/web/vendors/validate/jquery.validate.js') }}"></script>
 <script src="{{ asset('/web/vendors/validate/additional-methods.js') }}"></script>
 <script src="{{ asset('/web/vendors/validate/messages_es.js') }}"></script>
 <script src="{{ asset('/web/js/validate.js') }}"></script>
+<script src="https://www.google.com/recaptcha/api.js"></script>
+<script>
+	function onSubmit(token) {
+		document.getElementById("formContact").submit();
+	}
+</script>
 @endsection

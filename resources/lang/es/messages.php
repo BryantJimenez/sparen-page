@@ -24,7 +24,7 @@ return [
     'we will be happy to help you in everything you need' => 'Estaremos encantados en ayudarte en todo lo que necesites',
     'contact us' => 'Contáctanos',
     'address' => 'Dirección',
-    'description' => 'Buscamos que nuestros clientes manejen sus fondos con transparencia.',
+    'description' => 'Economía, Finanzas e Inversión.',
     'copyright' => 'Todos los derechos reservados',
     'make' => 'Realizado por',
     'pages' => 'Páginas',

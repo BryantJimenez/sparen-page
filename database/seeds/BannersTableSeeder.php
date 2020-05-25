@@ -15,14 +15,14 @@ class BannersTableSeeder extends Seeder
     		array(
     			'id' => 1,
     			'banner1_spanish' => 'Economía<br />Finanzas<br />Inversión',
-    			'banner1_english' => 'Economics<br />Finance<br />Investment',
+    			'banner1_english' => 'Economy<br />Finance<br />Investment',
     			'banner2_spanish' => 'Consultorías para Empresas,<br />Inversores e Instituciones',
     			'banner2_english' => 'Consulting for Companies,<br />Investors and Institutions',
     			'banner3_spanish' => 'Compromiso,<br />Profesionalismo,<br />Responsabilidad y Creatividad',
     			'banner3_english' => 'Commitment,<br />Professionalism,<br />Responsibility and Creativity',
     			'picture1' => 'banner2.jpg',
-    			'picture2' => 'banner1.png',
-    			'picture3' => 'about_banner.png'
+    			'picture2' => 'banner4.jpg',
+    			'picture3' => 'banner3.jpg'
     		)
     	];
     	DB::table('banners')->insert($banners);
